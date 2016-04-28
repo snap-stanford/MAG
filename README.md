@@ -15,3 +15,5 @@ mag-gen-cit-pagerank-tables.py reads these binaries, creates the network and out
 4. Top Affiliations by Sum of Paper Citations
 
 The sample_out dir contains the top 1000 lines of the outputs of these files.
+
+The working codes are stored in the src/ directory. python_based/ is an implementation that relies heavily on Python to do the processing, while snap_based/ in an implementation that implements the operations based on SNAP primitives.
