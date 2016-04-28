@@ -19815,18 +19815,6 @@ class TNEANet(object):
         """
         return _snap.TNEANet_HasFlag(self, *args)
 
-    def GetMemUsed(self):
-        """
-        GetMemUsed(self) -> size_t
-        Parameters:
-           self: TNEANet const * value
-
-
-
-
-        """
-        return _snap.TNEANet_GetMemUsed(self)
-
     def GetNodes(self):
         """
         GetNodes(self) -> int
@@ -21768,6 +21756,20 @@ class TNEANet(object):
         """
         return _snap.TNEANet_IsIntAttrDeletedN(self, *args)
 
+    def IsIntVAttrDeletedN(self, *args):
+        """
+        IsIntVAttrDeletedN(self, int NId, TStr attr) -> bool
+        Parameters:
+           self: TNEANet const * value
+           NId: int const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TNEANet_IsIntVAttrDeletedN(self, *args)
+
     def IsStrAttrDeletedN(self, *args):
         """
         IsStrAttrDeletedN(self, int NId, TStr attr) -> bool
@@ -21823,6 +21825,20 @@ class TNEANet(object):
 
         """
         return _snap.TNEANet_NodeAttrIsIntDeleted(self, *args)
+
+    def NodeAttrIsIntVDeleted(self, *args):
+        """
+        NodeAttrIsIntVDeleted(self, int NId, TStrIntPrH::TIter NodeHI) -> bool
+        Parameters:
+           self: TNEANet const * value
+           NId: int const & value
+           NodeHI: TStrIntPrH::TIter const & value
+
+           NId: int const & value
+           NodeHI: TStrIntPrH::TIter const & value
+
+        """
+        return _snap.TNEANet_NodeAttrIsIntVDeleted(self, *args)
 
     def NodeAttrIsStrDeleted(self, *args):
         """
@@ -21880,6 +21896,20 @@ class TNEANet(object):
         """
         return _snap.TNEANet_IsIntAttrDeletedE(self, *args)
 
+    def IsIntVAttrDeletedE(self, *args):
+        """
+        IsIntVAttrDeletedE(self, int EId, TStr attr) -> bool
+        Parameters:
+           self: TNEANet const * value
+           EId: int const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TNEANet_IsIntVAttrDeletedE(self, *args)
+
     def IsStrAttrDeletedE(self, *args):
         """
         IsStrAttrDeletedE(self, int EId, TStr attr) -> bool
@@ -21935,6 +21965,20 @@ class TNEANet(object):
 
         """
         return _snap.TNEANet_EdgeAttrIsIntDeleted(self, *args)
+
+    def EdgeAttrIsIntVDeleted(self, *args):
+        """
+        EdgeAttrIsIntVDeleted(self, int EId, TStrIntPrH::TIter EdgeHI) -> bool
+        Parameters:
+           self: TNEANet const * value
+           EId: int const & value
+           EdgeHI: TStrIntPrH::TIter const & value
+
+           EId: int const & value
+           EdgeHI: TStrIntPrH::TIter const & value
+
+        """
+        return _snap.TNEANet_EdgeAttrIsIntVDeleted(self, *args)
 
     def EdgeAttrIsStrDeleted(self, *args):
         """
@@ -23166,7 +23210,6 @@ class TNEANet(object):
 TNEANet.Save = new_instancemethod(_snap.TNEANet_Save,None,TNEANet)
 TNEANet.Save_V1 = new_instancemethod(_snap.TNEANet_Save_V1,None,TNEANet)
 TNEANet.HasFlag = new_instancemethod(_snap.TNEANet_HasFlag,None,TNEANet)
-TNEANet.GetMemUsed = new_instancemethod(_snap.TNEANet_GetMemUsed,None,TNEANet)
 TNEANet.GetNodes = new_instancemethod(_snap.TNEANet_GetNodes,None,TNEANet)
 TNEANet.AddNode = new_instancemethod(_snap.TNEANet_AddNode,None,TNEANet)
 TNEANet.DelNode = new_instancemethod(_snap.TNEANet_DelNode,None,TNEANet)
@@ -23266,18 +23309,22 @@ TNEANet.DelAttrN = new_instancemethod(_snap.TNEANet_DelAttrN,None,TNEANet)
 TNEANet.DelAttrE = new_instancemethod(_snap.TNEANet_DelAttrE,None,TNEANet)
 TNEANet.IsAttrDeletedN = new_instancemethod(_snap.TNEANet_IsAttrDeletedN,None,TNEANet)
 TNEANet.IsIntAttrDeletedN = new_instancemethod(_snap.TNEANet_IsIntAttrDeletedN,None,TNEANet)
+TNEANet.IsIntVAttrDeletedN = new_instancemethod(_snap.TNEANet_IsIntVAttrDeletedN,None,TNEANet)
 TNEANet.IsStrAttrDeletedN = new_instancemethod(_snap.TNEANet_IsStrAttrDeletedN,None,TNEANet)
 TNEANet.IsFltAttrDeletedN = new_instancemethod(_snap.TNEANet_IsFltAttrDeletedN,None,TNEANet)
 TNEANet.NodeAttrIsDeleted = new_instancemethod(_snap.TNEANet_NodeAttrIsDeleted,None,TNEANet)
 TNEANet.NodeAttrIsIntDeleted = new_instancemethod(_snap.TNEANet_NodeAttrIsIntDeleted,None,TNEANet)
+TNEANet.NodeAttrIsIntVDeleted = new_instancemethod(_snap.TNEANet_NodeAttrIsIntVDeleted,None,TNEANet)
 TNEANet.NodeAttrIsStrDeleted = new_instancemethod(_snap.TNEANet_NodeAttrIsStrDeleted,None,TNEANet)
 TNEANet.NodeAttrIsFltDeleted = new_instancemethod(_snap.TNEANet_NodeAttrIsFltDeleted,None,TNEANet)
 TNEANet.IsAttrDeletedE = new_instancemethod(_snap.TNEANet_IsAttrDeletedE,None,TNEANet)
 TNEANet.IsIntAttrDeletedE = new_instancemethod(_snap.TNEANet_IsIntAttrDeletedE,None,TNEANet)
+TNEANet.IsIntVAttrDeletedE = new_instancemethod(_snap.TNEANet_IsIntVAttrDeletedE,None,TNEANet)
 TNEANet.IsStrAttrDeletedE = new_instancemethod(_snap.TNEANet_IsStrAttrDeletedE,None,TNEANet)
 TNEANet.IsFltAttrDeletedE = new_instancemethod(_snap.TNEANet_IsFltAttrDeletedE,None,TNEANet)
 TNEANet.EdgeAttrIsDeleted = new_instancemethod(_snap.TNEANet_EdgeAttrIsDeleted,None,TNEANet)
 TNEANet.EdgeAttrIsIntDeleted = new_instancemethod(_snap.TNEANet_EdgeAttrIsIntDeleted,None,TNEANet)
+TNEANet.EdgeAttrIsIntVDeleted = new_instancemethod(_snap.TNEANet_EdgeAttrIsIntVDeleted,None,TNEANet)
 TNEANet.EdgeAttrIsStrDeleted = new_instancemethod(_snap.TNEANet_EdgeAttrIsStrDeleted,None,TNEANet)
 TNEANet.EdgeAttrIsFltDeleted = new_instancemethod(_snap.TNEANet_EdgeAttrIsFltDeleted,None,TNEANet)
 TNEANet.GetNodeAttrValue = new_instancemethod(_snap.TNEANet_GetNodeAttrValue,None,TNEANet)
@@ -26227,18 +26274,6 @@ class TModeNet(TNEANet):
         """
         return _snap.TModeNet_GetPartitionRanges(self, *args)
 
-    def GetMemUsed(self):
-        """
-        GetMemUsed(self) -> size_t
-        Parameters:
-           self: TModeNet const * value
-
-
-
-
-        """
-        return _snap.TModeNet_GetMemUsed(self)
-
     def Save(self, *args):
         """
         Save(self, TSOut SOut)
@@ -26345,7 +26380,6 @@ class TModeNet(TNEANet):
 
     __swig_destroy__ = _snap.delete_TModeNet
 TModeNet.GetPartitionRanges = new_instancemethod(_snap.TModeNet_GetPartitionRanges,None,TModeNet)
-TModeNet.GetMemUsed = new_instancemethod(_snap.TModeNet_GetMemUsed,None,TModeNet)
 TModeNet.Save = new_instancemethod(_snap.TModeNet_Save,None,TModeNet)
 TModeNet.GetCrossNetNames = new_instancemethod(_snap.TModeNet_GetCrossNetNames,None,TModeNet)
 TModeNet.GetNeighborsByCrossNet = new_instancemethod(_snap.TModeNet_GetNeighborsByCrossNet,None,TModeNet)
@@ -26449,6 +26483,18 @@ class TCrossNet(object):
 
         """
         return _snap.TCrossNet_GetEdges(self)
+
+    def Clr(self):
+        """
+        Clr(self)
+        Parameters:
+           self: TCrossNet * value
+
+
+
+
+        """
+        return _snap.TCrossNet_Clr(self)
 
     def GetCrossEdge(self, *args):
         """
@@ -27180,18 +27226,6 @@ class TCrossNet(object):
         """
         return _snap.TCrossNet_GetEdgeAttrValue(self, *args)
 
-    def GetMemUsed(self):
-        """
-        GetMemUsed(self) -> size_t
-        Parameters:
-           self: TCrossNet const * value
-
-
-
-
-        """
-        return _snap.TCrossNet_GetMemUsed(self)
-
     def BegEI(self):
         """
         BegEI(self) -> TCrossNetEdgeI
@@ -27329,6 +27363,7 @@ TCrossNet.IsEdge = new_instancemethod(_snap.TCrossNet_IsEdge,None,TCrossNet)
 TCrossNet.GetPartitionRanges = new_instancemethod(_snap.TCrossNet_GetPartitionRanges,None,TCrossNet)
 TCrossNet.GetMxEId = new_instancemethod(_snap.TCrossNet_GetMxEId,None,TCrossNet)
 TCrossNet.GetEdges = new_instancemethod(_snap.TCrossNet_GetEdges,None,TCrossNet)
+TCrossNet.Clr = new_instancemethod(_snap.TCrossNet_Clr,None,TCrossNet)
 TCrossNet.GetCrossEdge = new_instancemethod(_snap.TCrossNet_GetCrossEdge,None,TCrossNet)
 TCrossNet.AddEdge = new_instancemethod(_snap.TCrossNet_AddEdge,None,TCrossNet)
 TCrossNet.GetEdgeI = new_instancemethod(_snap.TCrossNet_GetEdgeI,None,TCrossNet)
@@ -27370,7 +27405,6 @@ TCrossNet.EdgeAttrIsIntDeleted = new_instancemethod(_snap.TCrossNet_EdgeAttrIsIn
 TCrossNet.EdgeAttrIsStrDeleted = new_instancemethod(_snap.TCrossNet_EdgeAttrIsStrDeleted,None,TCrossNet)
 TCrossNet.EdgeAttrIsFltDeleted = new_instancemethod(_snap.TCrossNet_EdgeAttrIsFltDeleted,None,TCrossNet)
 TCrossNet.GetEdgeAttrValue = new_instancemethod(_snap.TCrossNet_GetEdgeAttrValue,None,TCrossNet)
-TCrossNet.GetMemUsed = new_instancemethod(_snap.TCrossNet_GetMemUsed,None,TCrossNet)
 TCrossNet.BegEI = new_instancemethod(_snap.TCrossNet_BegEI,None,TCrossNet)
 TCrossNet.EndEI = new_instancemethod(_snap.TCrossNet_EndEI,None,TCrossNet)
 TCrossNet.BegEAIntI = new_instancemethod(_snap.TCrossNet_BegEAIntI,None,TCrossNet)
@@ -27404,18 +27438,6 @@ class TMMNet(object):
 
         """
         _snap.TMMNet_swiginit(self,_snap.new_TMMNet(*args))
-    def GetMemUsed(self):
-        """
-        GetMemUsed(self) -> size_t
-        Parameters:
-           self: TMMNet const * value
-
-
-
-
-        """
-        return _snap.TMMNet_GetMemUsed(self)
-
     def AddMode(self, *args):
         """
         AddMode(self, TStr ModeName) -> int
@@ -27780,7 +27802,6 @@ class TMMNet(object):
         return _snap.TMMNet_GetCrossNetI(self, *args)
 
     __swig_destroy__ = _snap.delete_TMMNet
-TMMNet.GetMemUsed = new_instancemethod(_snap.TMMNet_GetMemUsed,None,TMMNet)
 TMMNet.AddMode = new_instancemethod(_snap.TMMNet_AddMode,None,TMMNet)
 TMMNet.DelMode = new_instancemethod(_snap.TMMNet_DelMode,None,TMMNet)
 TMMNet.AddCrossNet = new_instancemethod(_snap.TMMNet_AddCrossNet,None,TMMNet)
@@ -31537,7 +31558,7 @@ class TTable(object):
 
     def GetIntRowIdxByVal(self, *args):
         """
-        GetIntRowIdxByVal(self, TStr ColName, TInt Val) -> TInt
+        GetIntRowIdxByVal(self, TStr ColName, TInt Val) -> TIntV
         Parameters:
            self: TTable const * value
            ColName: TStr const & value
@@ -31551,7 +31572,7 @@ class TTable(object):
 
     def GetStrRowIdxByMap(self, *args):
         """
-        GetStrRowIdxByMap(self, TStr ColName, TInt Map) -> TInt
+        GetStrRowIdxByMap(self, TStr ColName, TInt Map) -> TIntV
         Parameters:
            self: TTable const * value
            ColName: TStr const & value
@@ -31565,7 +31586,7 @@ class TTable(object):
 
     def GetFltRowIdxByVal(self, *args):
         """
-        GetFltRowIdxByVal(self, TStr ColName, TFlt Val) -> TInt
+        GetFltRowIdxByVal(self, TStr ColName, TFlt Val) -> TIntV
         Parameters:
            self: TTable const * value
            ColName: TStr const & value
@@ -75765,23 +75786,6 @@ class PNEANet(object):
         """
         return _snap.PNEANet_HasFlag(self, *args)
 
-    def GetMemUsed(self):
-        """
-        GetMemUsed(self) -> size_t
-        Parameters:
-           self: TNEANet const * value
-
-
-
-
-           self: TPt< TNEANet > const * value
-
-
-
-
-        """
-        return _snap.PNEANet_GetMemUsed(self)
-
     def GetNodes(self):
         """
         GetNodes(self) -> int
@@ -79203,6 +79207,27 @@ class PNEANet(object):
         """
         return _snap.PNEANet_IsIntAttrDeletedN(self, *args)
 
+    def IsIntVAttrDeletedN(self, *args):
+        """
+        IsIntVAttrDeletedN(self, int NId, TStr attr) -> bool
+        Parameters:
+           self: TNEANet const * value
+           NId: int const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           attr: TStr const & value
+
+           self: TPt< TNEANet > const * value
+           NId: int const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.PNEANet_IsIntVAttrDeletedN(self, *args)
+
     def IsStrAttrDeletedN(self, *args):
         """
         IsStrAttrDeletedN(self, int NId, TStr attr) -> bool
@@ -79286,6 +79311,27 @@ class PNEANet(object):
 
         """
         return _snap.PNEANet_NodeAttrIsIntDeleted(self, *args)
+
+    def NodeAttrIsIntVDeleted(self, *args):
+        """
+        NodeAttrIsIntVDeleted(self, int NId, TStrIntPrH::TIter NodeHI) -> bool
+        Parameters:
+           self: TNEANet const * value
+           NId: int const & value
+           NodeHI: TStrIntPrH::TIter const & value
+
+           NId: int const & value
+           NodeHI: TStrIntPrH::TIter const & value
+
+           self: TPt< TNEANet > const * value
+           NId: int const & value
+           NodeHI: TStrIntPrH::TIter const & value
+
+           NId: int const & value
+           NodeHI: TStrIntPrH::TIter const & value
+
+        """
+        return _snap.PNEANet_NodeAttrIsIntVDeleted(self, *args)
 
     def NodeAttrIsStrDeleted(self, *args):
         """
@@ -79371,6 +79417,27 @@ class PNEANet(object):
         """
         return _snap.PNEANet_IsIntAttrDeletedE(self, *args)
 
+    def IsIntVAttrDeletedE(self, *args):
+        """
+        IsIntVAttrDeletedE(self, int EId, TStr attr) -> bool
+        Parameters:
+           self: TNEANet const * value
+           EId: int const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           attr: TStr const & value
+
+           self: TPt< TNEANet > const * value
+           EId: int const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.PNEANet_IsIntVAttrDeletedE(self, *args)
+
     def IsStrAttrDeletedE(self, *args):
         """
         IsStrAttrDeletedE(self, int EId, TStr attr) -> bool
@@ -79454,6 +79521,27 @@ class PNEANet(object):
 
         """
         return _snap.PNEANet_EdgeAttrIsIntDeleted(self, *args)
+
+    def EdgeAttrIsIntVDeleted(self, *args):
+        """
+        EdgeAttrIsIntVDeleted(self, int EId, TStrIntPrH::TIter EdgeHI) -> bool
+        Parameters:
+           self: TNEANet const * value
+           EId: int const & value
+           EdgeHI: TStrIntPrH::TIter const & value
+
+           EId: int const & value
+           EdgeHI: TStrIntPrH::TIter const & value
+
+           self: TPt< TNEANet > const * value
+           EId: int const & value
+           EdgeHI: TStrIntPrH::TIter const & value
+
+           EId: int const & value
+           EdgeHI: TStrIntPrH::TIter const & value
+
+        """
+        return _snap.PNEANet_EdgeAttrIsIntVDeleted(self, *args)
 
     def EdgeAttrIsStrDeleted(self, *args):
         """
@@ -81051,7 +81139,6 @@ PNEANet.Save_V1 = new_instancemethod(_snap.PNEANet_Save_V1,None,PNEANet)
 PNEANet.Load = new_instancemethod(_snap.PNEANet_Load,None,PNEANet)
 PNEANet.Load_V1 = new_instancemethod(_snap.PNEANet_Load_V1,None,PNEANet)
 PNEANet.HasFlag = new_instancemethod(_snap.PNEANet_HasFlag,None,PNEANet)
-PNEANet.GetMemUsed = new_instancemethod(_snap.PNEANet_GetMemUsed,None,PNEANet)
 PNEANet.GetNodes = new_instancemethod(_snap.PNEANet_GetNodes,None,PNEANet)
 PNEANet.AddNode = new_instancemethod(_snap.PNEANet_AddNode,None,PNEANet)
 PNEANet.DelNode = new_instancemethod(_snap.PNEANet_DelNode,None,PNEANet)
@@ -81166,18 +81253,22 @@ PNEANet.DelAttrN = new_instancemethod(_snap.PNEANet_DelAttrN,None,PNEANet)
 PNEANet.DelAttrE = new_instancemethod(_snap.PNEANet_DelAttrE,None,PNEANet)
 PNEANet.IsAttrDeletedN = new_instancemethod(_snap.PNEANet_IsAttrDeletedN,None,PNEANet)
 PNEANet.IsIntAttrDeletedN = new_instancemethod(_snap.PNEANet_IsIntAttrDeletedN,None,PNEANet)
+PNEANet.IsIntVAttrDeletedN = new_instancemethod(_snap.PNEANet_IsIntVAttrDeletedN,None,PNEANet)
 PNEANet.IsStrAttrDeletedN = new_instancemethod(_snap.PNEANet_IsStrAttrDeletedN,None,PNEANet)
 PNEANet.IsFltAttrDeletedN = new_instancemethod(_snap.PNEANet_IsFltAttrDeletedN,None,PNEANet)
 PNEANet.NodeAttrIsDeleted = new_instancemethod(_snap.PNEANet_NodeAttrIsDeleted,None,PNEANet)
 PNEANet.NodeAttrIsIntDeleted = new_instancemethod(_snap.PNEANet_NodeAttrIsIntDeleted,None,PNEANet)
+PNEANet.NodeAttrIsIntVDeleted = new_instancemethod(_snap.PNEANet_NodeAttrIsIntVDeleted,None,PNEANet)
 PNEANet.NodeAttrIsStrDeleted = new_instancemethod(_snap.PNEANet_NodeAttrIsStrDeleted,None,PNEANet)
 PNEANet.NodeAttrIsFltDeleted = new_instancemethod(_snap.PNEANet_NodeAttrIsFltDeleted,None,PNEANet)
 PNEANet.IsAttrDeletedE = new_instancemethod(_snap.PNEANet_IsAttrDeletedE,None,PNEANet)
 PNEANet.IsIntAttrDeletedE = new_instancemethod(_snap.PNEANet_IsIntAttrDeletedE,None,PNEANet)
+PNEANet.IsIntVAttrDeletedE = new_instancemethod(_snap.PNEANet_IsIntVAttrDeletedE,None,PNEANet)
 PNEANet.IsStrAttrDeletedE = new_instancemethod(_snap.PNEANet_IsStrAttrDeletedE,None,PNEANet)
 PNEANet.IsFltAttrDeletedE = new_instancemethod(_snap.PNEANet_IsFltAttrDeletedE,None,PNEANet)
 PNEANet.EdgeAttrIsDeleted = new_instancemethod(_snap.PNEANet_EdgeAttrIsDeleted,None,PNEANet)
 PNEANet.EdgeAttrIsIntDeleted = new_instancemethod(_snap.PNEANet_EdgeAttrIsIntDeleted,None,PNEANet)
+PNEANet.EdgeAttrIsIntVDeleted = new_instancemethod(_snap.PNEANet_EdgeAttrIsIntVDeleted,None,PNEANet)
 PNEANet.EdgeAttrIsStrDeleted = new_instancemethod(_snap.PNEANet_EdgeAttrIsStrDeleted,None,PNEANet)
 PNEANet.EdgeAttrIsFltDeleted = new_instancemethod(_snap.PNEANet_EdgeAttrIsFltDeleted,None,PNEANet)
 PNEANet.GetNodeAttrValue = new_instancemethod(_snap.PNEANet_GetNodeAttrValue,None,PNEANet)
@@ -81995,23 +82086,6 @@ class PMMNet(object):
         return _snap.PMMNet_GetRefs(self)
 
     CRef = _swig_property(_snap.PMMNet_CRef_get)
-    def GetMemUsed(self):
-        """
-        GetMemUsed(self) -> size_t
-        Parameters:
-           self: TMMNet const * value
-
-
-
-
-           self: TPt< TMMNet > const * value
-
-
-
-
-        """
-        return _snap.PMMNet_GetMemUsed(self)
-
     def AddMode(self, *args):
         """
         AddMode(self, TStr ModeName) -> int
@@ -82527,7 +82601,6 @@ PMMNet.__call__ = new_instancemethod(_snap.PMMNet___call__,None,PMMNet)
 PMMNet.Empty = new_instancemethod(_snap.PMMNet_Empty,None,PMMNet)
 PMMNet.Clr = new_instancemethod(_snap.PMMNet_Clr,None,PMMNet)
 PMMNet.GetRefs = new_instancemethod(_snap.PMMNet_GetRefs,None,PMMNet)
-PMMNet.GetMemUsed = new_instancemethod(_snap.PMMNet_GetMemUsed,None,PMMNet)
 PMMNet.AddMode = new_instancemethod(_snap.PMMNet_AddMode,None,PMMNet)
 PMMNet.DelMode = new_instancemethod(_snap.PMMNet_DelMode,None,PMMNet)
 PMMNet.AddCrossNet = new_instancemethod(_snap.PMMNet_AddCrossNet,None,PMMNet)
@@ -97548,7 +97621,7 @@ class PTable(object):
 
     def GetIntRowIdxByVal(self, *args):
         """
-        GetIntRowIdxByVal(self, TStr ColName, TInt Val) -> TInt
+        GetIntRowIdxByVal(self, TStr ColName, TInt Val) -> TIntV
         Parameters:
            self: TTable const * value
            ColName: TStr const & value
@@ -97569,7 +97642,7 @@ class PTable(object):
 
     def GetStrRowIdxByMap(self, *args):
         """
-        GetStrRowIdxByMap(self, TStr ColName, TInt Map) -> TInt
+        GetStrRowIdxByMap(self, TStr ColName, TInt Map) -> TIntV
         Parameters:
            self: TTable const * value
            ColName: TStr const & value
@@ -97590,7 +97663,7 @@ class PTable(object):
 
     def GetFltRowIdxByVal(self, *args):
         """
-        GetFltRowIdxByVal(self, TStr ColName, TFlt Val) -> TInt
+        GetFltRowIdxByVal(self, TStr ColName, TFlt Val) -> TIntV
         Parameters:
            self: TTable const * value
            ColName: TStr const & value
