@@ -80,7 +80,7 @@ def _swig_setattr_nondynamic_method(set):
 
 
 SNAP_ALL = _snap.SNAP_ALL
-Version = "2.0.5-mag"
+Version = "2.0.3-dev"
 
 
 def print_array(*args):
@@ -19707,6 +19707,7 @@ class TNEANet(object):
     """Proxy of C++ TNEANet class"""
     thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
     __repr__ = _swig_repr
+    CRef = _swig_property(_snap.TNEANet_CRef_get)
     def __init__(self, *args): 
         """
         __init__(self) -> TNEANet
@@ -19889,6 +19890,44 @@ class TNEANet(object):
         """
         return _snap.TNEANet_GetNAIntI(self, *args)
 
+    def BegNAIntVI(self, *args):
+        """
+        BegNAIntVI(self, TStr attr) -> TAIntVI
+        Parameters:
+           self: TNEANet const * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.TNEANet_BegNAIntVI(self, *args)
+
+    def EndNAIntVI(self, *args):
+        """
+        EndNAIntVI(self, TStr attr) -> TAIntVI
+        Parameters:
+           self: TNEANet const * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.TNEANet_EndNAIntVI(self, *args)
+
+    def GetNAIntVI(self, *args):
+        """
+        GetNAIntVI(self, TStr attr, int NId) -> TAIntVI
+        Parameters:
+           self: TNEANet const * value
+           attr: TStr const & value
+           NId: int const & value
+
+           attr: TStr const & value
+           NId: int const & value
+
+        """
+        return _snap.TNEANet_GetNAIntVI(self, *args)
+
     def GetNAStrI(self, *args):
         """
         GetNAStrI(self, TStr attr, int NId) -> TAStrI
@@ -20012,6 +20051,54 @@ class TNEANet(object):
 
         """
         return _snap.TNEANet_IntAttrValueNI(self, *args)
+
+    def IntVAttrNameNI(self, *args):
+        """
+        IntVAttrNameNI(self, TInt NId, TStrV Names)
+        Parameters:
+           NId: TInt const & value
+           Names: TStrV & value
+
+           NId: TInt const & value
+           Names: TStrV & value
+
+        IntVAttrNameNI(self, TInt NId, TStrIntPrH::TIter NodeHI, TStrV Names)
+        Parameters:
+           self: TNEANet const * value
+           NId: TInt const & value
+           NodeHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+           NId: TInt const & value
+           NodeHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+        """
+        return _snap.TNEANet_IntVAttrNameNI(self, *args)
+
+    def IntVAttrValueNI(self, *args):
+        """
+        IntVAttrValueNI(self, TInt NId, TVec<(TIntV)> Values)
+        Parameters:
+           NId: TInt const & value
+           Values: TVec< TIntV > & value
+
+           NId: TInt const & value
+           Values: TVec< TIntV > & value
+
+        IntVAttrValueNI(self, TInt NId, TStrIntPrH::TIter NodeHI, TVec<(TIntV)> Values)
+        Parameters:
+           self: TNEANet const * value
+           NId: TInt const & value
+           NodeHI: TStrIntPrH::TIter value
+           Values: TVec< TIntV > & value
+
+           NId: TInt const & value
+           NodeHI: TStrIntPrH::TIter value
+           Values: TVec< TIntV > & value
+
+        """
+        return _snap.TNEANet_IntVAttrValueNI(self, *args)
 
     def StrAttrNameNI(self, *args):
         """
@@ -20205,6 +20292,54 @@ class TNEANet(object):
         """
         return _snap.TNEANet_IntAttrValueEI(self, *args)
 
+    def IntVAttrNameEI(self, *args):
+        """
+        IntVAttrNameEI(self, TInt EId, TStrV Names)
+        Parameters:
+           EId: TInt const & value
+           Names: TStrV & value
+
+           EId: TInt const & value
+           Names: TStrV & value
+
+        IntVAttrNameEI(self, TInt EId, TStrIntPrH::TIter EdgeHI, TStrV Names)
+        Parameters:
+           self: TNEANet const * value
+           EId: TInt const & value
+           EdgeHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+           EId: TInt const & value
+           EdgeHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+        """
+        return _snap.TNEANet_IntVAttrNameEI(self, *args)
+
+    def IntVAttrValueEI(self, *args):
+        """
+        IntVAttrValueEI(self, TInt EId, TVec<(TIntV)> Values)
+        Parameters:
+           EId: TInt const & value
+           Values: TVec< TIntV > & value
+
+           EId: TInt const & value
+           Values: TVec< TIntV > & value
+
+        IntVAttrValueEI(self, TInt EId, TStrIntPrH::TIter EdgeHI, TVec<(TIntV)> Values)
+        Parameters:
+           self: TNEANet const * value
+           EId: TInt const & value
+           EdgeHI: TStrIntPrH::TIter value
+           Values: TVec< TIntV > & value
+
+           EId: TInt const & value
+           EdgeHI: TStrIntPrH::TIter value
+           Values: TVec< TIntV > & value
+
+        """
+        return _snap.TNEANet_IntVAttrValueEI(self, *args)
+
     def StrAttrNameEI(self, *args):
         """
         StrAttrNameEI(self, TInt EId, TStrV Names)
@@ -20314,6 +20449,44 @@ class TNEANet(object):
 
         """
         return _snap.TNEANet_GetEAIntI(self, *args)
+
+    def BegEAIntVI(self, *args):
+        """
+        BegEAIntVI(self, TStr attr) -> TAIntVI
+        Parameters:
+           self: TNEANet const * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.TNEANet_BegEAIntVI(self, *args)
+
+    def EndEAIntVI(self, *args):
+        """
+        EndEAIntVI(self, TStr attr) -> TAIntVI
+        Parameters:
+           self: TNEANet const * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.TNEANet_EndEAIntVI(self, *args)
+
+    def GetEAIntVI(self, *args):
+        """
+        GetEAIntVI(self, TStr attr, int EId) -> TAIntVI
+        Parameters:
+           self: TNEANet const * value
+           attr: TStr const & value
+           EId: int const & value
+
+           attr: TStr const & value
+           EId: int const & value
+
+        """
+        return _snap.TNEANet_GetEAIntVI(self, *args)
 
     def GetEAStrI(self, *args):
         """
@@ -20779,6 +20952,84 @@ class TNEANet(object):
         """
         return _snap.TNEANet_AddFltAttrDatN(self, *args)
 
+    def AddIntVAttrDatN(self, *args):
+        """
+        AddIntVAttrDatN(self, TNodeI NodeI, TIntV value, TStr attr) -> int
+        Parameters:
+           NodeI: TNEANet::TNodeI const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+           NodeI: TNEANet::TNodeI const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+        AddIntVAttrDatN(self, int NId, TIntV value, TStr attr) -> int
+        Parameters:
+           self: TNEANet * value
+           NId: int const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TNEANet_AddIntVAttrDatN(self, *args)
+
+    def AppendIntVAttrDatN(self, *args):
+        """
+        AppendIntVAttrDatN(self, TNodeI NodeI, TInt value, TStr attr) -> int
+        Parameters:
+           NodeI: TNEANet::TNodeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           NodeI: TNEANet::TNodeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+        AppendIntVAttrDatN(self, int NId, TInt value, TStr attr) -> int
+        Parameters:
+           self: TNEANet * value
+           NId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TNEANet_AppendIntVAttrDatN(self, *args)
+
+    def DelFromIntVAttrDatN(self, *args):
+        """
+        DelFromIntVAttrDatN(self, TNodeI NodeI, TInt value, TStr attr) -> int
+        Parameters:
+           NodeI: TNEANet::TNodeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           NodeI: TNEANet::TNodeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+        DelFromIntVAttrDatN(self, int NId, TInt value, TStr attr) -> int
+        Parameters:
+           self: TNEANet * value
+           NId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TNEANet_DelFromIntVAttrDatN(self, *args)
+
     def AddIntAttrDatE(self, *args):
         """
         AddIntAttrDatE(self, TEdgeI EdgeI, TInt value, TStr attr) -> int
@@ -20857,6 +21108,58 @@ class TNEANet(object):
         """
         return _snap.TNEANet_AddFltAttrDatE(self, *args)
 
+    def AddIntVAttrDatE(self, *args):
+        """
+        AddIntVAttrDatE(self, TEdgeI EdgeI, TIntV value, TStr attr) -> int
+        Parameters:
+           EdgeI: TNEANet::TEdgeI const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+           EdgeI: TNEANet::TEdgeI const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+        AddIntVAttrDatE(self, int EId, TIntV value, TStr attr) -> int
+        Parameters:
+           self: TNEANet * value
+           EId: int const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TNEANet_AddIntVAttrDatE(self, *args)
+
+    def AppendIntVAttrDatE(self, *args):
+        """
+        AppendIntVAttrDatE(self, TEdgeI EdgeI, TInt value, TStr attr) -> int
+        Parameters:
+           EdgeI: TNEANet::TEdgeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           EdgeI: TNEANet::TEdgeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+        AppendIntVAttrDatE(self, int EId, TInt value, TStr attr) -> int
+        Parameters:
+           self: TNEANet * value
+           EId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TNEANet_AppendIntVAttrDatE(self, *args)
+
     def GetIntAttrDatN(self, *args):
         """
         GetIntAttrDatN(self, TNodeI NodeI, TStr attr) -> TInt
@@ -20922,6 +21225,28 @@ class TNEANet(object):
 
         """
         return _snap.TNEANet_GetFltAttrDatN(self, *args)
+
+    def GetIntVAttrDatN(self, *args):
+        """
+        GetIntVAttrDatN(self, TNodeI NodeI, TStr attr) -> TIntV
+        Parameters:
+           NodeI: TNEANet::TNodeI const & value
+           attr: TStr const & value
+
+           NodeI: TNEANet::TNodeI const & value
+           attr: TStr const & value
+
+        GetIntVAttrDatN(self, int NId, TStr attr) -> TIntV
+        Parameters:
+           self: TNEANet const * value
+           NId: int const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TNEANet_GetIntVAttrDatN(self, *args)
 
     def GetIntAttrIndN(self, *args):
         """
@@ -21078,6 +21403,28 @@ class TNEANet(object):
 
         """
         return _snap.TNEANet_GetFltAttrDatE(self, *args)
+
+    def GetIntVAttrDatE(self, *args):
+        """
+        GetIntVAttrDatE(self, TEdgeI EdgeI, TStr attr) -> TIntV
+        Parameters:
+           EdgeI: TNEANet::TEdgeI const & value
+           attr: TStr const & value
+
+           EdgeI: TNEANet::TEdgeI const & value
+           attr: TStr const & value
+
+        GetIntVAttrDatE(self, int EId, TStr attr) -> TIntV
+        Parameters:
+           self: TNEANet * value
+           EId: int const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TNEANet_GetIntVAttrDatE(self, *args)
 
     def GetIntAttrIndE(self, *args):
         """
@@ -21273,6 +21620,18 @@ class TNEANet(object):
         """
         return _snap.TNEANet_AddFltAttrN(self, *args)
 
+    def AddIntVAttrN(self, *args):
+        """
+        AddIntVAttrN(self, TStr attr) -> int
+        Parameters:
+           self: TNEANet * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.TNEANet_AddIntVAttrN(self, *args)
+
     def AddIntAttrE(self, *args):
         """
         AddIntAttrE(self, TStr attr, TInt defaultValue = Mn) -> int
@@ -21333,6 +21692,18 @@ class TNEANet(object):
         """
         return _snap.TNEANet_AddFltAttrE(self, *args)
 
+    def AddIntVAttrE(self, *args):
+        """
+        AddIntVAttrE(self, TStr attr) -> int
+        Parameters:
+           self: TNEANet * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.TNEANet_AddIntVAttrE(self, *args)
+
     def DelAttrN(self, *args):
         """
         DelAttrN(self, TStr attr) -> int
@@ -21384,6 +21755,20 @@ class TNEANet(object):
 
         """
         return _snap.TNEANet_IsIntAttrDeletedN(self, *args)
+
+    def IsIntVAttrDeletedN(self, *args):
+        """
+        IsIntVAttrDeletedN(self, int NId, TStr attr) -> bool
+        Parameters:
+           self: TNEANet const * value
+           NId: int const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TNEANet_IsIntVAttrDeletedN(self, *args)
 
     def IsStrAttrDeletedN(self, *args):
         """
@@ -21441,6 +21826,20 @@ class TNEANet(object):
         """
         return _snap.TNEANet_NodeAttrIsIntDeleted(self, *args)
 
+    def NodeAttrIsIntVDeleted(self, *args):
+        """
+        NodeAttrIsIntVDeleted(self, int NId, TStrIntPrH::TIter NodeHI) -> bool
+        Parameters:
+           self: TNEANet const * value
+           NId: int const & value
+           NodeHI: TStrIntPrH::TIter const & value
+
+           NId: int const & value
+           NodeHI: TStrIntPrH::TIter const & value
+
+        """
+        return _snap.TNEANet_NodeAttrIsIntVDeleted(self, *args)
+
     def NodeAttrIsStrDeleted(self, *args):
         """
         NodeAttrIsStrDeleted(self, int NId, TStrIntPrH::TIter NodeHI) -> bool
@@ -21497,6 +21896,20 @@ class TNEANet(object):
         """
         return _snap.TNEANet_IsIntAttrDeletedE(self, *args)
 
+    def IsIntVAttrDeletedE(self, *args):
+        """
+        IsIntVAttrDeletedE(self, int EId, TStr attr) -> bool
+        Parameters:
+           self: TNEANet const * value
+           EId: int const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TNEANet_IsIntVAttrDeletedE(self, *args)
+
     def IsStrAttrDeletedE(self, *args):
         """
         IsStrAttrDeletedE(self, int EId, TStr attr) -> bool
@@ -21552,6 +21965,20 @@ class TNEANet(object):
 
         """
         return _snap.TNEANet_EdgeAttrIsIntDeleted(self, *args)
+
+    def EdgeAttrIsIntVDeleted(self, *args):
+        """
+        EdgeAttrIsIntVDeleted(self, int EId, TStrIntPrH::TIter EdgeHI) -> bool
+        Parameters:
+           self: TNEANet const * value
+           EId: int const & value
+           EdgeHI: TStrIntPrH::TIter const & value
+
+           EId: int const & value
+           EdgeHI: TStrIntPrH::TIter const & value
+
+        """
+        return _snap.TNEANet_EdgeAttrIsIntVDeleted(self, *args)
 
     def EdgeAttrIsStrDeleted(self, *args):
         """
@@ -22788,12 +23215,17 @@ TNEANet.AddNode = new_instancemethod(_snap.TNEANet_AddNode,None,TNEANet)
 TNEANet.DelNode = new_instancemethod(_snap.TNEANet_DelNode,None,TNEANet)
 TNEANet.IsNode = new_instancemethod(_snap.TNEANet_IsNode,None,TNEANet)
 TNEANet.GetNAIntI = new_instancemethod(_snap.TNEANet_GetNAIntI,None,TNEANet)
+TNEANet.BegNAIntVI = new_instancemethod(_snap.TNEANet_BegNAIntVI,None,TNEANet)
+TNEANet.EndNAIntVI = new_instancemethod(_snap.TNEANet_EndNAIntVI,None,TNEANet)
+TNEANet.GetNAIntVI = new_instancemethod(_snap.TNEANet_GetNAIntVI,None,TNEANet)
 TNEANet.GetNAStrI = new_instancemethod(_snap.TNEANet_GetNAStrI,None,TNEANet)
 TNEANet.GetNAFltI = new_instancemethod(_snap.TNEANet_GetNAFltI,None,TNEANet)
 TNEANet.AttrNameNI = new_instancemethod(_snap.TNEANet_AttrNameNI,None,TNEANet)
 TNEANet.AttrValueNI = new_instancemethod(_snap.TNEANet_AttrValueNI,None,TNEANet)
 TNEANet.IntAttrNameNI = new_instancemethod(_snap.TNEANet_IntAttrNameNI,None,TNEANet)
 TNEANet.IntAttrValueNI = new_instancemethod(_snap.TNEANet_IntAttrValueNI,None,TNEANet)
+TNEANet.IntVAttrNameNI = new_instancemethod(_snap.TNEANet_IntVAttrNameNI,None,TNEANet)
+TNEANet.IntVAttrValueNI = new_instancemethod(_snap.TNEANet_IntVAttrValueNI,None,TNEANet)
 TNEANet.StrAttrNameNI = new_instancemethod(_snap.TNEANet_StrAttrNameNI,None,TNEANet)
 TNEANet.StrAttrValueNI = new_instancemethod(_snap.TNEANet_StrAttrValueNI,None,TNEANet)
 TNEANet.FltAttrNameNI = new_instancemethod(_snap.TNEANet_FltAttrNameNI,None,TNEANet)
@@ -22802,11 +23234,16 @@ TNEANet.AttrNameEI = new_instancemethod(_snap.TNEANet_AttrNameEI,None,TNEANet)
 TNEANet.AttrValueEI = new_instancemethod(_snap.TNEANet_AttrValueEI,None,TNEANet)
 TNEANet.IntAttrNameEI = new_instancemethod(_snap.TNEANet_IntAttrNameEI,None,TNEANet)
 TNEANet.IntAttrValueEI = new_instancemethod(_snap.TNEANet_IntAttrValueEI,None,TNEANet)
+TNEANet.IntVAttrNameEI = new_instancemethod(_snap.TNEANet_IntVAttrNameEI,None,TNEANet)
+TNEANet.IntVAttrValueEI = new_instancemethod(_snap.TNEANet_IntVAttrValueEI,None,TNEANet)
 TNEANet.StrAttrNameEI = new_instancemethod(_snap.TNEANet_StrAttrNameEI,None,TNEANet)
 TNEANet.StrAttrValueEI = new_instancemethod(_snap.TNEANet_StrAttrValueEI,None,TNEANet)
 TNEANet.FltAttrNameEI = new_instancemethod(_snap.TNEANet_FltAttrNameEI,None,TNEANet)
 TNEANet.FltAttrValueEI = new_instancemethod(_snap.TNEANet_FltAttrValueEI,None,TNEANet)
 TNEANet.GetEAIntI = new_instancemethod(_snap.TNEANet_GetEAIntI,None,TNEANet)
+TNEANet.BegEAIntVI = new_instancemethod(_snap.TNEANet_BegEAIntVI,None,TNEANet)
+TNEANet.EndEAIntVI = new_instancemethod(_snap.TNEANet_EndEAIntVI,None,TNEANet)
+TNEANet.GetEAIntVI = new_instancemethod(_snap.TNEANet_GetEAIntVI,None,TNEANet)
 TNEANet.GetEAStrI = new_instancemethod(_snap.TNEANet_GetEAStrI,None,TNEANet)
 TNEANet.GetEAFltI = new_instancemethod(_snap.TNEANet_GetEAFltI,None,TNEANet)
 TNEANet.GetMxNId = new_instancemethod(_snap.TNEANet_GetMxNId,None,TNEANet)
@@ -22832,12 +23269,18 @@ TNEANet.Dump = new_instancemethod(_snap.TNEANet_Dump,None,TNEANet)
 TNEANet.AddIntAttrDatN = new_instancemethod(_snap.TNEANet_AddIntAttrDatN,None,TNEANet)
 TNEANet.AddStrAttrDatN = new_instancemethod(_snap.TNEANet_AddStrAttrDatN,None,TNEANet)
 TNEANet.AddFltAttrDatN = new_instancemethod(_snap.TNEANet_AddFltAttrDatN,None,TNEANet)
+TNEANet.AddIntVAttrDatN = new_instancemethod(_snap.TNEANet_AddIntVAttrDatN,None,TNEANet)
+TNEANet.AppendIntVAttrDatN = new_instancemethod(_snap.TNEANet_AppendIntVAttrDatN,None,TNEANet)
+TNEANet.DelFromIntVAttrDatN = new_instancemethod(_snap.TNEANet_DelFromIntVAttrDatN,None,TNEANet)
 TNEANet.AddIntAttrDatE = new_instancemethod(_snap.TNEANet_AddIntAttrDatE,None,TNEANet)
 TNEANet.AddStrAttrDatE = new_instancemethod(_snap.TNEANet_AddStrAttrDatE,None,TNEANet)
 TNEANet.AddFltAttrDatE = new_instancemethod(_snap.TNEANet_AddFltAttrDatE,None,TNEANet)
+TNEANet.AddIntVAttrDatE = new_instancemethod(_snap.TNEANet_AddIntVAttrDatE,None,TNEANet)
+TNEANet.AppendIntVAttrDatE = new_instancemethod(_snap.TNEANet_AppendIntVAttrDatE,None,TNEANet)
 TNEANet.GetIntAttrDatN = new_instancemethod(_snap.TNEANet_GetIntAttrDatN,None,TNEANet)
 TNEANet.GetStrAttrDatN = new_instancemethod(_snap.TNEANet_GetStrAttrDatN,None,TNEANet)
 TNEANet.GetFltAttrDatN = new_instancemethod(_snap.TNEANet_GetFltAttrDatN,None,TNEANet)
+TNEANet.GetIntVAttrDatN = new_instancemethod(_snap.TNEANet_GetIntVAttrDatN,None,TNEANet)
 TNEANet.GetIntAttrIndN = new_instancemethod(_snap.TNEANet_GetIntAttrIndN,None,TNEANet)
 TNEANet.GetAttrIndN = new_instancemethod(_snap.TNEANet_GetAttrIndN,None,TNEANet)
 TNEANet.GetIntAttrIndDatN = new_instancemethod(_snap.TNEANet_GetIntAttrIndDatN,None,TNEANet)
@@ -22846,6 +23289,7 @@ TNEANet.GetFltAttrIndDatN = new_instancemethod(_snap.TNEANet_GetFltAttrIndDatN,N
 TNEANet.GetIntAttrDatE = new_instancemethod(_snap.TNEANet_GetIntAttrDatE,None,TNEANet)
 TNEANet.GetStrAttrDatE = new_instancemethod(_snap.TNEANet_GetStrAttrDatE,None,TNEANet)
 TNEANet.GetFltAttrDatE = new_instancemethod(_snap.TNEANet_GetFltAttrDatE,None,TNEANet)
+TNEANet.GetIntVAttrDatE = new_instancemethod(_snap.TNEANet_GetIntVAttrDatE,None,TNEANet)
 TNEANet.GetIntAttrIndE = new_instancemethod(_snap.TNEANet_GetIntAttrIndE,None,TNEANet)
 TNEANet.GetAttrIndE = new_instancemethod(_snap.TNEANet_GetAttrIndE,None,TNEANet)
 TNEANet.GetIntAttrIndDatE = new_instancemethod(_snap.TNEANet_GetIntAttrIndDatE,None,TNEANet)
@@ -22856,25 +23300,31 @@ TNEANet.DelAttrDatE = new_instancemethod(_snap.TNEANet_DelAttrDatE,None,TNEANet)
 TNEANet.AddIntAttrN = new_instancemethod(_snap.TNEANet_AddIntAttrN,None,TNEANet)
 TNEANet.AddStrAttrN = new_instancemethod(_snap.TNEANet_AddStrAttrN,None,TNEANet)
 TNEANet.AddFltAttrN = new_instancemethod(_snap.TNEANet_AddFltAttrN,None,TNEANet)
+TNEANet.AddIntVAttrN = new_instancemethod(_snap.TNEANet_AddIntVAttrN,None,TNEANet)
 TNEANet.AddIntAttrE = new_instancemethod(_snap.TNEANet_AddIntAttrE,None,TNEANet)
 TNEANet.AddStrAttrE = new_instancemethod(_snap.TNEANet_AddStrAttrE,None,TNEANet)
 TNEANet.AddFltAttrE = new_instancemethod(_snap.TNEANet_AddFltAttrE,None,TNEANet)
+TNEANet.AddIntVAttrE = new_instancemethod(_snap.TNEANet_AddIntVAttrE,None,TNEANet)
 TNEANet.DelAttrN = new_instancemethod(_snap.TNEANet_DelAttrN,None,TNEANet)
 TNEANet.DelAttrE = new_instancemethod(_snap.TNEANet_DelAttrE,None,TNEANet)
 TNEANet.IsAttrDeletedN = new_instancemethod(_snap.TNEANet_IsAttrDeletedN,None,TNEANet)
 TNEANet.IsIntAttrDeletedN = new_instancemethod(_snap.TNEANet_IsIntAttrDeletedN,None,TNEANet)
+TNEANet.IsIntVAttrDeletedN = new_instancemethod(_snap.TNEANet_IsIntVAttrDeletedN,None,TNEANet)
 TNEANet.IsStrAttrDeletedN = new_instancemethod(_snap.TNEANet_IsStrAttrDeletedN,None,TNEANet)
 TNEANet.IsFltAttrDeletedN = new_instancemethod(_snap.TNEANet_IsFltAttrDeletedN,None,TNEANet)
 TNEANet.NodeAttrIsDeleted = new_instancemethod(_snap.TNEANet_NodeAttrIsDeleted,None,TNEANet)
 TNEANet.NodeAttrIsIntDeleted = new_instancemethod(_snap.TNEANet_NodeAttrIsIntDeleted,None,TNEANet)
+TNEANet.NodeAttrIsIntVDeleted = new_instancemethod(_snap.TNEANet_NodeAttrIsIntVDeleted,None,TNEANet)
 TNEANet.NodeAttrIsStrDeleted = new_instancemethod(_snap.TNEANet_NodeAttrIsStrDeleted,None,TNEANet)
 TNEANet.NodeAttrIsFltDeleted = new_instancemethod(_snap.TNEANet_NodeAttrIsFltDeleted,None,TNEANet)
 TNEANet.IsAttrDeletedE = new_instancemethod(_snap.TNEANet_IsAttrDeletedE,None,TNEANet)
 TNEANet.IsIntAttrDeletedE = new_instancemethod(_snap.TNEANet_IsIntAttrDeletedE,None,TNEANet)
+TNEANet.IsIntVAttrDeletedE = new_instancemethod(_snap.TNEANet_IsIntVAttrDeletedE,None,TNEANet)
 TNEANet.IsStrAttrDeletedE = new_instancemethod(_snap.TNEANet_IsStrAttrDeletedE,None,TNEANet)
 TNEANet.IsFltAttrDeletedE = new_instancemethod(_snap.TNEANet_IsFltAttrDeletedE,None,TNEANet)
 TNEANet.EdgeAttrIsDeleted = new_instancemethod(_snap.TNEANet_EdgeAttrIsDeleted,None,TNEANet)
 TNEANet.EdgeAttrIsIntDeleted = new_instancemethod(_snap.TNEANet_EdgeAttrIsIntDeleted,None,TNEANet)
+TNEANet.EdgeAttrIsIntVDeleted = new_instancemethod(_snap.TNEANet_EdgeAttrIsIntVDeleted,None,TNEANet)
 TNEANet.EdgeAttrIsStrDeleted = new_instancemethod(_snap.TNEANet_EdgeAttrIsStrDeleted,None,TNEANet)
 TNEANet.EdgeAttrIsFltDeleted = new_instancemethod(_snap.TNEANet_EdgeAttrIsFltDeleted,None,TNEANet)
 TNEANet.GetNodeAttrValue = new_instancemethod(_snap.TNEANet_GetNodeAttrValue,None,TNEANet)
@@ -25765,6 +26215,1634 @@ def TDirNet_GetSmallGraph():
   """TDirNet_GetSmallGraph() -> PDirNet"""
   return _snap.TDirNet_GetSmallGraph()
 
+class TModeNet(TNEANet):
+    """Proxy of C++ TModeNet class"""
+    thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        """
+        __init__(self) -> TModeNet
+        __init__(self, int TypeId) -> TModeNet
+        Parameters:
+           TypeId: int const & value
+
+           TypeId: int const & value
+
+        __init__(self, int Nodes, int Edges) -> TModeNet
+        Parameters:
+           Nodes: int const & value
+           Edges: int const & value
+
+           Nodes: int const & value
+           Edges: int const & value
+
+        __init__(self, int Nodes, int Edges, int TypeId) -> TModeNet
+        Parameters:
+           Nodes: int const & value
+           Edges: int const & value
+           TypeId: int const & value
+
+           Nodes: int const & value
+           Edges: int const & value
+           TypeId: int const & value
+
+        __init__(self, TModeNet Graph) -> TModeNet
+        Parameters:
+           Graph: TModeNet const & value
+
+           Graph: TModeNet const & value
+
+        __init__(self, TSIn SIn) -> TModeNet
+        Parameters:
+           SIn: TSIn & value
+
+           SIn: TSIn & value
+
+        """
+        _snap.TModeNet_swiginit(self,_snap.new_TModeNet(*args))
+    def GetPartitionRanges(self, *args):
+        """
+        GetPartitionRanges(self, TIntPrV Partitions, TInt NumPartitions)
+        Parameters:
+           self: TModeNet const * value
+           Partitions: TIntPrV & value
+           NumPartitions: TInt value
+
+           Partitions: TIntPrV & value
+           NumPartitions: TInt value
+
+        """
+        return _snap.TModeNet_GetPartitionRanges(self, *args)
+
+    def Save(self, *args):
+        """
+        Save(self, TSOut SOut)
+        Parameters:
+           self: TModeNet const * value
+           SOut: TSOut & value
+
+           SOut: TSOut & value
+
+        """
+        return _snap.TModeNet_Save(self, *args)
+
+    def GetCrossNetNames(self, *args):
+        """
+        GetCrossNetNames(self, TStrV Names)
+        Parameters:
+           self: TModeNet const * value
+           Names: TStrV & value
+
+           Names: TStrV & value
+
+        """
+        return _snap.TModeNet_GetCrossNetNames(self, *args)
+
+    def GetNeighborsByCrossNet(self, *args):
+        """
+        GetNeighborsByCrossNet(self, int NId, TStr Name, TIntV Neighbors, bool isOutEId = False)
+        Parameters:
+           NId: int const & value
+           Name: TStr & value
+           Neighbors: TIntV & value
+           isOutEId: bool const value
+
+           NId: int const & value
+           Name: TStr & value
+           Neighbors: TIntV & value
+           isOutEId: bool const value
+
+        GetNeighborsByCrossNet(self, int NId, TStr Name, TIntV Neighbors)
+        Parameters:
+           self: TModeNet const * value
+           NId: int const & value
+           Name: TStr & value
+           Neighbors: TIntV & value
+
+           NId: int const & value
+           Name: TStr & value
+           Neighbors: TIntV & value
+
+        """
+        return _snap.TModeNet_GetNeighborsByCrossNet(self, *args)
+
+    def Clr(self):
+        """
+        Clr(self)
+        Parameters:
+           self: TModeNet * value
+
+
+
+
+        """
+        return _snap.TModeNet_Clr(self)
+
+    def BegMMNI(self, *args):
+        """
+        BegMMNI(self) -> TNodeI
+        BegMMNI(self) -> TModeNetNodeI
+        Parameters:
+           self: TModeNet * value
+
+
+        """
+        return _snap.TModeNet_BegMMNI(self, *args)
+
+    def EndMMNI(self, *args):
+        """
+        EndMMNI(self) -> TNodeI
+        EndMMNI(self) -> TModeNetNodeI
+        Parameters:
+           self: TModeNet * value
+
+
+        """
+        return _snap.TModeNet_EndMMNI(self, *args)
+
+    def GetMMNI(self, *args):
+        """
+        GetMMNI(self, int NId) -> TNodeI
+        Parameters:
+           NId: int const & value
+
+           NId: int const & value
+
+        GetMMNI(self, int NId) -> TModeNetNodeI
+        Parameters:
+           self: TModeNet * value
+           NId: int const & value
+
+           NId: int const & value
+
+        """
+        return _snap.TModeNet_GetMMNI(self, *args)
+
+    __swig_destroy__ = _snap.delete_TModeNet
+TModeNet.GetPartitionRanges = new_instancemethod(_snap.TModeNet_GetPartitionRanges,None,TModeNet)
+TModeNet.Save = new_instancemethod(_snap.TModeNet_Save,None,TModeNet)
+TModeNet.GetCrossNetNames = new_instancemethod(_snap.TModeNet_GetCrossNetNames,None,TModeNet)
+TModeNet.GetNeighborsByCrossNet = new_instancemethod(_snap.TModeNet_GetNeighborsByCrossNet,None,TModeNet)
+TModeNet.Clr = new_instancemethod(_snap.TModeNet_Clr,None,TModeNet)
+TModeNet.BegMMNI = new_instancemethod(_snap.TModeNet_BegMMNI,None,TModeNet)
+TModeNet.EndMMNI = new_instancemethod(_snap.TModeNet_EndMMNI,None,TModeNet)
+TModeNet.GetMMNI = new_instancemethod(_snap.TModeNet_GetMMNI,None,TModeNet)
+TModeNet_swigregister = _snap.TModeNet_swigregister
+TModeNet_swigregister(TModeNet)
+
+class TCrossNet(object):
+    """Proxy of C++ TCrossNet class"""
+    thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
+    __repr__ = _swig_repr
+    CRef = _swig_property(_snap.TCrossNet_CRef_get)
+    def __init__(self, *args): 
+        """
+        __init__(self) -> TCrossNet
+        __init__(self, TInt MId1, TInt MId2, TInt LId) -> TCrossNet
+        Parameters:
+           MId1: TInt value
+           MId2: TInt value
+           LId: TInt value
+
+           MId1: TInt value
+           MId2: TInt value
+           LId: TInt value
+
+        __init__(self, TInt MId1, TInt MId2, TBool IsDir, TInt LId) -> TCrossNet
+        Parameters:
+           MId1: TInt value
+           MId2: TInt value
+           IsDir: TBool value
+           LId: TInt value
+
+           MId1: TInt value
+           MId2: TInt value
+           IsDir: TBool value
+           LId: TInt value
+
+        __init__(self, TSIn SIn) -> TCrossNet
+        Parameters:
+           SIn: TSIn & value
+
+           SIn: TSIn & value
+
+        __init__(self, TCrossNet OtherTCrossNet) -> TCrossNet
+        Parameters:
+           OtherTCrossNet: TCrossNet const & value
+
+           OtherTCrossNet: TCrossNet const & value
+
+        """
+        _snap.TCrossNet_swiginit(self,_snap.new_TCrossNet(*args))
+    def IsEdge(self, *args):
+        """
+        IsEdge(self, int EId) -> bool
+        Parameters:
+           self: TCrossNet const * value
+           EId: int const & value
+
+           EId: int const & value
+
+        """
+        return _snap.TCrossNet_IsEdge(self, *args)
+
+    def GetPartitionRanges(self, *args):
+        """
+        GetPartitionRanges(self, TIntPrV Partitions, TInt NumPartitions)
+        Parameters:
+           self: TCrossNet const * value
+           Partitions: TIntPrV & value
+           NumPartitions: TInt value
+
+           Partitions: TIntPrV & value
+           NumPartitions: TInt value
+
+        """
+        return _snap.TCrossNet_GetPartitionRanges(self, *args)
+
+    def GetMxEId(self):
+        """
+        GetMxEId(self) -> int
+        Parameters:
+           self: TCrossNet const * value
+
+
+
+
+        """
+        return _snap.TCrossNet_GetMxEId(self)
+
+    def GetEdges(self):
+        """
+        GetEdges(self) -> int
+        Parameters:
+           self: TCrossNet const * value
+
+
+
+
+        """
+        return _snap.TCrossNet_GetEdges(self)
+
+    def Clr(self):
+        """
+        Clr(self)
+        Parameters:
+           self: TCrossNet * value
+
+
+
+
+        """
+        return _snap.TCrossNet_Clr(self)
+
+    def GetCrossEdge(self, *args):
+        """
+        GetCrossEdge(self, int EId) -> TCrossEdge
+        Parameters:
+           self: TCrossNet * value
+           EId: int const & value
+
+           EId: int const & value
+
+        """
+        return _snap.TCrossNet_GetCrossEdge(self, *args)
+
+    def AddEdge(self, *args):
+        """
+        AddEdge(self, int sourceNId, int destNId, int EId = -1) -> int
+        Parameters:
+           sourceNId: int const & value
+           destNId: int const & value
+           EId: int value
+
+           sourceNId: int const & value
+           destNId: int const & value
+           EId: int value
+
+        AddEdge(self, int sourceNId, int destNId) -> int
+        Parameters:
+           self: TCrossNet * value
+           sourceNId: int const & value
+           destNId: int const & value
+
+           sourceNId: int const & value
+           destNId: int const & value
+
+        """
+        return _snap.TCrossNet_AddEdge(self, *args)
+
+    def GetEdgeI(self, *args):
+        """
+        GetEdgeI(self, int EId) -> TCrossEdgeI
+        Parameters:
+           self: TCrossNet const * value
+           EId: int const & value
+
+           EId: int const & value
+
+        """
+        return _snap.TCrossNet_GetEdgeI(self, *args)
+
+    def BegEdgeI(self):
+        """
+        BegEdgeI(self) -> TCrossEdgeI
+        Parameters:
+           self: TCrossNet const * value
+
+
+
+
+        """
+        return _snap.TCrossNet_BegEdgeI(self)
+
+    def EndEdgeI(self):
+        """
+        EndEdgeI(self) -> TCrossEdgeI
+        Parameters:
+           self: TCrossNet const * value
+
+
+
+
+        """
+        return _snap.TCrossNet_EndEdgeI(self)
+
+    def DelEdge(self, *args):
+        """
+        DelEdge(self, int EId) -> int
+        Parameters:
+           self: TCrossNet * value
+           EId: int const & value
+
+           EId: int const & value
+
+        """
+        return _snap.TCrossNet_DelEdge(self, *args)
+
+    def GetMode1(self):
+        """
+        GetMode1(self) -> int
+        Parameters:
+           self: TCrossNet const * value
+
+
+
+
+        """
+        return _snap.TCrossNet_GetMode1(self)
+
+    def GetMode2(self):
+        """
+        GetMode2(self) -> int
+        Parameters:
+           self: TCrossNet const * value
+
+
+
+
+        """
+        return _snap.TCrossNet_GetMode2(self)
+
+    def Save(self, *args):
+        """
+        Save(self, TSOut SOut)
+        Parameters:
+           self: TCrossNet const * value
+           SOut: TSOut & value
+
+           SOut: TSOut & value
+
+        """
+        return _snap.TCrossNet_Save(self, *args)
+
+    def IsDirected(self):
+        """
+        IsDirected(self) -> bool
+        Parameters:
+           self: TCrossNet const * value
+
+
+
+
+        """
+        return _snap.TCrossNet_IsDirected(self)
+
+    def AttrNameEI(self, *args):
+        """
+        AttrNameEI(self, TInt EId, TStrV Names)
+        Parameters:
+           EId: TInt const & value
+           Names: TStrV & value
+
+           EId: TInt const & value
+           Names: TStrV & value
+
+        AttrNameEI(self, TInt EId, TStrIntPrH::TIter CrossHI, TStrV Names)
+        Parameters:
+           self: TCrossNet const * value
+           EId: TInt const & value
+           CrossHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+           EId: TInt const & value
+           CrossHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+        """
+        return _snap.TCrossNet_AttrNameEI(self, *args)
+
+    def AttrValueEI(self, *args):
+        """
+        AttrValueEI(self, TInt EId, TStrV Values)
+        Parameters:
+           EId: TInt const & value
+           Values: TStrV & value
+
+           EId: TInt const & value
+           Values: TStrV & value
+
+        AttrValueEI(self, TInt EId, TStrIntPrH::TIter CrossHI, TStrV Values)
+        Parameters:
+           self: TCrossNet const * value
+           EId: TInt const & value
+           CrossHI: TStrIntPrH::TIter value
+           Values: TStrV & value
+
+           EId: TInt const & value
+           CrossHI: TStrIntPrH::TIter value
+           Values: TStrV & value
+
+        """
+        return _snap.TCrossNet_AttrValueEI(self, *args)
+
+    def IntAttrNameEI(self, *args):
+        """
+        IntAttrNameEI(self, TInt EId, TStrV Names)
+        Parameters:
+           EId: TInt const & value
+           Names: TStrV & value
+
+           EId: TInt const & value
+           Names: TStrV & value
+
+        IntAttrNameEI(self, TInt EId, TStrIntPrH::TIter CrossHI, TStrV Names)
+        Parameters:
+           self: TCrossNet const * value
+           EId: TInt const & value
+           CrossHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+           EId: TInt const & value
+           CrossHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+        """
+        return _snap.TCrossNet_IntAttrNameEI(self, *args)
+
+    def IntAttrValueEI(self, *args):
+        """
+        IntAttrValueEI(self, TInt EId, TIntV Values)
+        Parameters:
+           EId: TInt const & value
+           Values: TIntV & value
+
+           EId: TInt const & value
+           Values: TIntV & value
+
+        IntAttrValueEI(self, TInt EId, TStrIntPrH::TIter CrossHI, TIntV Values)
+        Parameters:
+           self: TCrossNet const * value
+           EId: TInt const & value
+           CrossHI: TStrIntPrH::TIter value
+           Values: TIntV & value
+
+           EId: TInt const & value
+           CrossHI: TStrIntPrH::TIter value
+           Values: TIntV & value
+
+        """
+        return _snap.TCrossNet_IntAttrValueEI(self, *args)
+
+    def StrAttrNameEI(self, *args):
+        """
+        StrAttrNameEI(self, TInt EId, TStrV Names)
+        Parameters:
+           EId: TInt const & value
+           Names: TStrV & value
+
+           EId: TInt const & value
+           Names: TStrV & value
+
+        StrAttrNameEI(self, TInt EId, TStrIntPrH::TIter CrossHI, TStrV Names)
+        Parameters:
+           self: TCrossNet const * value
+           EId: TInt const & value
+           CrossHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+           EId: TInt const & value
+           CrossHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+        """
+        return _snap.TCrossNet_StrAttrNameEI(self, *args)
+
+    def StrAttrValueEI(self, *args):
+        """
+        StrAttrValueEI(self, TInt EId, TStrV Values)
+        Parameters:
+           EId: TInt const & value
+           Values: TStrV & value
+
+           EId: TInt const & value
+           Values: TStrV & value
+
+        StrAttrValueEI(self, TInt EId, TStrIntPrH::TIter CrossHI, TStrV Values)
+        Parameters:
+           self: TCrossNet const * value
+           EId: TInt const & value
+           CrossHI: TStrIntPrH::TIter value
+           Values: TStrV & value
+
+           EId: TInt const & value
+           CrossHI: TStrIntPrH::TIter value
+           Values: TStrV & value
+
+        """
+        return _snap.TCrossNet_StrAttrValueEI(self, *args)
+
+    def FltAttrNameEI(self, *args):
+        """
+        FltAttrNameEI(self, TInt EId, TStrV Names)
+        Parameters:
+           EId: TInt const & value
+           Names: TStrV & value
+
+           EId: TInt const & value
+           Names: TStrV & value
+
+        FltAttrNameEI(self, TInt EId, TStrIntPrH::TIter CrossHI, TStrV Names)
+        Parameters:
+           self: TCrossNet const * value
+           EId: TInt const & value
+           CrossHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+           EId: TInt const & value
+           CrossHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+        """
+        return _snap.TCrossNet_FltAttrNameEI(self, *args)
+
+    def FltAttrValueEI(self, *args):
+        """
+        FltAttrValueEI(self, TInt EId, TFltV Values)
+        Parameters:
+           EId: TInt const & value
+           Values: TFltV & value
+
+           EId: TInt const & value
+           Values: TFltV & value
+
+        FltAttrValueEI(self, TInt EId, TStrIntPrH::TIter CrossHI, TFltV Values)
+        Parameters:
+           self: TCrossNet const * value
+           EId: TInt const & value
+           CrossHI: TStrIntPrH::TIter value
+           Values: TFltV & value
+
+           EId: TInt const & value
+           CrossHI: TStrIntPrH::TIter value
+           Values: TFltV & value
+
+        """
+        return _snap.TCrossNet_FltAttrValueEI(self, *args)
+
+    def AddIntAttrDatE(self, *args):
+        """
+        AddIntAttrDatE(self, TCrossEdgeI EdgeI, TInt value, TStr attr) -> int
+        Parameters:
+           EdgeI: TCrossNet::TCrossEdgeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           EdgeI: TCrossNet::TCrossEdgeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+        AddIntAttrDatE(self, int EId, TInt value, TStr attr) -> int
+        Parameters:
+           self: TCrossNet * value
+           EId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_AddIntAttrDatE(self, *args)
+
+    def AddStrAttrDatE(self, *args):
+        """
+        AddStrAttrDatE(self, TCrossEdgeI EdgeI, TStr value, TStr attr) -> int
+        Parameters:
+           EdgeI: TCrossNet::TCrossEdgeI const & value
+           value: TStr const & value
+           attr: TStr const & value
+
+           EdgeI: TCrossNet::TCrossEdgeI const & value
+           value: TStr const & value
+           attr: TStr const & value
+
+        AddStrAttrDatE(self, int EId, TStr value, TStr attr) -> int
+        Parameters:
+           self: TCrossNet * value
+           EId: int const & value
+           value: TStr const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           value: TStr const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_AddStrAttrDatE(self, *args)
+
+    def AddFltAttrDatE(self, *args):
+        """
+        AddFltAttrDatE(self, TCrossEdgeI EdgeI, TFlt value, TStr attr) -> int
+        Parameters:
+           EdgeI: TCrossNet::TCrossEdgeI const & value
+           value: TFlt const & value
+           attr: TStr const & value
+
+           EdgeI: TCrossNet::TCrossEdgeI const & value
+           value: TFlt const & value
+           attr: TStr const & value
+
+        AddFltAttrDatE(self, int EId, TFlt value, TStr attr) -> int
+        Parameters:
+           self: TCrossNet * value
+           EId: int const & value
+           value: TFlt const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           value: TFlt const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_AddFltAttrDatE(self, *args)
+
+    def GetIntAttrDatE(self, *args):
+        """
+        GetIntAttrDatE(self, TCrossEdgeI EdgeI, TStr attr) -> TInt
+        Parameters:
+           EdgeI: TCrossNet::TCrossEdgeI const & value
+           attr: TStr const & value
+
+           EdgeI: TCrossNet::TCrossEdgeI const & value
+           attr: TStr const & value
+
+        GetIntAttrDatE(self, int EId, TStr attr) -> TInt
+        Parameters:
+           self: TCrossNet * value
+           EId: int const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_GetIntAttrDatE(self, *args)
+
+    def GetStrAttrDatE(self, *args):
+        """
+        GetStrAttrDatE(self, TCrossEdgeI EdgeI, TStr attr) -> TStr
+        Parameters:
+           EdgeI: TCrossNet::TCrossEdgeI const & value
+           attr: TStr const & value
+
+           EdgeI: TCrossNet::TCrossEdgeI const & value
+           attr: TStr const & value
+
+        GetStrAttrDatE(self, int EId, TStr attr) -> TStr
+        Parameters:
+           self: TCrossNet * value
+           EId: int const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_GetStrAttrDatE(self, *args)
+
+    def GetFltAttrDatE(self, *args):
+        """
+        GetFltAttrDatE(self, TCrossEdgeI EdgeI, TStr attr) -> TFlt
+        Parameters:
+           EdgeI: TCrossNet::TCrossEdgeI const & value
+           attr: TStr const & value
+
+           EdgeI: TCrossNet::TCrossEdgeI const & value
+           attr: TStr const & value
+
+        GetFltAttrDatE(self, int EId, TStr attr) -> TFlt
+        Parameters:
+           self: TCrossNet * value
+           EId: int const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_GetFltAttrDatE(self, *args)
+
+    def GetEAIntI(self, *args):
+        """
+        GetEAIntI(self, TStr attr, int EId) -> TAIntI
+        Parameters:
+           self: TCrossNet const * value
+           attr: TStr const & value
+           EId: int const & value
+
+           attr: TStr const & value
+           EId: int const & value
+
+        """
+        return _snap.TCrossNet_GetEAIntI(self, *args)
+
+    def GetEAStrI(self, *args):
+        """
+        GetEAStrI(self, TStr attr, int EId) -> TAStrI
+        Parameters:
+           self: TCrossNet const * value
+           attr: TStr const & value
+           EId: int const & value
+
+           attr: TStr const & value
+           EId: int const & value
+
+        """
+        return _snap.TCrossNet_GetEAStrI(self, *args)
+
+    def GetEAFltI(self, *args):
+        """
+        GetEAFltI(self, TStr attr, int EId) -> TAFltI
+        Parameters:
+           self: TCrossNet const * value
+           attr: TStr const & value
+           EId: int const & value
+
+           attr: TStr const & value
+           EId: int const & value
+
+        """
+        return _snap.TCrossNet_GetEAFltI(self, *args)
+
+    def DelAttrDatE(self, *args):
+        """
+        DelAttrDatE(self, TCrossEdgeI EdgeI, TStr attr) -> int
+        Parameters:
+           EdgeI: TCrossNet::TCrossEdgeI const & value
+           attr: TStr const & value
+
+           EdgeI: TCrossNet::TCrossEdgeI const & value
+           attr: TStr const & value
+
+        DelAttrDatE(self, int EId, TStr attr) -> int
+        Parameters:
+           self: TCrossNet * value
+           EId: int const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_DelAttrDatE(self, *args)
+
+    def AddIntAttrE(self, *args):
+        """
+        AddIntAttrE(self, TStr attr, TInt defaultValue = Mn) -> int
+        Parameters:
+           attr: TStr const & value
+           defaultValue: TInt value
+
+           attr: TStr const & value
+           defaultValue: TInt value
+
+        AddIntAttrE(self, TStr attr) -> int
+        Parameters:
+           self: TCrossNet * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_AddIntAttrE(self, *args)
+
+    def AddStrAttrE(self, *args):
+        """
+        AddStrAttrE(self, TStr attr, TStr defaultValue = TStr::GetNullStr()) -> int
+        Parameters:
+           attr: TStr const & value
+           defaultValue: TStr value
+
+           attr: TStr const & value
+           defaultValue: TStr value
+
+        AddStrAttrE(self, TStr attr) -> int
+        Parameters:
+           self: TCrossNet * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_AddStrAttrE(self, *args)
+
+    def AddFltAttrE(self, *args):
+        """
+        AddFltAttrE(self, TStr attr, TFlt defaultValue = Mn) -> int
+        Parameters:
+           attr: TStr const & value
+           defaultValue: TFlt value
+
+           attr: TStr const & value
+           defaultValue: TFlt value
+
+        AddFltAttrE(self, TStr attr) -> int
+        Parameters:
+           self: TCrossNet * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_AddFltAttrE(self, *args)
+
+    def DelAttrE(self, *args):
+        """
+        DelAttrE(self, TStr attr) -> int
+        Parameters:
+           self: TCrossNet * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_DelAttrE(self, *args)
+
+    def IsAttrDeletedE(self, *args):
+        """
+        IsAttrDeletedE(self, int EId, TStr attr) -> bool
+        Parameters:
+           self: TCrossNet const * value
+           EId: int const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_IsAttrDeletedE(self, *args)
+
+    def IsIntAttrDeletedE(self, *args):
+        """
+        IsIntAttrDeletedE(self, int EId, TStr attr) -> bool
+        Parameters:
+           self: TCrossNet const * value
+           EId: int const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_IsIntAttrDeletedE(self, *args)
+
+    def IsStrAttrDeletedE(self, *args):
+        """
+        IsStrAttrDeletedE(self, int EId, TStr attr) -> bool
+        Parameters:
+           self: TCrossNet const * value
+           EId: int const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_IsStrAttrDeletedE(self, *args)
+
+    def IsFltAttrDeletedE(self, *args):
+        """
+        IsFltAttrDeletedE(self, int EId, TStr attr) -> bool
+        Parameters:
+           self: TCrossNet const * value
+           EId: int const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_IsFltAttrDeletedE(self, *args)
+
+    def EdgeAttrIsDeleted(self, *args):
+        """
+        EdgeAttrIsDeleted(self, int EId, TStrIntPrH::TIter CrossHI) -> bool
+        Parameters:
+           self: TCrossNet const * value
+           EId: int const & value
+           CrossHI: TStrIntPrH::TIter const & value
+
+           EId: int const & value
+           CrossHI: TStrIntPrH::TIter const & value
+
+        """
+        return _snap.TCrossNet_EdgeAttrIsDeleted(self, *args)
+
+    def EdgeAttrIsIntDeleted(self, *args):
+        """
+        EdgeAttrIsIntDeleted(self, int EId, TStrIntPrH::TIter CrossHI) -> bool
+        Parameters:
+           self: TCrossNet const * value
+           EId: int const & value
+           CrossHI: TStrIntPrH::TIter const & value
+
+           EId: int const & value
+           CrossHI: TStrIntPrH::TIter const & value
+
+        """
+        return _snap.TCrossNet_EdgeAttrIsIntDeleted(self, *args)
+
+    def EdgeAttrIsStrDeleted(self, *args):
+        """
+        EdgeAttrIsStrDeleted(self, int EId, TStrIntPrH::TIter CrossHI) -> bool
+        Parameters:
+           self: TCrossNet const * value
+           EId: int const & value
+           CrossHI: TStrIntPrH::TIter const & value
+
+           EId: int const & value
+           CrossHI: TStrIntPrH::TIter const & value
+
+        """
+        return _snap.TCrossNet_EdgeAttrIsStrDeleted(self, *args)
+
+    def EdgeAttrIsFltDeleted(self, *args):
+        """
+        EdgeAttrIsFltDeleted(self, int EId, TStrIntPrH::TIter CrossHI) -> bool
+        Parameters:
+           self: TCrossNet const * value
+           EId: int const & value
+           CrossHI: TStrIntPrH::TIter const & value
+
+           EId: int const & value
+           CrossHI: TStrIntPrH::TIter const & value
+
+        """
+        return _snap.TCrossNet_EdgeAttrIsFltDeleted(self, *args)
+
+    def GetEdgeAttrValue(self, *args):
+        """
+        GetEdgeAttrValue(self, int EId, TStrIntPrH::TIter CrossHI) -> TStr
+        Parameters:
+           self: TCrossNet const * value
+           EId: int const & value
+           CrossHI: TStrIntPrH::TIter const & value
+
+           EId: int const & value
+           CrossHI: TStrIntPrH::TIter const & value
+
+        """
+        return _snap.TCrossNet_GetEdgeAttrValue(self, *args)
+
+    def BegEI(self):
+        """
+        BegEI(self) -> TCrossNetEdgeI
+        Parameters:
+           self: TCrossNet * value
+
+
+
+
+        """
+        return _snap.TCrossNet_BegEI(self)
+
+    def EndEI(self):
+        """
+        EndEI(self) -> TCrossNetEdgeI
+        Parameters:
+           self: TCrossNet * value
+
+
+
+
+        """
+        return _snap.TCrossNet_EndEI(self)
+
+    def BegEAIntI(self, *args):
+        """
+        BegEAIntI(self, TStr attr) -> TAIntI
+        Parameters:
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        BegEAIntI(self, TStr attr) -> TCrossNetAIntI
+        Parameters:
+           self: TCrossNet * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_BegEAIntI(self, *args)
+
+    def EndEAIntI(self, *args):
+        """
+        EndEAIntI(self, TStr attr) -> TAIntI
+        Parameters:
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        EndEAIntI(self, TStr attr) -> TCrossNetAIntI
+        Parameters:
+           self: TCrossNet * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_EndEAIntI(self, *args)
+
+    def BegEAStrI(self, *args):
+        """
+        BegEAStrI(self, TStr attr) -> TAStrI
+        Parameters:
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        BegEAStrI(self, TStr attr) -> TCrossNetAStrI
+        Parameters:
+           self: TCrossNet * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_BegEAStrI(self, *args)
+
+    def EndEAStrI(self, *args):
+        """
+        EndEAStrI(self, TStr attr) -> TAStrI
+        Parameters:
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        EndEAStrI(self, TStr attr) -> TCrossNetAStrI
+        Parameters:
+           self: TCrossNet * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_EndEAStrI(self, *args)
+
+    def BegEAFltI(self, *args):
+        """
+        BegEAFltI(self, TStr attr) -> TAFltI
+        Parameters:
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        BegEAFltI(self, TStr attr) -> TCrossNetAFltI
+        Parameters:
+           self: TCrossNet * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_BegEAFltI(self, *args)
+
+    def EndEAFltI(self, *args):
+        """
+        EndEAFltI(self, TStr attr) -> TAFltI
+        Parameters:
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        EndEAFltI(self, TStr attr) -> TCrossNetAFltI
+        Parameters:
+           self: TCrossNet * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.TCrossNet_EndEAFltI(self, *args)
+
+    __swig_destroy__ = _snap.delete_TCrossNet
+TCrossNet.IsEdge = new_instancemethod(_snap.TCrossNet_IsEdge,None,TCrossNet)
+TCrossNet.GetPartitionRanges = new_instancemethod(_snap.TCrossNet_GetPartitionRanges,None,TCrossNet)
+TCrossNet.GetMxEId = new_instancemethod(_snap.TCrossNet_GetMxEId,None,TCrossNet)
+TCrossNet.GetEdges = new_instancemethod(_snap.TCrossNet_GetEdges,None,TCrossNet)
+TCrossNet.Clr = new_instancemethod(_snap.TCrossNet_Clr,None,TCrossNet)
+TCrossNet.GetCrossEdge = new_instancemethod(_snap.TCrossNet_GetCrossEdge,None,TCrossNet)
+TCrossNet.AddEdge = new_instancemethod(_snap.TCrossNet_AddEdge,None,TCrossNet)
+TCrossNet.GetEdgeI = new_instancemethod(_snap.TCrossNet_GetEdgeI,None,TCrossNet)
+TCrossNet.BegEdgeI = new_instancemethod(_snap.TCrossNet_BegEdgeI,None,TCrossNet)
+TCrossNet.EndEdgeI = new_instancemethod(_snap.TCrossNet_EndEdgeI,None,TCrossNet)
+TCrossNet.DelEdge = new_instancemethod(_snap.TCrossNet_DelEdge,None,TCrossNet)
+TCrossNet.GetMode1 = new_instancemethod(_snap.TCrossNet_GetMode1,None,TCrossNet)
+TCrossNet.GetMode2 = new_instancemethod(_snap.TCrossNet_GetMode2,None,TCrossNet)
+TCrossNet.Save = new_instancemethod(_snap.TCrossNet_Save,None,TCrossNet)
+TCrossNet.IsDirected = new_instancemethod(_snap.TCrossNet_IsDirected,None,TCrossNet)
+TCrossNet.AttrNameEI = new_instancemethod(_snap.TCrossNet_AttrNameEI,None,TCrossNet)
+TCrossNet.AttrValueEI = new_instancemethod(_snap.TCrossNet_AttrValueEI,None,TCrossNet)
+TCrossNet.IntAttrNameEI = new_instancemethod(_snap.TCrossNet_IntAttrNameEI,None,TCrossNet)
+TCrossNet.IntAttrValueEI = new_instancemethod(_snap.TCrossNet_IntAttrValueEI,None,TCrossNet)
+TCrossNet.StrAttrNameEI = new_instancemethod(_snap.TCrossNet_StrAttrNameEI,None,TCrossNet)
+TCrossNet.StrAttrValueEI = new_instancemethod(_snap.TCrossNet_StrAttrValueEI,None,TCrossNet)
+TCrossNet.FltAttrNameEI = new_instancemethod(_snap.TCrossNet_FltAttrNameEI,None,TCrossNet)
+TCrossNet.FltAttrValueEI = new_instancemethod(_snap.TCrossNet_FltAttrValueEI,None,TCrossNet)
+TCrossNet.AddIntAttrDatE = new_instancemethod(_snap.TCrossNet_AddIntAttrDatE,None,TCrossNet)
+TCrossNet.AddStrAttrDatE = new_instancemethod(_snap.TCrossNet_AddStrAttrDatE,None,TCrossNet)
+TCrossNet.AddFltAttrDatE = new_instancemethod(_snap.TCrossNet_AddFltAttrDatE,None,TCrossNet)
+TCrossNet.GetIntAttrDatE = new_instancemethod(_snap.TCrossNet_GetIntAttrDatE,None,TCrossNet)
+TCrossNet.GetStrAttrDatE = new_instancemethod(_snap.TCrossNet_GetStrAttrDatE,None,TCrossNet)
+TCrossNet.GetFltAttrDatE = new_instancemethod(_snap.TCrossNet_GetFltAttrDatE,None,TCrossNet)
+TCrossNet.GetEAIntI = new_instancemethod(_snap.TCrossNet_GetEAIntI,None,TCrossNet)
+TCrossNet.GetEAStrI = new_instancemethod(_snap.TCrossNet_GetEAStrI,None,TCrossNet)
+TCrossNet.GetEAFltI = new_instancemethod(_snap.TCrossNet_GetEAFltI,None,TCrossNet)
+TCrossNet.DelAttrDatE = new_instancemethod(_snap.TCrossNet_DelAttrDatE,None,TCrossNet)
+TCrossNet.AddIntAttrE = new_instancemethod(_snap.TCrossNet_AddIntAttrE,None,TCrossNet)
+TCrossNet.AddStrAttrE = new_instancemethod(_snap.TCrossNet_AddStrAttrE,None,TCrossNet)
+TCrossNet.AddFltAttrE = new_instancemethod(_snap.TCrossNet_AddFltAttrE,None,TCrossNet)
+TCrossNet.DelAttrE = new_instancemethod(_snap.TCrossNet_DelAttrE,None,TCrossNet)
+TCrossNet.IsAttrDeletedE = new_instancemethod(_snap.TCrossNet_IsAttrDeletedE,None,TCrossNet)
+TCrossNet.IsIntAttrDeletedE = new_instancemethod(_snap.TCrossNet_IsIntAttrDeletedE,None,TCrossNet)
+TCrossNet.IsStrAttrDeletedE = new_instancemethod(_snap.TCrossNet_IsStrAttrDeletedE,None,TCrossNet)
+TCrossNet.IsFltAttrDeletedE = new_instancemethod(_snap.TCrossNet_IsFltAttrDeletedE,None,TCrossNet)
+TCrossNet.EdgeAttrIsDeleted = new_instancemethod(_snap.TCrossNet_EdgeAttrIsDeleted,None,TCrossNet)
+TCrossNet.EdgeAttrIsIntDeleted = new_instancemethod(_snap.TCrossNet_EdgeAttrIsIntDeleted,None,TCrossNet)
+TCrossNet.EdgeAttrIsStrDeleted = new_instancemethod(_snap.TCrossNet_EdgeAttrIsStrDeleted,None,TCrossNet)
+TCrossNet.EdgeAttrIsFltDeleted = new_instancemethod(_snap.TCrossNet_EdgeAttrIsFltDeleted,None,TCrossNet)
+TCrossNet.GetEdgeAttrValue = new_instancemethod(_snap.TCrossNet_GetEdgeAttrValue,None,TCrossNet)
+TCrossNet.BegEI = new_instancemethod(_snap.TCrossNet_BegEI,None,TCrossNet)
+TCrossNet.EndEI = new_instancemethod(_snap.TCrossNet_EndEI,None,TCrossNet)
+TCrossNet.BegEAIntI = new_instancemethod(_snap.TCrossNet_BegEAIntI,None,TCrossNet)
+TCrossNet.EndEAIntI = new_instancemethod(_snap.TCrossNet_EndEAIntI,None,TCrossNet)
+TCrossNet.BegEAStrI = new_instancemethod(_snap.TCrossNet_BegEAStrI,None,TCrossNet)
+TCrossNet.EndEAStrI = new_instancemethod(_snap.TCrossNet_EndEAStrI,None,TCrossNet)
+TCrossNet.BegEAFltI = new_instancemethod(_snap.TCrossNet_BegEAFltI,None,TCrossNet)
+TCrossNet.EndEAFltI = new_instancemethod(_snap.TCrossNet_EndEAFltI,None,TCrossNet)
+TCrossNet_swigregister = _snap.TCrossNet_swigregister
+TCrossNet_swigregister(TCrossNet)
+
+class TMMNet(object):
+    """Proxy of C++ TMMNet class"""
+    thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
+    __repr__ = _swig_repr
+    CRef = _swig_property(_snap.TMMNet_CRef_get)
+    def __init__(self, *args): 
+        """
+        __init__(self) -> TMMNet
+        __init__(self, TMMNet OtherTMMNet) -> TMMNet
+        Parameters:
+           OtherTMMNet: TMMNet const & value
+
+           OtherTMMNet: TMMNet const & value
+
+        __init__(self, TSIn SIn) -> TMMNet
+        Parameters:
+           SIn: TSIn & value
+
+           SIn: TSIn & value
+
+        """
+        _snap.TMMNet_swiginit(self,_snap.new_TMMNet(*args))
+    def AddMode(self, *args):
+        """
+        AddMode(self, TStr ModeName) -> int
+        Parameters:
+           self: TMMNet * value
+           ModeName: TStr const & value
+
+           ModeName: TStr const & value
+
+        """
+        return _snap.TMMNet_AddMode(self, *args)
+
+    def DelMode(self, *args):
+        """
+        DelMode(self, TInt ModeId) -> int
+        Parameters:
+           ModeId: TInt const & value
+
+           ModeId: TInt const & value
+
+        DelMode(self, TStr ModeName) -> int
+        Parameters:
+           self: TMMNet * value
+           ModeName: TStr const & value
+
+           ModeName: TStr const & value
+
+        """
+        return _snap.TMMNet_DelMode(self, *args)
+
+    def AddCrossNet(self, *args):
+        """
+        AddCrossNet(self, TStr ModeName1, TStr ModeName2, TStr CrossNetName) -> int
+        Parameters:
+           ModeName1: TStr const & value
+           ModeName2: TStr const & value
+           CrossNetName: TStr const & value
+
+           ModeName1: TStr const & value
+           ModeName2: TStr const & value
+           CrossNetName: TStr const & value
+
+        AddCrossNet(self, TInt ModeId1, TInt ModeId2, TStr CrossNetName) -> int
+        Parameters:
+           ModeId1: TInt const & value
+           ModeId2: TInt const & value
+           CrossNetName: TStr const & value
+
+           ModeId1: TInt const & value
+           ModeId2: TInt const & value
+           CrossNetName: TStr const & value
+
+        AddCrossNet(self, TStr ModeName1, TStr ModeName2, bool isDir, TStr CrossNetName) -> int
+        Parameters:
+           ModeName1: TStr const & value
+           ModeName2: TStr const & value
+           isDir: bool value
+           CrossNetName: TStr const & value
+
+           ModeName1: TStr const & value
+           ModeName2: TStr const & value
+           isDir: bool value
+           CrossNetName: TStr const & value
+
+        AddCrossNet(self, TInt ModeId1, TInt ModeId2, bool isDir, TStr CrossNetName) -> int
+        Parameters:
+           self: TMMNet * value
+           ModeId1: TInt const & value
+           ModeId2: TInt const & value
+           isDir: bool value
+           CrossNetName: TStr const & value
+
+           ModeId1: TInt const & value
+           ModeId2: TInt const & value
+           isDir: bool value
+           CrossNetName: TStr const & value
+
+        """
+        return _snap.TMMNet_AddCrossNet(self, *args)
+
+    def DelCrossNet(self, *args):
+        """
+        DelCrossNet(self, TInt CrossNetId) -> int
+        Parameters:
+           CrossNetId: TInt const & value
+
+           CrossNetId: TInt const & value
+
+        DelCrossNet(self, TStr CrossNet) -> int
+        Parameters:
+           self: TMMNet * value
+           CrossNet: TStr const & value
+
+           CrossNet: TStr const & value
+
+        """
+        return _snap.TMMNet_DelCrossNet(self, *args)
+
+    def Save(self, *args):
+        """
+        Save(self, TSOut SOut)
+        Parameters:
+           self: TMMNet const * value
+           SOut: TSOut & value
+
+           SOut: TSOut & value
+
+        """
+        return _snap.TMMNet_Save(self, *args)
+
+    def Load(*args):
+        """
+        Load(TSIn SIn) -> PMMNet
+        Parameters:
+           SIn: TSIn & value
+
+           SIn: TSIn & value
+
+           SIn: TSIn & value
+
+        """
+        return _snap.TMMNet_Load(*args)
+
+    Load = staticmethod(Load)
+    def New():
+        """New() -> PMMNet"""
+        return _snap.TMMNet_New()
+
+    New = staticmethod(New)
+    def GetModeId(self, *args):
+        """
+        GetModeId(self, TStr ModeName) -> int
+        Parameters:
+           self: TMMNet const * value
+           ModeName: TStr const & value
+
+           ModeName: TStr const & value
+
+        """
+        return _snap.TMMNet_GetModeId(self, *args)
+
+    def GetModeName(self, *args):
+        """
+        GetModeName(self, TInt ModeId) -> TStr
+        Parameters:
+           self: TMMNet const * value
+           ModeId: TInt const & value
+
+           ModeId: TInt const & value
+
+        """
+        return _snap.TMMNet_GetModeName(self, *args)
+
+    def GetCrossId(self, *args):
+        """
+        GetCrossId(self, TStr CrossName) -> int
+        Parameters:
+           self: TMMNet const * value
+           CrossName: TStr const & value
+
+           CrossName: TStr const & value
+
+        """
+        return _snap.TMMNet_GetCrossId(self, *args)
+
+    def GetCrossName(self, *args):
+        """
+        GetCrossName(self, TInt CrossId) -> TStr
+        Parameters:
+           self: TMMNet const * value
+           CrossId: TInt const & value
+
+           CrossId: TInt const & value
+
+        """
+        return _snap.TMMNet_GetCrossName(self, *args)
+
+    def GetModeNetByName(self, *args):
+        """
+        GetModeNetByName(self, TStr ModeName) -> TModeNet
+        Parameters:
+           self: TMMNet const * value
+           ModeName: TStr const & value
+
+           ModeName: TStr const & value
+
+        """
+        return _snap.TMMNet_GetModeNetByName(self, *args)
+
+    def GetModeNetById(self, *args):
+        """
+        GetModeNetById(self, TInt ModeId) -> TModeNet
+        Parameters:
+           self: TMMNet const * value
+           ModeId: TInt const & value
+
+           ModeId: TInt const & value
+
+        """
+        return _snap.TMMNet_GetModeNetById(self, *args)
+
+    def GetCrossNetByName(self, *args):
+        """
+        GetCrossNetByName(self, TStr CrossName) -> TCrossNet
+        Parameters:
+           self: TMMNet const * value
+           CrossName: TStr const & value
+
+           CrossName: TStr const & value
+
+        """
+        return _snap.TMMNet_GetCrossNetByName(self, *args)
+
+    def GetCrossNetById(self, *args):
+        """
+        GetCrossNetById(self, TInt CrossId) -> TCrossNet
+        Parameters:
+           self: TMMNet const * value
+           CrossId: TInt const & value
+
+           CrossId: TInt const & value
+
+        """
+        return _snap.TMMNet_GetCrossNetById(self, *args)
+
+    def GetSubgraphByCrossNet(self, *args):
+        """
+        GetSubgraphByCrossNet(self, TStrV CrossNetTypes) -> PMMNet
+        Parameters:
+           self: TMMNet * value
+           CrossNetTypes: TStrV & value
+
+           CrossNetTypes: TStrV & value
+
+        """
+        return _snap.TMMNet_GetSubgraphByCrossNet(self, *args)
+
+    def GetSubgraphByModeNet(self, *args):
+        """
+        GetSubgraphByModeNet(self, TStrV ModeNetTypes) -> PMMNet
+        Parameters:
+           self: TMMNet * value
+           ModeNetTypes: TStrV & value
+
+           ModeNetTypes: TStrV & value
+
+        """
+        return _snap.TMMNet_GetSubgraphByModeNet(self, *args)
+
+    def ToNetwork(self, *args):
+        """
+        ToNetwork(self, TIntV CrossNetTypes, TVec<(TTriple<(TInt,TStr,TStr)>)> NodeAttrMap, 
+            TVec<(TTriple<(TInt,TStr,TStr)>)> EdgeAttrMap) -> PNEANet
+        Parameters:
+           self: TMMNet * value
+           CrossNetTypes: TIntV & value
+           NodeAttrMap: TVec< TTriple< TInt,TStr,TStr > > & value
+           EdgeAttrMap: TVec< TTriple< TInt,TStr,TStr > > & value
+
+           CrossNetTypes: TIntV & value
+           NodeAttrMap: TVec< TTriple< TInt,TStr,TStr > > & value
+           EdgeAttrMap: TVec< TTriple< TInt,TStr,TStr > > & value
+
+        """
+        return _snap.TMMNet_ToNetwork(self, *args)
+
+    def ToNetwork2(self, *args):
+        """
+        ToNetwork2(self, TIntV CrossNetTypes, THash<(TInt,TVec<(TPair<(TStr,TStr)>)>)> NodeAttrMap, 
+            THash<(TInt,TVec<(TPair<(TStr,TStr)>)>)> EdgeAttrMap) -> PNEANet
+        Parameters:
+           self: TMMNet * value
+           CrossNetTypes: TIntV & value
+           NodeAttrMap: THash< TInt,TVec< TPair< TStr,TStr > > > & value
+           EdgeAttrMap: THash< TInt,TVec< TPair< TStr,TStr > > > & value
+
+           CrossNetTypes: TIntV & value
+           NodeAttrMap: THash< TInt,TVec< TPair< TStr,TStr > > > & value
+           EdgeAttrMap: THash< TInt,TVec< TPair< TStr,TStr > > > & value
+
+        """
+        return _snap.TMMNet_ToNetwork2(self, *args)
+
+    def BegModeNetI(self, *args):
+        """
+        BegModeNetI(self) -> TModeNetI
+        BegModeNetI(self) -> TMMNetModeNetI
+        Parameters:
+           self: TMMNet * value
+
+
+        """
+        return _snap.TMMNet_BegModeNetI(self, *args)
+
+    def EndModeNetI(self, *args):
+        """
+        EndModeNetI(self) -> TModeNetI
+        EndModeNetI(self) -> TMMNetModeNetI
+        Parameters:
+           self: TMMNet * value
+
+
+        """
+        return _snap.TMMNet_EndModeNetI(self, *args)
+
+    def GetModeNetI(self, *args):
+        """
+        GetModeNetI(self, int Id) -> TModeNetI
+        Parameters:
+           Id: int const & value
+
+           Id: int const & value
+
+        GetModeNetI(self, int NId) -> TMMNetModeNetI
+        Parameters:
+           self: TMMNet * value
+           NId: int const & value
+
+           NId: int const & value
+
+        """
+        return _snap.TMMNet_GetModeNetI(self, *args)
+
+    def BegCrossNetI(self, *args):
+        """
+        BegCrossNetI(self) -> TCrossNetI
+        BegCrossNetI(self) -> TMMNetCrossNetI
+        Parameters:
+           self: TMMNet * value
+
+
+        """
+        return _snap.TMMNet_BegCrossNetI(self, *args)
+
+    def EndCrossNetI(self, *args):
+        """
+        EndCrossNetI(self) -> TCrossNetI
+        EndCrossNetI(self) -> TMMNetCrossNetI
+        Parameters:
+           self: TMMNet * value
+
+
+        """
+        return _snap.TMMNet_EndCrossNetI(self, *args)
+
+    def GetCrossNetI(self, *args):
+        """
+        GetCrossNetI(self, int Id) -> TCrossNetI
+        Parameters:
+           Id: int const & value
+
+           Id: int const & value
+
+        GetCrossNetI(self, int CId) -> TMMNetCrossNetI
+        Parameters:
+           self: TMMNet * value
+           CId: int const & value
+
+           CId: int const & value
+
+        """
+        return _snap.TMMNet_GetCrossNetI(self, *args)
+
+    __swig_destroy__ = _snap.delete_TMMNet
+TMMNet.AddMode = new_instancemethod(_snap.TMMNet_AddMode,None,TMMNet)
+TMMNet.DelMode = new_instancemethod(_snap.TMMNet_DelMode,None,TMMNet)
+TMMNet.AddCrossNet = new_instancemethod(_snap.TMMNet_AddCrossNet,None,TMMNet)
+TMMNet.DelCrossNet = new_instancemethod(_snap.TMMNet_DelCrossNet,None,TMMNet)
+TMMNet.Save = new_instancemethod(_snap.TMMNet_Save,None,TMMNet)
+TMMNet.GetModeId = new_instancemethod(_snap.TMMNet_GetModeId,None,TMMNet)
+TMMNet.GetModeName = new_instancemethod(_snap.TMMNet_GetModeName,None,TMMNet)
+TMMNet.GetCrossId = new_instancemethod(_snap.TMMNet_GetCrossId,None,TMMNet)
+TMMNet.GetCrossName = new_instancemethod(_snap.TMMNet_GetCrossName,None,TMMNet)
+TMMNet.GetModeNetByName = new_instancemethod(_snap.TMMNet_GetModeNetByName,None,TMMNet)
+TMMNet.GetModeNetById = new_instancemethod(_snap.TMMNet_GetModeNetById,None,TMMNet)
+TMMNet.GetCrossNetByName = new_instancemethod(_snap.TMMNet_GetCrossNetByName,None,TMMNet)
+TMMNet.GetCrossNetById = new_instancemethod(_snap.TMMNet_GetCrossNetById,None,TMMNet)
+TMMNet.GetSubgraphByCrossNet = new_instancemethod(_snap.TMMNet_GetSubgraphByCrossNet,None,TMMNet)
+TMMNet.GetSubgraphByModeNet = new_instancemethod(_snap.TMMNet_GetSubgraphByModeNet,None,TMMNet)
+TMMNet.ToNetwork = new_instancemethod(_snap.TMMNet_ToNetwork,None,TMMNet)
+TMMNet.ToNetwork2 = new_instancemethod(_snap.TMMNet_ToNetwork2,None,TMMNet)
+TMMNet.BegModeNetI = new_instancemethod(_snap.TMMNet_BegModeNetI,None,TMMNet)
+TMMNet.EndModeNetI = new_instancemethod(_snap.TMMNet_EndModeNetI,None,TMMNet)
+TMMNet.GetModeNetI = new_instancemethod(_snap.TMMNet_GetModeNetI,None,TMMNet)
+TMMNet.BegCrossNetI = new_instancemethod(_snap.TMMNet_BegCrossNetI,None,TMMNet)
+TMMNet.EndCrossNetI = new_instancemethod(_snap.TMMNet_EndCrossNetI,None,TMMNet)
+TMMNet.GetCrossNetI = new_instancemethod(_snap.TMMNet_GetCrossNetI,None,TMMNet)
+TMMNet_swigregister = _snap.TMMNet_swigregister
+TMMNet_swigregister(TMMNet)
+
+def TMMNet_Load(*args):
+  """
+    TMMNet_Load(TSIn SIn) -> PMMNet
+    Parameters:
+       SIn: TSIn & value
+
+       SIn: TSIn & value
+
+    """
+  return _snap.TMMNet_Load(*args)
+
+def TMMNet_New():
+  """TMMNet_New() -> PMMNet"""
+  return _snap.TMMNet_New()
+
 class TNEANetMP(object):
     """Proxy of C++ TNEANetMP class"""
     thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
@@ -26604,6 +28682,18 @@ class TNEANetMP(object):
 
         """
         return _snap.TNEANetMP_SetEdges(self, *args)
+
+    def SetMxEId(self, *args):
+        """
+        SetMxEId(self, TInt Id)
+        Parameters:
+           self: TNEANetMP * value
+           Id: TInt const & value
+
+           Id: TInt const & value
+
+        """
+        return _snap.TNEANetMP_SetMxEId(self, *args)
 
     def AddEdge(self, *args):
         """
@@ -27777,6 +29867,7 @@ TNEANetMP.Reserved = new_instancemethod(_snap.TNEANetMP_Reserved,None,TNEANetMP)
 TNEANetMP.ReservedE = new_instancemethod(_snap.TNEANetMP_ReservedE,None,TNEANetMP)
 TNEANetMP.GetEdges = new_instancemethod(_snap.TNEANetMP_GetEdges,None,TNEANetMP)
 TNEANetMP.SetEdges = new_instancemethod(_snap.TNEANetMP_SetEdges,None,TNEANetMP)
+TNEANetMP.SetMxEId = new_instancemethod(_snap.TNEANetMP_SetMxEId,None,TNEANetMP)
 TNEANetMP.AddEdge = new_instancemethod(_snap.TNEANetMP_AddEdge,None,TNEANetMP)
 TNEANetMP.AddEdgeUnchecked = new_instancemethod(_snap.TNEANetMP_AddEdgeUnchecked,None,TNEANetMP)
 TNEANetMP.IsEdge = new_instancemethod(_snap.TNEANetMP_IsEdge,None,TNEANetMP)
@@ -28695,6 +30786,43 @@ TTableIterator.HasNext = new_instancemethod(_snap.TTableIterator_HasNext,None,TT
 TTableIterator_swigregister = _snap.TTableIterator_swigregister
 TTableIterator_swigregister(TTableIterator)
 
+
+def LoadCrossNet(*args):
+  """
+    LoadCrossNet(TCrossNet Graph, PTable Table, TStr SrcCol, TStr DstCol, 
+        TStrV EdgeAttrV) -> int
+    Parameters:
+       Graph: TCrossNet & value
+       Table: PTable value
+       SrcCol: TStr const & value
+       DstCol: TStr const & value
+       EdgeAttrV: TStrV & value
+
+       Graph: TCrossNet & value
+       Table: PTable value
+       SrcCol: TStr const & value
+       DstCol: TStr const & value
+       EdgeAttrV: TStrV & value
+
+    """
+  return _snap.LoadCrossNet(*args)
+
+def LoadMode(*args):
+  """
+    LoadMode(TModeNet Graph, PTable Table, TStr NCol, TStrV NodeAttrV) -> int
+    Parameters:
+       Graph: TModeNet & value
+       Table: PTable value
+       NCol: TStr const & value
+       NodeAttrV: TStrV & value
+
+       Graph: TModeNet & value
+       Table: PTable value
+       NCol: TStr const & value
+       NodeAttrV: TStrV & value
+
+    """
+  return _snap.LoadMode(*args)
 class TTable(object):
     """Proxy of C++ TTable class"""
     thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
@@ -28746,6 +30874,42 @@ class TTable(object):
         return _snap.TTable_NormalizeColNameV(*args)
 
     NormalizeColNameV = staticmethod(NormalizeColNameV)
+    def AddIntCol(self, *args):
+        """
+        AddIntCol(self, TStr ColName)
+        Parameters:
+           self: TTable * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+        """
+        return _snap.TTable_AddIntCol(self, *args)
+
+    def AddFltCol(self, *args):
+        """
+        AddFltCol(self, TStr ColName)
+        Parameters:
+           self: TTable * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+        """
+        return _snap.TTable_AddFltCol(self, *args)
+
+    def AddStrCol(self, *args):
+        """
+        AddStrCol(self, TStr ColName)
+        Parameters:
+           self: TTable * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+        """
+        return _snap.TTable_AddStrCol(self, *args)
+
     def GroupByIntColMP(self, *args):
         """
         GroupByIntColMP(self, TStr GroupBy, THashMP<(TInt,TIntV)> Grouping, TBool UsePhysicalIds = True)
@@ -29335,6 +31499,140 @@ class TTable(object):
 
         """
         return _snap.TTable_GetStrVal(self, *args)
+
+    def GetStrMapById(self, *args):
+        """
+        GetStrMapById(self, TInt ColIdx, TInt RowIdx) -> TInt
+        Parameters:
+           self: TTable const * value
+           ColIdx: TInt value
+           RowIdx: TInt value
+
+           ColIdx: TInt value
+           RowIdx: TInt value
+
+        """
+        return _snap.TTable_GetStrMapById(self, *args)
+
+    def GetStrMapByName(self, *args):
+        """
+        GetStrMapByName(self, TStr ColName, TInt RowIdx) -> TInt
+        Parameters:
+           self: TTable const * value
+           ColName: TStr const & value
+           RowIdx: TInt value
+
+           ColName: TStr const & value
+           RowIdx: TInt value
+
+        """
+        return _snap.TTable_GetStrMapByName(self, *args)
+
+    def GetStrValById(self, *args):
+        """
+        GetStrValById(self, TInt ColIdx, TInt RowIdx) -> TStr
+        Parameters:
+           self: TTable const * value
+           ColIdx: TInt value
+           RowIdx: TInt value
+
+           ColIdx: TInt value
+           RowIdx: TInt value
+
+        """
+        return _snap.TTable_GetStrValById(self, *args)
+
+    def GetStrValByName(self, *args):
+        """
+        GetStrValByName(self, TStr ColName, TInt RowIdx) -> TStr
+        Parameters:
+           self: TTable const * value
+           ColName: TStr const & value
+           RowIdx: TInt const & value
+
+           ColName: TStr const & value
+           RowIdx: TInt const & value
+
+        """
+        return _snap.TTable_GetStrValByName(self, *args)
+
+    def GetIntRowIdxByVal(self, *args):
+        """
+        GetIntRowIdxByVal(self, TStr ColName, TInt Val) -> TIntV
+        Parameters:
+           self: TTable const * value
+           ColName: TStr const & value
+           Val: TInt const & value
+
+           ColName: TStr const & value
+           Val: TInt const & value
+
+        """
+        return _snap.TTable_GetIntRowIdxByVal(self, *args)
+
+    def GetStrRowIdxByMap(self, *args):
+        """
+        GetStrRowIdxByMap(self, TStr ColName, TInt Map) -> TIntV
+        Parameters:
+           self: TTable const * value
+           ColName: TStr const & value
+           Map: TInt const & value
+
+           ColName: TStr const & value
+           Map: TInt const & value
+
+        """
+        return _snap.TTable_GetStrRowIdxByMap(self, *args)
+
+    def GetFltRowIdxByVal(self, *args):
+        """
+        GetFltRowIdxByVal(self, TStr ColName, TFlt Val) -> TIntV
+        Parameters:
+           self: TTable const * value
+           ColName: TStr const & value
+           Val: TFlt const & value
+
+           ColName: TStr const & value
+           Val: TFlt const & value
+
+        """
+        return _snap.TTable_GetFltRowIdxByVal(self, *args)
+
+    def RequestIndexInt(self, *args):
+        """
+        RequestIndexInt(self, TStr ColName) -> TInt
+        Parameters:
+           self: TTable * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+        """
+        return _snap.TTable_RequestIndexInt(self, *args)
+
+    def RequestIndexFlt(self, *args):
+        """
+        RequestIndexFlt(self, TStr ColName) -> TInt
+        Parameters:
+           self: TTable * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+        """
+        return _snap.TTable_RequestIndexFlt(self, *args)
+
+    def RequestIndexStrMap(self, *args):
+        """
+        RequestIndexStrMap(self, TStr ColName) -> TInt
+        Parameters:
+           self: TTable * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+        """
+        return _snap.TTable_RequestIndexStrMap(self, *args)
 
     def GetStr(self, *args):
         """
@@ -31893,6 +34191,9 @@ class TTable(object):
         return _snap.TTable_GetContextMemUsedKB(self)
 
     __swig_destroy__ = _snap.delete_TTable
+TTable.AddIntCol = new_instancemethod(_snap.TTable_AddIntCol,None,TTable)
+TTable.AddFltCol = new_instancemethod(_snap.TTable_AddFltCol,None,TTable)
+TTable.AddStrCol = new_instancemethod(_snap.TTable_AddStrCol,None,TTable)
 TTable.GroupByIntColMP = new_instancemethod(_snap.TTable_GroupByIntColMP,None,TTable)
 TTable.SaveSS = new_instancemethod(_snap.TTable_SaveSS,None,TTable)
 TTable.SaveBin = new_instancemethod(_snap.TTable_SaveBin,None,TTable)
@@ -31905,6 +34206,16 @@ TTable.GetColIdx = new_instancemethod(_snap.TTable_GetColIdx,None,TTable)
 TTable.GetIntVal = new_instancemethod(_snap.TTable_GetIntVal,None,TTable)
 TTable.GetFltVal = new_instancemethod(_snap.TTable_GetFltVal,None,TTable)
 TTable.GetStrVal = new_instancemethod(_snap.TTable_GetStrVal,None,TTable)
+TTable.GetStrMapById = new_instancemethod(_snap.TTable_GetStrMapById,None,TTable)
+TTable.GetStrMapByName = new_instancemethod(_snap.TTable_GetStrMapByName,None,TTable)
+TTable.GetStrValById = new_instancemethod(_snap.TTable_GetStrValById,None,TTable)
+TTable.GetStrValByName = new_instancemethod(_snap.TTable_GetStrValByName,None,TTable)
+TTable.GetIntRowIdxByVal = new_instancemethod(_snap.TTable_GetIntRowIdxByVal,None,TTable)
+TTable.GetStrRowIdxByMap = new_instancemethod(_snap.TTable_GetStrRowIdxByMap,None,TTable)
+TTable.GetFltRowIdxByVal = new_instancemethod(_snap.TTable_GetFltRowIdxByVal,None,TTable)
+TTable.RequestIndexInt = new_instancemethod(_snap.TTable_RequestIndexInt,None,TTable)
+TTable.RequestIndexFlt = new_instancemethod(_snap.TTable_RequestIndexFlt,None,TTable)
+TTable.RequestIndexStrMap = new_instancemethod(_snap.TTable_RequestIndexStrMap,None,TTable)
 TTable.GetStr = new_instancemethod(_snap.TTable_GetStr,None,TTable)
 TTable.GetIntValAtRowIdx = new_instancemethod(_snap.TTable_GetIntValAtRowIdx,None,TTable)
 TTable.GetFltValAtRowIdx = new_instancemethod(_snap.TTable_GetFltValAtRowIdx,None,TTable)
@@ -72147,6 +74458,838 @@ TNEANetMPEdgeI.GetDstNId = new_instancemethod(_snap.TNEANetMPEdgeI_GetDstNId,Non
 TNEANetMPEdgeI_swigregister = _snap.TNEANetMPEdgeI_swigregister
 TNEANetMPEdgeI_swigregister(TNEANetMPEdgeI)
 
+class TModeNetNodeI(object):
+    """Proxy of C++ TModeNetNodeI class"""
+    thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        """
+        __init__(self) -> TModeNetNodeI
+        __init__(self, TNodeI NodeI) -> TModeNetNodeI
+        Parameters:
+           NodeI: TModeNet::TNodeI const & value
+
+           NodeI: TModeNet::TNodeI const & value
+
+        """
+        _snap.TModeNetNodeI_swiginit(self,_snap.new_TModeNetNodeI(*args))
+    def Next(self):
+        """
+        Next(self) -> TModeNetNodeI
+        Parameters:
+           self: TModeNetNodeI * value
+
+
+
+
+        """
+        return _snap.TModeNetNodeI_Next(self)
+
+    def __lt__(self, *args):
+        """
+        __lt__(self, TModeNetNodeI NodeI) -> bool
+        Parameters:
+           self: TModeNetNodeI const * value
+           NodeI: TModeNetNodeI const & value
+
+           NodeI: TModeNetNodeI const & value
+
+        """
+        return _snap.TModeNetNodeI___lt__(self, *args)
+
+    def __eq__(self, *args):
+        """
+        __eq__(self, TModeNetNodeI NodeI) -> bool
+        Parameters:
+           self: TModeNetNodeI const * value
+           NodeI: TModeNetNodeI const & value
+
+           NodeI: TModeNetNodeI const & value
+
+        """
+        return _snap.TModeNetNodeI___eq__(self, *args)
+
+    def GetId(self):
+        """
+        GetId(self) -> int
+        Parameters:
+           self: TModeNetNodeI const * value
+
+
+
+
+        """
+        return _snap.TModeNetNodeI_GetId(self)
+
+    def GetDeg(self):
+        """
+        GetDeg(self) -> int
+        Parameters:
+           self: TModeNetNodeI const * value
+
+
+
+
+        """
+        return _snap.TModeNetNodeI_GetDeg(self)
+
+    def GetInDeg(self):
+        """
+        GetInDeg(self) -> int
+        Parameters:
+           self: TModeNetNodeI const * value
+
+
+
+
+        """
+        return _snap.TModeNetNodeI_GetInDeg(self)
+
+    def GetOutDeg(self):
+        """
+        GetOutDeg(self) -> int
+        Parameters:
+           self: TModeNetNodeI const * value
+
+
+
+
+        """
+        return _snap.TModeNetNodeI_GetOutDeg(self)
+
+    def GetInNId(self, *args):
+        """
+        GetInNId(self, int NodeN) -> int
+        Parameters:
+           self: TModeNetNodeI const * value
+           NodeN: int const & value
+
+           NodeN: int const & value
+
+        """
+        return _snap.TModeNetNodeI_GetInNId(self, *args)
+
+    def GetOutNId(self, *args):
+        """
+        GetOutNId(self, int NodeN) -> int
+        Parameters:
+           self: TModeNetNodeI const * value
+           NodeN: int const & value
+
+           NodeN: int const & value
+
+        """
+        return _snap.TModeNetNodeI_GetOutNId(self, *args)
+
+    def GetNbrNId(self, *args):
+        """
+        GetNbrNId(self, int NodeN) -> int
+        Parameters:
+           self: TModeNetNodeI const * value
+           NodeN: int const & value
+
+           NodeN: int const & value
+
+        """
+        return _snap.TModeNetNodeI_GetNbrNId(self, *args)
+
+    def IsInNId(self, *args):
+        """
+        IsInNId(self, int NId) -> bool
+        Parameters:
+           self: TModeNetNodeI const * value
+           NId: int const & value
+
+           NId: int const & value
+
+        """
+        return _snap.TModeNetNodeI_IsInNId(self, *args)
+
+    def IsOutNId(self, *args):
+        """
+        IsOutNId(self, int NId) -> bool
+        Parameters:
+           self: TModeNetNodeI const * value
+           NId: int const & value
+
+           NId: int const & value
+
+        """
+        return _snap.TModeNetNodeI_IsOutNId(self, *args)
+
+    def IsNbrNId(self, *args):
+        """
+        IsNbrNId(self, int NId) -> bool
+        Parameters:
+           self: TModeNetNodeI const * value
+           NId: int const & value
+
+           NId: int const & value
+
+        """
+        return _snap.TModeNetNodeI_IsNbrNId(self, *args)
+
+    __swig_destroy__ = _snap.delete_TModeNetNodeI
+TModeNetNodeI.Next = new_instancemethod(_snap.TModeNetNodeI_Next,None,TModeNetNodeI)
+TModeNetNodeI.__lt__ = new_instancemethod(_snap.TModeNetNodeI___lt__,None,TModeNetNodeI)
+TModeNetNodeI.__eq__ = new_instancemethod(_snap.TModeNetNodeI___eq__,None,TModeNetNodeI)
+TModeNetNodeI.GetId = new_instancemethod(_snap.TModeNetNodeI_GetId,None,TModeNetNodeI)
+TModeNetNodeI.GetDeg = new_instancemethod(_snap.TModeNetNodeI_GetDeg,None,TModeNetNodeI)
+TModeNetNodeI.GetInDeg = new_instancemethod(_snap.TModeNetNodeI_GetInDeg,None,TModeNetNodeI)
+TModeNetNodeI.GetOutDeg = new_instancemethod(_snap.TModeNetNodeI_GetOutDeg,None,TModeNetNodeI)
+TModeNetNodeI.GetInNId = new_instancemethod(_snap.TModeNetNodeI_GetInNId,None,TModeNetNodeI)
+TModeNetNodeI.GetOutNId = new_instancemethod(_snap.TModeNetNodeI_GetOutNId,None,TModeNetNodeI)
+TModeNetNodeI.GetNbrNId = new_instancemethod(_snap.TModeNetNodeI_GetNbrNId,None,TModeNetNodeI)
+TModeNetNodeI.IsInNId = new_instancemethod(_snap.TModeNetNodeI_IsInNId,None,TModeNetNodeI)
+TModeNetNodeI.IsOutNId = new_instancemethod(_snap.TModeNetNodeI_IsOutNId,None,TModeNetNodeI)
+TModeNetNodeI.IsNbrNId = new_instancemethod(_snap.TModeNetNodeI_IsNbrNId,None,TModeNetNodeI)
+TModeNetNodeI_swigregister = _snap.TModeNetNodeI_swigregister
+TModeNetNodeI_swigregister(TModeNetNodeI)
+
+class TModeNetEdgeI(object):
+    """Proxy of C++ TModeNetEdgeI class"""
+    thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        """
+        __init__(self) -> TModeNetEdgeI
+        __init__(self, TEdgeI EdgeI) -> TModeNetEdgeI
+        Parameters:
+           EdgeI: TNEANet::TEdgeI const & value
+
+           EdgeI: TNEANet::TEdgeI const & value
+
+        """
+        _snap.TModeNetEdgeI_swiginit(self,_snap.new_TModeNetEdgeI(*args))
+    def Next(self):
+        """
+        Next(self) -> TModeNetEdgeI
+        Parameters:
+           self: TModeNetEdgeI * value
+
+
+
+
+        """
+        return _snap.TModeNetEdgeI_Next(self)
+
+    def __lt__(self, *args):
+        """
+        __lt__(self, TModeNetEdgeI EdgeI) -> bool
+        Parameters:
+           self: TModeNetEdgeI const * value
+           EdgeI: TModeNetEdgeI const & value
+
+           EdgeI: TModeNetEdgeI const & value
+
+        """
+        return _snap.TModeNetEdgeI___lt__(self, *args)
+
+    def __eq__(self, *args):
+        """
+        __eq__(self, TModeNetEdgeI EdgeI) -> bool
+        Parameters:
+           self: TModeNetEdgeI const * value
+           EdgeI: TModeNetEdgeI const & value
+
+           EdgeI: TModeNetEdgeI const & value
+
+        """
+        return _snap.TModeNetEdgeI___eq__(self, *args)
+
+    def GetId(self):
+        """
+        GetId(self) -> int
+        Parameters:
+           self: TModeNetEdgeI const * value
+
+
+
+
+        """
+        return _snap.TModeNetEdgeI_GetId(self)
+
+    def GetSrcNId(self):
+        """
+        GetSrcNId(self) -> int
+        Parameters:
+           self: TModeNetEdgeI const * value
+
+
+
+
+        """
+        return _snap.TModeNetEdgeI_GetSrcNId(self)
+
+    def GetDstNId(self):
+        """
+        GetDstNId(self) -> int
+        Parameters:
+           self: TModeNetEdgeI const * value
+
+
+
+
+        """
+        return _snap.TModeNetEdgeI_GetDstNId(self)
+
+    __swig_destroy__ = _snap.delete_TModeNetEdgeI
+TModeNetEdgeI.Next = new_instancemethod(_snap.TModeNetEdgeI_Next,None,TModeNetEdgeI)
+TModeNetEdgeI.__lt__ = new_instancemethod(_snap.TModeNetEdgeI___lt__,None,TModeNetEdgeI)
+TModeNetEdgeI.__eq__ = new_instancemethod(_snap.TModeNetEdgeI___eq__,None,TModeNetEdgeI)
+TModeNetEdgeI.GetId = new_instancemethod(_snap.TModeNetEdgeI_GetId,None,TModeNetEdgeI)
+TModeNetEdgeI.GetSrcNId = new_instancemethod(_snap.TModeNetEdgeI_GetSrcNId,None,TModeNetEdgeI)
+TModeNetEdgeI.GetDstNId = new_instancemethod(_snap.TModeNetEdgeI_GetDstNId,None,TModeNetEdgeI)
+TModeNetEdgeI_swigregister = _snap.TModeNetEdgeI_swigregister
+TModeNetEdgeI_swigregister(TModeNetEdgeI)
+
+class TCrossNetEdgeI(object):
+    """Proxy of C++ TCrossNetEdgeI class"""
+    thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        """
+        __init__(self) -> TCrossNetEdgeI
+        __init__(self, TCrossEdgeI EdgeI) -> TCrossNetEdgeI
+        Parameters:
+           EdgeI: TCrossNet::TCrossEdgeI const & value
+
+           EdgeI: TCrossNet::TCrossEdgeI const & value
+
+        """
+        _snap.TCrossNetEdgeI_swiginit(self,_snap.new_TCrossNetEdgeI(*args))
+    def Next(self):
+        """
+        Next(self) -> TCrossNetEdgeI
+        Parameters:
+           self: TCrossNetEdgeI * value
+
+
+
+
+        """
+        return _snap.TCrossNetEdgeI_Next(self)
+
+    def __lt__(self, *args):
+        """
+        __lt__(self, TCrossNetEdgeI EdgeI) -> bool
+        Parameters:
+           self: TCrossNetEdgeI const * value
+           EdgeI: TCrossNetEdgeI const & value
+
+           EdgeI: TCrossNetEdgeI const & value
+
+        """
+        return _snap.TCrossNetEdgeI___lt__(self, *args)
+
+    def __eq__(self, *args):
+        """
+        __eq__(self, TCrossNetEdgeI EdgeI) -> bool
+        Parameters:
+           self: TCrossNetEdgeI const * value
+           EdgeI: TCrossNetEdgeI const & value
+
+           EdgeI: TCrossNetEdgeI const & value
+
+        """
+        return _snap.TCrossNetEdgeI___eq__(self, *args)
+
+    def GetId(self):
+        """
+        GetId(self) -> int
+        Parameters:
+           self: TCrossNetEdgeI const * value
+
+
+
+
+        """
+        return _snap.TCrossNetEdgeI_GetId(self)
+
+    def GetSrcNId(self):
+        """
+        GetSrcNId(self) -> int
+        Parameters:
+           self: TCrossNetEdgeI const * value
+
+
+
+
+        """
+        return _snap.TCrossNetEdgeI_GetSrcNId(self)
+
+    def GetDstNId(self):
+        """
+        GetDstNId(self) -> int
+        Parameters:
+           self: TCrossNetEdgeI const * value
+
+
+
+
+        """
+        return _snap.TCrossNetEdgeI_GetDstNId(self)
+
+    __swig_destroy__ = _snap.delete_TCrossNetEdgeI
+TCrossNetEdgeI.Next = new_instancemethod(_snap.TCrossNetEdgeI_Next,None,TCrossNetEdgeI)
+TCrossNetEdgeI.__lt__ = new_instancemethod(_snap.TCrossNetEdgeI___lt__,None,TCrossNetEdgeI)
+TCrossNetEdgeI.__eq__ = new_instancemethod(_snap.TCrossNetEdgeI___eq__,None,TCrossNetEdgeI)
+TCrossNetEdgeI.GetId = new_instancemethod(_snap.TCrossNetEdgeI_GetId,None,TCrossNetEdgeI)
+TCrossNetEdgeI.GetSrcNId = new_instancemethod(_snap.TCrossNetEdgeI_GetSrcNId,None,TCrossNetEdgeI)
+TCrossNetEdgeI.GetDstNId = new_instancemethod(_snap.TCrossNetEdgeI_GetDstNId,None,TCrossNetEdgeI)
+TCrossNetEdgeI_swigregister = _snap.TCrossNetEdgeI_swigregister
+TCrossNetEdgeI_swigregister(TCrossNetEdgeI)
+
+class TCrossNetAIntI(object):
+    """Proxy of C++ TCrossNetAIntI class"""
+    thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        """
+        __init__(self) -> TCrossNetAIntI
+        __init__(self, TIntVecIter HIter, TStr attribute, TCrossNet GraphPt) -> TCrossNetAIntI
+        Parameters:
+           HIter: TIntVecIter const & value
+           attribute: TStr value
+           GraphPt: TCrossNet const * value
+
+           HIter: TIntVecIter const & value
+           attribute: TStr value
+           GraphPt: TCrossNet const * value
+
+        __init__(self, TAIntI I) -> TCrossNetAIntI
+        Parameters:
+           I: TCrossNet::TAIntI const & value
+
+           I: TCrossNet::TAIntI const & value
+
+        """
+        _snap.TCrossNetAIntI_swiginit(self,_snap.new_TCrossNetAIntI(*args))
+    def Next(self):
+        """
+        Next(self) -> TCrossNetAIntI
+        Parameters:
+           self: TCrossNetAIntI * value
+
+
+
+
+        """
+        return _snap.TCrossNetAIntI_Next(self)
+
+    def __lt__(self, *args):
+        """
+        __lt__(self, TCrossNetAIntI I) -> bool
+        Parameters:
+           self: TCrossNetAIntI const * value
+           I: TCrossNetAIntI const & value
+
+           I: TCrossNetAIntI const & value
+
+        """
+        return _snap.TCrossNetAIntI___lt__(self, *args)
+
+    def __eq__(self, *args):
+        """
+        __eq__(self, TCrossNetAIntI I) -> bool
+        Parameters:
+           self: TCrossNetAIntI const * value
+           I: TCrossNetAIntI const & value
+
+           I: TCrossNetAIntI const & value
+
+        """
+        return _snap.TCrossNetAIntI___eq__(self, *args)
+
+    def GetDat(self):
+        """
+        GetDat(self) -> int
+        Parameters:
+           self: TCrossNetAIntI const * value
+
+
+
+
+        """
+        return _snap.TCrossNetAIntI_GetDat(self)
+
+    def IsDeleted(self):
+        """
+        IsDeleted(self) -> bool
+        Parameters:
+           self: TCrossNetAIntI const * value
+
+
+
+
+        """
+        return _snap.TCrossNetAIntI_IsDeleted(self)
+
+    __swig_destroy__ = _snap.delete_TCrossNetAIntI
+TCrossNetAIntI.Next = new_instancemethod(_snap.TCrossNetAIntI_Next,None,TCrossNetAIntI)
+TCrossNetAIntI.__lt__ = new_instancemethod(_snap.TCrossNetAIntI___lt__,None,TCrossNetAIntI)
+TCrossNetAIntI.__eq__ = new_instancemethod(_snap.TCrossNetAIntI___eq__,None,TCrossNetAIntI)
+TCrossNetAIntI.GetDat = new_instancemethod(_snap.TCrossNetAIntI_GetDat,None,TCrossNetAIntI)
+TCrossNetAIntI.IsDeleted = new_instancemethod(_snap.TCrossNetAIntI_IsDeleted,None,TCrossNetAIntI)
+TCrossNetAIntI_swigregister = _snap.TCrossNetAIntI_swigregister
+TCrossNetAIntI_swigregister(TCrossNetAIntI)
+
+class TCrossNetAStrI(object):
+    """Proxy of C++ TCrossNetAStrI class"""
+    thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        """
+        __init__(self) -> TCrossNetAStrI
+        __init__(self, TStrVecIter HIter, TStr attribute, TCrossNet GraphPt) -> TCrossNetAStrI
+        Parameters:
+           HIter: TStrVecIter const & value
+           attribute: TStr value
+           GraphPt: TCrossNet const * value
+
+           HIter: TStrVecIter const & value
+           attribute: TStr value
+           GraphPt: TCrossNet const * value
+
+        __init__(self, TAStrI I) -> TCrossNetAStrI
+        Parameters:
+           I: TCrossNet::TAStrI const & value
+
+           I: TCrossNet::TAStrI const & value
+
+        """
+        _snap.TCrossNetAStrI_swiginit(self,_snap.new_TCrossNetAStrI(*args))
+    def Next(self):
+        """
+        Next(self) -> TCrossNetAStrI
+        Parameters:
+           self: TCrossNetAStrI * value
+
+
+
+
+        """
+        return _snap.TCrossNetAStrI_Next(self)
+
+    def __lt__(self, *args):
+        """
+        __lt__(self, TCrossNetAStrI I) -> bool
+        Parameters:
+           self: TCrossNetAStrI const * value
+           I: TCrossNetAStrI const & value
+
+           I: TCrossNetAStrI const & value
+
+        """
+        return _snap.TCrossNetAStrI___lt__(self, *args)
+
+    def __eq__(self, *args):
+        """
+        __eq__(self, TCrossNetAStrI I) -> bool
+        Parameters:
+           self: TCrossNetAStrI const * value
+           I: TCrossNetAStrI const & value
+
+           I: TCrossNetAStrI const & value
+
+        """
+        return _snap.TCrossNetAStrI___eq__(self, *args)
+
+    def GetDat(self):
+        """
+        GetDat(self) -> char
+        Parameters:
+           self: TCrossNetAStrI const * value
+
+
+
+
+        """
+        return _snap.TCrossNetAStrI_GetDat(self)
+
+    def IsDeleted(self):
+        """
+        IsDeleted(self) -> bool
+        Parameters:
+           self: TCrossNetAStrI const * value
+
+
+
+
+        """
+        return _snap.TCrossNetAStrI_IsDeleted(self)
+
+    __swig_destroy__ = _snap.delete_TCrossNetAStrI
+TCrossNetAStrI.Next = new_instancemethod(_snap.TCrossNetAStrI_Next,None,TCrossNetAStrI)
+TCrossNetAStrI.__lt__ = new_instancemethod(_snap.TCrossNetAStrI___lt__,None,TCrossNetAStrI)
+TCrossNetAStrI.__eq__ = new_instancemethod(_snap.TCrossNetAStrI___eq__,None,TCrossNetAStrI)
+TCrossNetAStrI.GetDat = new_instancemethod(_snap.TCrossNetAStrI_GetDat,None,TCrossNetAStrI)
+TCrossNetAStrI.IsDeleted = new_instancemethod(_snap.TCrossNetAStrI_IsDeleted,None,TCrossNetAStrI)
+TCrossNetAStrI_swigregister = _snap.TCrossNetAStrI_swigregister
+TCrossNetAStrI_swigregister(TCrossNetAStrI)
+
+class TCrossNetAFltI(object):
+    """Proxy of C++ TCrossNetAFltI class"""
+    thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        """
+        __init__(self) -> TCrossNetAFltI
+        __init__(self, TFltVecIter HIter, TStr attribute, TCrossNet GraphPt) -> TCrossNetAFltI
+        Parameters:
+           HIter: TFltVecIter const & value
+           attribute: TStr value
+           GraphPt: TCrossNet const * value
+
+           HIter: TFltVecIter const & value
+           attribute: TStr value
+           GraphPt: TCrossNet const * value
+
+        __init__(self, TAFltI I) -> TCrossNetAFltI
+        Parameters:
+           I: TCrossNet::TAFltI const & value
+
+           I: TCrossNet::TAFltI const & value
+
+        """
+        _snap.TCrossNetAFltI_swiginit(self,_snap.new_TCrossNetAFltI(*args))
+    def Next(self):
+        """
+        Next(self) -> TCrossNetAFltI
+        Parameters:
+           self: TCrossNetAFltI * value
+
+
+
+
+        """
+        return _snap.TCrossNetAFltI_Next(self)
+
+    def __lt__(self, *args):
+        """
+        __lt__(self, TCrossNetAFltI I) -> bool
+        Parameters:
+           self: TCrossNetAFltI const * value
+           I: TCrossNetAFltI const & value
+
+           I: TCrossNetAFltI const & value
+
+        """
+        return _snap.TCrossNetAFltI___lt__(self, *args)
+
+    def __eq__(self, *args):
+        """
+        __eq__(self, TCrossNetAFltI I) -> bool
+        Parameters:
+           self: TCrossNetAFltI const * value
+           I: TCrossNetAFltI const & value
+
+           I: TCrossNetAFltI const & value
+
+        """
+        return _snap.TCrossNetAFltI___eq__(self, *args)
+
+    def GetDat(self):
+        """
+        GetDat(self) -> double
+        Parameters:
+           self: TCrossNetAFltI const * value
+
+
+
+
+        """
+        return _snap.TCrossNetAFltI_GetDat(self)
+
+    def IsDeleted(self):
+        """
+        IsDeleted(self) -> bool
+        Parameters:
+           self: TCrossNetAFltI const * value
+
+
+
+
+        """
+        return _snap.TCrossNetAFltI_IsDeleted(self)
+
+    __swig_destroy__ = _snap.delete_TCrossNetAFltI
+TCrossNetAFltI.Next = new_instancemethod(_snap.TCrossNetAFltI_Next,None,TCrossNetAFltI)
+TCrossNetAFltI.__lt__ = new_instancemethod(_snap.TCrossNetAFltI___lt__,None,TCrossNetAFltI)
+TCrossNetAFltI.__eq__ = new_instancemethod(_snap.TCrossNetAFltI___eq__,None,TCrossNetAFltI)
+TCrossNetAFltI.GetDat = new_instancemethod(_snap.TCrossNetAFltI_GetDat,None,TCrossNetAFltI)
+TCrossNetAFltI.IsDeleted = new_instancemethod(_snap.TCrossNetAFltI_IsDeleted,None,TCrossNetAFltI)
+TCrossNetAFltI_swigregister = _snap.TCrossNetAFltI_swigregister
+TCrossNetAFltI_swigregister(TCrossNetAFltI)
+
+class TMMNetModeNetI(object):
+    """Proxy of C++ TMMNetModeNetI class"""
+    thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        """
+        __init__(self) -> TMMNetModeNetI
+        __init__(self, TModeNetI NodeI) -> TMMNetModeNetI
+        Parameters:
+           NodeI: TMMNet::TModeNetI const & value
+
+           NodeI: TMMNet::TModeNetI const & value
+
+        """
+        _snap.TMMNetModeNetI_swiginit(self,_snap.new_TMMNetModeNetI(*args))
+    def Next(self):
+        """
+        Next(self) -> TMMNetModeNetI
+        Parameters:
+           self: TMMNetModeNetI * value
+
+
+
+
+        """
+        return _snap.TMMNetModeNetI_Next(self)
+
+    def __lt__(self, *args):
+        """
+        __lt__(self, TMMNetModeNetI NodeI) -> bool
+        Parameters:
+           self: TMMNetModeNetI const * value
+           NodeI: TMMNetModeNetI const & value
+
+           NodeI: TMMNetModeNetI const & value
+
+        """
+        return _snap.TMMNetModeNetI___lt__(self, *args)
+
+    def __eq__(self, *args):
+        """
+        __eq__(self, TMMNetModeNetI NodeI) -> bool
+        Parameters:
+           self: TMMNetModeNetI const * value
+           NodeI: TMMNetModeNetI const & value
+
+           NodeI: TMMNetModeNetI const & value
+
+        """
+        return _snap.TMMNetModeNetI___eq__(self, *args)
+
+    def GetModeId(self):
+        """
+        GetModeId(self) -> int
+        Parameters:
+           self: TMMNetModeNetI * value
+
+
+
+
+        """
+        return _snap.TMMNetModeNetI_GetModeId(self)
+
+    def GetModeNet(self):
+        """
+        GetModeNet(self) -> TModeNet
+        Parameters:
+           self: TMMNetModeNetI * value
+
+
+
+
+        """
+        return _snap.TMMNetModeNetI_GetModeNet(self)
+
+    __swig_destroy__ = _snap.delete_TMMNetModeNetI
+TMMNetModeNetI.Next = new_instancemethod(_snap.TMMNetModeNetI_Next,None,TMMNetModeNetI)
+TMMNetModeNetI.__lt__ = new_instancemethod(_snap.TMMNetModeNetI___lt__,None,TMMNetModeNetI)
+TMMNetModeNetI.__eq__ = new_instancemethod(_snap.TMMNetModeNetI___eq__,None,TMMNetModeNetI)
+TMMNetModeNetI.GetModeId = new_instancemethod(_snap.TMMNetModeNetI_GetModeId,None,TMMNetModeNetI)
+TMMNetModeNetI.GetModeNet = new_instancemethod(_snap.TMMNetModeNetI_GetModeNet,None,TMMNetModeNetI)
+TMMNetModeNetI_swigregister = _snap.TMMNetModeNetI_swigregister
+TMMNetModeNetI_swigregister(TMMNetModeNetI)
+
+class TMMNetCrossNetI(object):
+    """Proxy of C++ TMMNetCrossNetI class"""
+    thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        """
+        __init__(self) -> TMMNetCrossNetI
+        __init__(self, TCrossNetI EdgeI) -> TMMNetCrossNetI
+        Parameters:
+           EdgeI: TMMNet::TCrossNetI const & value
+
+           EdgeI: TMMNet::TCrossNetI const & value
+
+        """
+        _snap.TMMNetCrossNetI_swiginit(self,_snap.new_TMMNetCrossNetI(*args))
+    def Next(self):
+        """
+        Next(self) -> TMMNetCrossNetI
+        Parameters:
+           self: TMMNetCrossNetI * value
+
+
+
+
+        """
+        return _snap.TMMNetCrossNetI_Next(self)
+
+    def __lt__(self, *args):
+        """
+        __lt__(self, TMMNetCrossNetI EdgeI) -> bool
+        Parameters:
+           self: TMMNetCrossNetI const * value
+           EdgeI: TMMNetCrossNetI const & value
+
+           EdgeI: TMMNetCrossNetI const & value
+
+        """
+        return _snap.TMMNetCrossNetI___lt__(self, *args)
+
+    def __eq__(self, *args):
+        """
+        __eq__(self, TMMNetCrossNetI EdgeI) -> bool
+        Parameters:
+           self: TMMNetCrossNetI const * value
+           EdgeI: TMMNetCrossNetI const & value
+
+           EdgeI: TMMNetCrossNetI const & value
+
+        """
+        return _snap.TMMNetCrossNetI___eq__(self, *args)
+
+    def GetCrossId(self):
+        """
+        GetCrossId(self) -> int
+        Parameters:
+           self: TMMNetCrossNetI * value
+
+
+
+
+        """
+        return _snap.TMMNetCrossNetI_GetCrossId(self)
+
+    def GetCrossNet(self):
+        """
+        GetCrossNet(self) -> TCrossNet
+        Parameters:
+           self: TMMNetCrossNetI * value
+
+
+
+
+        """
+        return _snap.TMMNetCrossNetI_GetCrossNet(self)
+
+    __swig_destroy__ = _snap.delete_TMMNetCrossNetI
+TMMNetCrossNetI.Next = new_instancemethod(_snap.TMMNetCrossNetI_Next,None,TMMNetCrossNetI)
+TMMNetCrossNetI.__lt__ = new_instancemethod(_snap.TMMNetCrossNetI___lt__,None,TMMNetCrossNetI)
+TMMNetCrossNetI.__eq__ = new_instancemethod(_snap.TMMNetCrossNetI___eq__,None,TMMNetCrossNetI)
+TMMNetCrossNetI.GetCrossId = new_instancemethod(_snap.TMMNetCrossNetI_GetCrossId,None,TMMNetCrossNetI)
+TMMNetCrossNetI.GetCrossNet = new_instancemethod(_snap.TMMNetCrossNetI_GetCrossNet,None,TMMNetCrossNetI)
+TMMNetCrossNetI_swigregister = _snap.TMMNetCrossNetI_swigregister
+TMMNetCrossNetI_swigregister(TMMNetCrossNetI)
+
 
 def TPrGraph(*args):
   """
@@ -72158,6 +75301,51 @@ def TPrGraph(*args):
 
     """
   return _snap.TPrGraph(*args)
+
+def LoadModeToNet(*args):
+  """
+    LoadModeToNet(PMMNet Graph, TStr Name, PTable Table, TStr NCol, TStrV NodeAttrV) -> int
+    Parameters:
+       Graph: PMMNet value
+       Name: TStr const & value
+       Table: PTable value
+       NCol: TStr const & value
+       NodeAttrV: TStrV & value
+
+       Graph: PMMNet value
+       Name: TStr const & value
+       Table: PTable value
+       NCol: TStr const & value
+       NodeAttrV: TStrV & value
+
+    """
+  return _snap.LoadModeToNet(*args)
+
+def LoadCrossNetToNet(*args):
+  """
+    LoadCrossNetToNet(PMMNet Graph, TStr Mode1, TStr Mode2, TStr CrossName, 
+        PTable Table, TStr SrcCol, TStr DstCol, TStrV EdgeAttrV) -> int
+    Parameters:
+       Graph: PMMNet value
+       Mode1: TStr const & value
+       Mode2: TStr const & value
+       CrossName: TStr const & value
+       Table: PTable value
+       SrcCol: TStr const & value
+       DstCol: TStr const & value
+       EdgeAttrV: TStrV & value
+
+       Graph: PMMNet value
+       Mode1: TStr const & value
+       Mode2: TStr const & value
+       CrossName: TStr const & value
+       Table: PTable value
+       SrcCol: TStr const & value
+       DstCol: TStr const & value
+       EdgeAttrV: TStrV & value
+
+    """
+  return _snap.LoadCrossNetToNet(*args)
 
 def GetRndWalkRestart_PUNGraph(*args):
   """
@@ -72527,6 +75715,7 @@ class PNEANet(object):
         """
         return _snap.PNEANet_GetRefs(self)
 
+    CRef = _swig_property(_snap.PNEANet_CRef_get)
     def Save_V1(self, *args):
         """
         Save_V1(self, TSOut SOut)
@@ -72815,6 +76004,61 @@ class PNEANet(object):
 
         """
         return _snap.PNEANet_GetNAIntI(self, *args)
+
+    def BegNAIntVI(self, *args):
+        """
+        BegNAIntVI(self, TStr attr) -> TAIntVI
+        Parameters:
+           self: TNEANet const * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+           self: TPt< TNEANet > const * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.PNEANet_BegNAIntVI(self, *args)
+
+    def EndNAIntVI(self, *args):
+        """
+        EndNAIntVI(self, TStr attr) -> TAIntVI
+        Parameters:
+           self: TNEANet const * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+           self: TPt< TNEANet > const * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.PNEANet_EndNAIntVI(self, *args)
+
+    def GetNAIntVI(self, *args):
+        """
+        GetNAIntVI(self, TStr attr, int NId) -> TAIntVI
+        Parameters:
+           self: TNEANet const * value
+           attr: TStr const & value
+           NId: int const & value
+
+           attr: TStr const & value
+           NId: int const & value
+
+           self: TPt< TNEANet > const * value
+           attr: TStr const & value
+           NId: int const & value
+
+           attr: TStr const & value
+           NId: int const & value
+
+        """
+        return _snap.PNEANet_GetNAIntVI(self, *args)
 
     def BegNAStrI(self, *args):
         """
@@ -73121,6 +76365,84 @@ class PNEANet(object):
 
         """
         return _snap.PNEANet_IntAttrValueNI(self, *args)
+
+    def IntVAttrNameNI(self, *args):
+        """
+        IntVAttrNameNI(self, TInt NId, TStrV Names)
+        Parameters:
+           NId: TInt const & value
+           Names: TStrV & value
+
+           NId: TInt const & value
+           Names: TStrV & value
+
+           NId: TInt const & value
+           Names: TStrV & value
+
+           NId: TInt const & value
+           Names: TStrV & value
+
+        IntVAttrNameNI(self, TInt NId, TStrIntPrH::TIter NodeHI, TStrV Names)
+        Parameters:
+           self: TNEANet const * value
+           NId: TInt const & value
+           NodeHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+           NId: TInt const & value
+           NodeHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+           self: TPt< TNEANet > const * value
+           NId: TInt const & value
+           NodeHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+           NId: TInt const & value
+           NodeHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+        """
+        return _snap.PNEANet_IntVAttrNameNI(self, *args)
+
+    def IntVAttrValueNI(self, *args):
+        """
+        IntVAttrValueNI(self, TInt NId, TVec<(TIntV)> Values)
+        Parameters:
+           NId: TInt const & value
+           Values: TVec< TIntV > & value
+
+           NId: TInt const & value
+           Values: TVec< TIntV > & value
+
+           NId: TInt const & value
+           Values: TVec< TIntV > & value
+
+           NId: TInt const & value
+           Values: TVec< TIntV > & value
+
+        IntVAttrValueNI(self, TInt NId, TStrIntPrH::TIter NodeHI, TVec<(TIntV)> Values)
+        Parameters:
+           self: TNEANet const * value
+           NId: TInt const & value
+           NodeHI: TStrIntPrH::TIter value
+           Values: TVec< TIntV > & value
+
+           NId: TInt const & value
+           NodeHI: TStrIntPrH::TIter value
+           Values: TVec< TIntV > & value
+
+           self: TPt< TNEANet > const * value
+           NId: TInt const & value
+           NodeHI: TStrIntPrH::TIter value
+           Values: TVec< TIntV > & value
+
+           NId: TInt const & value
+           NodeHI: TStrIntPrH::TIter value
+           Values: TVec< TIntV > & value
+
+        """
+        return _snap.PNEANet_IntVAttrValueNI(self, *args)
 
     def StrAttrNameNI(self, *args):
         """
@@ -73434,6 +76756,84 @@ class PNEANet(object):
         """
         return _snap.PNEANet_IntAttrValueEI(self, *args)
 
+    def IntVAttrNameEI(self, *args):
+        """
+        IntVAttrNameEI(self, TInt EId, TStrV Names)
+        Parameters:
+           EId: TInt const & value
+           Names: TStrV & value
+
+           EId: TInt const & value
+           Names: TStrV & value
+
+           EId: TInt const & value
+           Names: TStrV & value
+
+           EId: TInt const & value
+           Names: TStrV & value
+
+        IntVAttrNameEI(self, TInt EId, TStrIntPrH::TIter EdgeHI, TStrV Names)
+        Parameters:
+           self: TNEANet const * value
+           EId: TInt const & value
+           EdgeHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+           EId: TInt const & value
+           EdgeHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+           self: TPt< TNEANet > const * value
+           EId: TInt const & value
+           EdgeHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+           EId: TInt const & value
+           EdgeHI: TStrIntPrH::TIter value
+           Names: TStrV & value
+
+        """
+        return _snap.PNEANet_IntVAttrNameEI(self, *args)
+
+    def IntVAttrValueEI(self, *args):
+        """
+        IntVAttrValueEI(self, TInt EId, TVec<(TIntV)> Values)
+        Parameters:
+           EId: TInt const & value
+           Values: TVec< TIntV > & value
+
+           EId: TInt const & value
+           Values: TVec< TIntV > & value
+
+           EId: TInt const & value
+           Values: TVec< TIntV > & value
+
+           EId: TInt const & value
+           Values: TVec< TIntV > & value
+
+        IntVAttrValueEI(self, TInt EId, TStrIntPrH::TIter EdgeHI, TVec<(TIntV)> Values)
+        Parameters:
+           self: TNEANet const * value
+           EId: TInt const & value
+           EdgeHI: TStrIntPrH::TIter value
+           Values: TVec< TIntV > & value
+
+           EId: TInt const & value
+           EdgeHI: TStrIntPrH::TIter value
+           Values: TVec< TIntV > & value
+
+           self: TPt< TNEANet > const * value
+           EId: TInt const & value
+           EdgeHI: TStrIntPrH::TIter value
+           Values: TVec< TIntV > & value
+
+           EId: TInt const & value
+           EdgeHI: TStrIntPrH::TIter value
+           Values: TVec< TIntV > & value
+
+        """
+        return _snap.PNEANet_IntVAttrValueEI(self, *args)
+
     def StrAttrNameEI(self, *args):
         """
         StrAttrNameEI(self, TInt EId, TStrV Names)
@@ -73664,6 +77064,61 @@ class PNEANet(object):
 
         """
         return _snap.PNEANet_GetEAIntI(self, *args)
+
+    def BegEAIntVI(self, *args):
+        """
+        BegEAIntVI(self, TStr attr) -> TAIntVI
+        Parameters:
+           self: TNEANet const * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+           self: TPt< TNEANet > const * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.PNEANet_BegEAIntVI(self, *args)
+
+    def EndEAIntVI(self, *args):
+        """
+        EndEAIntVI(self, TStr attr) -> TAIntVI
+        Parameters:
+           self: TNEANet const * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+           self: TPt< TNEANet > const * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.PNEANet_EndEAIntVI(self, *args)
+
+    def GetEAIntVI(self, *args):
+        """
+        GetEAIntVI(self, TStr attr, int EId) -> TAIntVI
+        Parameters:
+           self: TNEANet const * value
+           attr: TStr const & value
+           EId: int const & value
+
+           attr: TStr const & value
+           EId: int const & value
+
+           self: TPt< TNEANet > const * value
+           attr: TStr const & value
+           EId: int const & value
+
+           attr: TStr const & value
+           EId: int const & value
+
+        """
+        return _snap.PNEANet_GetEAIntVI(self, *args)
 
     def BegEAStrI(self, *args):
         """
@@ -74484,6 +77939,135 @@ class PNEANet(object):
         """
         return _snap.PNEANet_AddFltAttrDatN(self, *args)
 
+    def AddIntVAttrDatN(self, *args):
+        """
+        AddIntVAttrDatN(self, TNodeI NodeI, TIntV value, TStr attr) -> int
+        Parameters:
+           NodeI: TNEANet::TNodeI const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+           NodeI: TNEANet::TNodeI const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+           NodeI: TNEANet::TNodeI const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+           NodeI: TNEANet::TNodeI const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+        AddIntVAttrDatN(self, int NId, TIntV value, TStr attr) -> int
+        Parameters:
+           self: TNEANet * value
+           NId: int const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+           self: TPt< TNEANet > * value
+           NId: int const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+        """
+        return _snap.PNEANet_AddIntVAttrDatN(self, *args)
+
+    def AppendIntVAttrDatN(self, *args):
+        """
+        AppendIntVAttrDatN(self, TNodeI NodeI, TInt value, TStr attr) -> int
+        Parameters:
+           NodeI: TNEANet::TNodeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           NodeI: TNEANet::TNodeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           NodeI: TNEANet::TNodeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           NodeI: TNEANet::TNodeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+        AppendIntVAttrDatN(self, int NId, TInt value, TStr attr) -> int
+        Parameters:
+           self: TNEANet * value
+           NId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           self: TPt< TNEANet > * value
+           NId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+        """
+        return _snap.PNEANet_AppendIntVAttrDatN(self, *args)
+
+    def DelFromIntVAttrDatN(self, *args):
+        """
+        DelFromIntVAttrDatN(self, TNodeI NodeI, TInt value, TStr attr) -> int
+        Parameters:
+           NodeI: TNEANet::TNodeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           NodeI: TNEANet::TNodeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           NodeI: TNEANet::TNodeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           NodeI: TNEANet::TNodeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+        DelFromIntVAttrDatN(self, int NId, TInt value, TStr attr) -> int
+        Parameters:
+           self: TNEANet * value
+           NId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           self: TPt< TNEANet > * value
+           NId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+        """
+        return _snap.PNEANet_DelFromIntVAttrDatN(self, *args)
+
     def AddIntAttrDatE(self, *args):
         """
         AddIntAttrDatE(self, TEdgeI EdgeI, TInt value, TStr attr) -> int
@@ -74613,6 +78197,92 @@ class PNEANet(object):
         """
         return _snap.PNEANet_AddFltAttrDatE(self, *args)
 
+    def AddIntVAttrDatE(self, *args):
+        """
+        AddIntVAttrDatE(self, TEdgeI EdgeI, TIntV value, TStr attr) -> int
+        Parameters:
+           EdgeI: TNEANet::TEdgeI const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+           EdgeI: TNEANet::TEdgeI const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+           EdgeI: TNEANet::TEdgeI const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+           EdgeI: TNEANet::TEdgeI const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+        AddIntVAttrDatE(self, int EId, TIntV value, TStr attr) -> int
+        Parameters:
+           self: TNEANet * value
+           EId: int const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+           self: TPt< TNEANet > * value
+           EId: int const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           value: TIntV const & value
+           attr: TStr const & value
+
+        """
+        return _snap.PNEANet_AddIntVAttrDatE(self, *args)
+
+    def AppendIntVAttrDatE(self, *args):
+        """
+        AppendIntVAttrDatE(self, TEdgeI EdgeI, TInt value, TStr attr) -> int
+        Parameters:
+           EdgeI: TNEANet::TEdgeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           EdgeI: TNEANet::TEdgeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           EdgeI: TNEANet::TEdgeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           EdgeI: TNEANet::TEdgeI const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+        AppendIntVAttrDatE(self, int EId, TInt value, TStr attr) -> int
+        Parameters:
+           self: TNEANet * value
+           EId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           self: TPt< TNEANet > * value
+           EId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           value: TInt const & value
+           attr: TStr const & value
+
+        """
+        return _snap.PNEANet_AppendIntVAttrDatE(self, *args)
+
     def GetIntAttrDatN(self, *args):
         """
         GetIntAttrDatN(self, TNodeI NodeI, TStr attr) -> TInt
@@ -74717,6 +78387,41 @@ class PNEANet(object):
 
         """
         return _snap.PNEANet_GetFltAttrDatN(self, *args)
+
+    def GetIntVAttrDatN(self, *args):
+        """
+        GetIntVAttrDatN(self, TNodeI NodeI, TStr attr) -> TIntV
+        Parameters:
+           NodeI: TNEANet::TNodeI const & value
+           attr: TStr const & value
+
+           NodeI: TNEANet::TNodeI const & value
+           attr: TStr const & value
+
+           NodeI: TNEANet::TNodeI const & value
+           attr: TStr const & value
+
+           NodeI: TNEANet::TNodeI const & value
+           attr: TStr const & value
+
+        GetIntVAttrDatN(self, int NId, TStr attr) -> TIntV
+        Parameters:
+           self: TNEANet const * value
+           NId: int const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           attr: TStr const & value
+
+           self: TPt< TNEANet > const * value
+           NId: int const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.PNEANet_GetIntVAttrDatN(self, *args)
 
     def GetIntAttrIndN(self, *args):
         """
@@ -74961,6 +78666,41 @@ class PNEANet(object):
 
         """
         return _snap.PNEANet_GetFltAttrDatE(self, *args)
+
+    def GetIntVAttrDatE(self, *args):
+        """
+        GetIntVAttrDatE(self, TEdgeI EdgeI, TStr attr) -> TIntV
+        Parameters:
+           EdgeI: TNEANet::TEdgeI const & value
+           attr: TStr const & value
+
+           EdgeI: TNEANet::TEdgeI const & value
+           attr: TStr const & value
+
+           EdgeI: TNEANet::TEdgeI const & value
+           attr: TStr const & value
+
+           EdgeI: TNEANet::TEdgeI const & value
+           attr: TStr const & value
+
+        GetIntVAttrDatE(self, int EId, TStr attr) -> TIntV
+        Parameters:
+           self: TNEANet * value
+           EId: int const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           attr: TStr const & value
+
+           self: TPt< TNEANet > * value
+           EId: int const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.PNEANet_GetIntVAttrDatE(self, *args)
 
     def GetIntAttrIndE(self, *args):
         """
@@ -75264,6 +79004,23 @@ class PNEANet(object):
         """
         return _snap.PNEANet_AddFltAttrN(self, *args)
 
+    def AddIntVAttrN(self, *args):
+        """
+        AddIntVAttrN(self, TStr attr) -> int
+        Parameters:
+           self: TNEANet * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+           self: TPt< TNEANet > * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.PNEANet_AddIntVAttrN(self, *args)
+
     def AddIntAttrE(self, *args):
         """
         AddIntAttrE(self, TStr attr, TInt defaultValue = Mn) -> int
@@ -75357,6 +79114,23 @@ class PNEANet(object):
         """
         return _snap.PNEANet_AddFltAttrE(self, *args)
 
+    def AddIntVAttrE(self, *args):
+        """
+        AddIntVAttrE(self, TStr attr) -> int
+        Parameters:
+           self: TNEANet * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+           self: TPt< TNEANet > * value
+           attr: TStr const & value
+
+           attr: TStr const & value
+
+        """
+        return _snap.PNEANet_AddIntVAttrE(self, *args)
+
     def DelAttrN(self, *args):
         """
         DelAttrN(self, TStr attr) -> int
@@ -75432,6 +79206,27 @@ class PNEANet(object):
 
         """
         return _snap.PNEANet_IsIntAttrDeletedN(self, *args)
+
+    def IsIntVAttrDeletedN(self, *args):
+        """
+        IsIntVAttrDeletedN(self, int NId, TStr attr) -> bool
+        Parameters:
+           self: TNEANet const * value
+           NId: int const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           attr: TStr const & value
+
+           self: TPt< TNEANet > const * value
+           NId: int const & value
+           attr: TStr const & value
+
+           NId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.PNEANet_IsIntVAttrDeletedN(self, *args)
 
     def IsStrAttrDeletedN(self, *args):
         """
@@ -75517,6 +79312,27 @@ class PNEANet(object):
         """
         return _snap.PNEANet_NodeAttrIsIntDeleted(self, *args)
 
+    def NodeAttrIsIntVDeleted(self, *args):
+        """
+        NodeAttrIsIntVDeleted(self, int NId, TStrIntPrH::TIter NodeHI) -> bool
+        Parameters:
+           self: TNEANet const * value
+           NId: int const & value
+           NodeHI: TStrIntPrH::TIter const & value
+
+           NId: int const & value
+           NodeHI: TStrIntPrH::TIter const & value
+
+           self: TPt< TNEANet > const * value
+           NId: int const & value
+           NodeHI: TStrIntPrH::TIter const & value
+
+           NId: int const & value
+           NodeHI: TStrIntPrH::TIter const & value
+
+        """
+        return _snap.PNEANet_NodeAttrIsIntVDeleted(self, *args)
+
     def NodeAttrIsStrDeleted(self, *args):
         """
         NodeAttrIsStrDeleted(self, int NId, TStrIntPrH::TIter NodeHI) -> bool
@@ -75601,6 +79417,27 @@ class PNEANet(object):
         """
         return _snap.PNEANet_IsIntAttrDeletedE(self, *args)
 
+    def IsIntVAttrDeletedE(self, *args):
+        """
+        IsIntVAttrDeletedE(self, int EId, TStr attr) -> bool
+        Parameters:
+           self: TNEANet const * value
+           EId: int const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           attr: TStr const & value
+
+           self: TPt< TNEANet > const * value
+           EId: int const & value
+           attr: TStr const & value
+
+           EId: int const & value
+           attr: TStr const & value
+
+        """
+        return _snap.PNEANet_IsIntVAttrDeletedE(self, *args)
+
     def IsStrAttrDeletedE(self, *args):
         """
         IsStrAttrDeletedE(self, int EId, TStr attr) -> bool
@@ -75684,6 +79521,27 @@ class PNEANet(object):
 
         """
         return _snap.PNEANet_EdgeAttrIsIntDeleted(self, *args)
+
+    def EdgeAttrIsIntVDeleted(self, *args):
+        """
+        EdgeAttrIsIntVDeleted(self, int EId, TStrIntPrH::TIter EdgeHI) -> bool
+        Parameters:
+           self: TNEANet const * value
+           EId: int const & value
+           EdgeHI: TStrIntPrH::TIter const & value
+
+           EId: int const & value
+           EdgeHI: TStrIntPrH::TIter const & value
+
+           self: TPt< TNEANet > const * value
+           EId: int const & value
+           EdgeHI: TStrIntPrH::TIter const & value
+
+           EId: int const & value
+           EdgeHI: TStrIntPrH::TIter const & value
+
+        """
+        return _snap.PNEANet_EdgeAttrIsIntVDeleted(self, *args)
 
     def EdgeAttrIsStrDeleted(self, *args):
         """
@@ -77291,6 +81149,9 @@ PNEANet.GetNI = new_instancemethod(_snap.PNEANet_GetNI,None,PNEANet)
 PNEANet.BegNAIntI = new_instancemethod(_snap.PNEANet_BegNAIntI,None,PNEANet)
 PNEANet.EndNAIntI = new_instancemethod(_snap.PNEANet_EndNAIntI,None,PNEANet)
 PNEANet.GetNAIntI = new_instancemethod(_snap.PNEANet_GetNAIntI,None,PNEANet)
+PNEANet.BegNAIntVI = new_instancemethod(_snap.PNEANet_BegNAIntVI,None,PNEANet)
+PNEANet.EndNAIntVI = new_instancemethod(_snap.PNEANet_EndNAIntVI,None,PNEANet)
+PNEANet.GetNAIntVI = new_instancemethod(_snap.PNEANet_GetNAIntVI,None,PNEANet)
 PNEANet.BegNAStrI = new_instancemethod(_snap.PNEANet_BegNAStrI,None,PNEANet)
 PNEANet.EndNAStrI = new_instancemethod(_snap.PNEANet_EndNAStrI,None,PNEANet)
 PNEANet.GetNAStrI = new_instancemethod(_snap.PNEANet_GetNAStrI,None,PNEANet)
@@ -77301,6 +81162,8 @@ PNEANet.AttrNameNI = new_instancemethod(_snap.PNEANet_AttrNameNI,None,PNEANet)
 PNEANet.AttrValueNI = new_instancemethod(_snap.PNEANet_AttrValueNI,None,PNEANet)
 PNEANet.IntAttrNameNI = new_instancemethod(_snap.PNEANet_IntAttrNameNI,None,PNEANet)
 PNEANet.IntAttrValueNI = new_instancemethod(_snap.PNEANet_IntAttrValueNI,None,PNEANet)
+PNEANet.IntVAttrNameNI = new_instancemethod(_snap.PNEANet_IntVAttrNameNI,None,PNEANet)
+PNEANet.IntVAttrValueNI = new_instancemethod(_snap.PNEANet_IntVAttrValueNI,None,PNEANet)
 PNEANet.StrAttrNameNI = new_instancemethod(_snap.PNEANet_StrAttrNameNI,None,PNEANet)
 PNEANet.StrAttrValueNI = new_instancemethod(_snap.PNEANet_StrAttrValueNI,None,PNEANet)
 PNEANet.FltAttrNameNI = new_instancemethod(_snap.PNEANet_FltAttrNameNI,None,PNEANet)
@@ -77309,6 +81172,8 @@ PNEANet.AttrNameEI = new_instancemethod(_snap.PNEANet_AttrNameEI,None,PNEANet)
 PNEANet.AttrValueEI = new_instancemethod(_snap.PNEANet_AttrValueEI,None,PNEANet)
 PNEANet.IntAttrNameEI = new_instancemethod(_snap.PNEANet_IntAttrNameEI,None,PNEANet)
 PNEANet.IntAttrValueEI = new_instancemethod(_snap.PNEANet_IntAttrValueEI,None,PNEANet)
+PNEANet.IntVAttrNameEI = new_instancemethod(_snap.PNEANet_IntVAttrNameEI,None,PNEANet)
+PNEANet.IntVAttrValueEI = new_instancemethod(_snap.PNEANet_IntVAttrValueEI,None,PNEANet)
 PNEANet.StrAttrNameEI = new_instancemethod(_snap.PNEANet_StrAttrNameEI,None,PNEANet)
 PNEANet.StrAttrValueEI = new_instancemethod(_snap.PNEANet_StrAttrValueEI,None,PNEANet)
 PNEANet.FltAttrNameEI = new_instancemethod(_snap.PNEANet_FltAttrNameEI,None,PNEANet)
@@ -77316,6 +81181,9 @@ PNEANet.FltAttrValueEI = new_instancemethod(_snap.PNEANet_FltAttrValueEI,None,PN
 PNEANet.BegEAIntI = new_instancemethod(_snap.PNEANet_BegEAIntI,None,PNEANet)
 PNEANet.EndEAIntI = new_instancemethod(_snap.PNEANet_EndEAIntI,None,PNEANet)
 PNEANet.GetEAIntI = new_instancemethod(_snap.PNEANet_GetEAIntI,None,PNEANet)
+PNEANet.BegEAIntVI = new_instancemethod(_snap.PNEANet_BegEAIntVI,None,PNEANet)
+PNEANet.EndEAIntVI = new_instancemethod(_snap.PNEANet_EndEAIntVI,None,PNEANet)
+PNEANet.GetEAIntVI = new_instancemethod(_snap.PNEANet_GetEAIntVI,None,PNEANet)
 PNEANet.BegEAStrI = new_instancemethod(_snap.PNEANet_BegEAStrI,None,PNEANet)
 PNEANet.EndEAStrI = new_instancemethod(_snap.PNEANet_EndEAStrI,None,PNEANet)
 PNEANet.GetEAStrI = new_instancemethod(_snap.PNEANet_GetEAStrI,None,PNEANet)
@@ -77345,12 +81213,18 @@ PNEANet.Dump = new_instancemethod(_snap.PNEANet_Dump,None,PNEANet)
 PNEANet.AddIntAttrDatN = new_instancemethod(_snap.PNEANet_AddIntAttrDatN,None,PNEANet)
 PNEANet.AddStrAttrDatN = new_instancemethod(_snap.PNEANet_AddStrAttrDatN,None,PNEANet)
 PNEANet.AddFltAttrDatN = new_instancemethod(_snap.PNEANet_AddFltAttrDatN,None,PNEANet)
+PNEANet.AddIntVAttrDatN = new_instancemethod(_snap.PNEANet_AddIntVAttrDatN,None,PNEANet)
+PNEANet.AppendIntVAttrDatN = new_instancemethod(_snap.PNEANet_AppendIntVAttrDatN,None,PNEANet)
+PNEANet.DelFromIntVAttrDatN = new_instancemethod(_snap.PNEANet_DelFromIntVAttrDatN,None,PNEANet)
 PNEANet.AddIntAttrDatE = new_instancemethod(_snap.PNEANet_AddIntAttrDatE,None,PNEANet)
 PNEANet.AddStrAttrDatE = new_instancemethod(_snap.PNEANet_AddStrAttrDatE,None,PNEANet)
 PNEANet.AddFltAttrDatE = new_instancemethod(_snap.PNEANet_AddFltAttrDatE,None,PNEANet)
+PNEANet.AddIntVAttrDatE = new_instancemethod(_snap.PNEANet_AddIntVAttrDatE,None,PNEANet)
+PNEANet.AppendIntVAttrDatE = new_instancemethod(_snap.PNEANet_AppendIntVAttrDatE,None,PNEANet)
 PNEANet.GetIntAttrDatN = new_instancemethod(_snap.PNEANet_GetIntAttrDatN,None,PNEANet)
 PNEANet.GetStrAttrDatN = new_instancemethod(_snap.PNEANet_GetStrAttrDatN,None,PNEANet)
 PNEANet.GetFltAttrDatN = new_instancemethod(_snap.PNEANet_GetFltAttrDatN,None,PNEANet)
+PNEANet.GetIntVAttrDatN = new_instancemethod(_snap.PNEANet_GetIntVAttrDatN,None,PNEANet)
 PNEANet.GetIntAttrIndN = new_instancemethod(_snap.PNEANet_GetIntAttrIndN,None,PNEANet)
 PNEANet.GetAttrIndN = new_instancemethod(_snap.PNEANet_GetAttrIndN,None,PNEANet)
 PNEANet.GetIntAttrIndDatN = new_instancemethod(_snap.PNEANet_GetIntAttrIndDatN,None,PNEANet)
@@ -77359,6 +81233,7 @@ PNEANet.GetFltAttrIndDatN = new_instancemethod(_snap.PNEANet_GetFltAttrIndDatN,N
 PNEANet.GetIntAttrDatE = new_instancemethod(_snap.PNEANet_GetIntAttrDatE,None,PNEANet)
 PNEANet.GetStrAttrDatE = new_instancemethod(_snap.PNEANet_GetStrAttrDatE,None,PNEANet)
 PNEANet.GetFltAttrDatE = new_instancemethod(_snap.PNEANet_GetFltAttrDatE,None,PNEANet)
+PNEANet.GetIntVAttrDatE = new_instancemethod(_snap.PNEANet_GetIntVAttrDatE,None,PNEANet)
 PNEANet.GetIntAttrIndE = new_instancemethod(_snap.PNEANet_GetIntAttrIndE,None,PNEANet)
 PNEANet.GetAttrIndE = new_instancemethod(_snap.PNEANet_GetAttrIndE,None,PNEANet)
 PNEANet.GetIntAttrIndDatE = new_instancemethod(_snap.PNEANet_GetIntAttrIndDatE,None,PNEANet)
@@ -77369,25 +81244,31 @@ PNEANet.DelAttrDatE = new_instancemethod(_snap.PNEANet_DelAttrDatE,None,PNEANet)
 PNEANet.AddIntAttrN = new_instancemethod(_snap.PNEANet_AddIntAttrN,None,PNEANet)
 PNEANet.AddStrAttrN = new_instancemethod(_snap.PNEANet_AddStrAttrN,None,PNEANet)
 PNEANet.AddFltAttrN = new_instancemethod(_snap.PNEANet_AddFltAttrN,None,PNEANet)
+PNEANet.AddIntVAttrN = new_instancemethod(_snap.PNEANet_AddIntVAttrN,None,PNEANet)
 PNEANet.AddIntAttrE = new_instancemethod(_snap.PNEANet_AddIntAttrE,None,PNEANet)
 PNEANet.AddStrAttrE = new_instancemethod(_snap.PNEANet_AddStrAttrE,None,PNEANet)
 PNEANet.AddFltAttrE = new_instancemethod(_snap.PNEANet_AddFltAttrE,None,PNEANet)
+PNEANet.AddIntVAttrE = new_instancemethod(_snap.PNEANet_AddIntVAttrE,None,PNEANet)
 PNEANet.DelAttrN = new_instancemethod(_snap.PNEANet_DelAttrN,None,PNEANet)
 PNEANet.DelAttrE = new_instancemethod(_snap.PNEANet_DelAttrE,None,PNEANet)
 PNEANet.IsAttrDeletedN = new_instancemethod(_snap.PNEANet_IsAttrDeletedN,None,PNEANet)
 PNEANet.IsIntAttrDeletedN = new_instancemethod(_snap.PNEANet_IsIntAttrDeletedN,None,PNEANet)
+PNEANet.IsIntVAttrDeletedN = new_instancemethod(_snap.PNEANet_IsIntVAttrDeletedN,None,PNEANet)
 PNEANet.IsStrAttrDeletedN = new_instancemethod(_snap.PNEANet_IsStrAttrDeletedN,None,PNEANet)
 PNEANet.IsFltAttrDeletedN = new_instancemethod(_snap.PNEANet_IsFltAttrDeletedN,None,PNEANet)
 PNEANet.NodeAttrIsDeleted = new_instancemethod(_snap.PNEANet_NodeAttrIsDeleted,None,PNEANet)
 PNEANet.NodeAttrIsIntDeleted = new_instancemethod(_snap.PNEANet_NodeAttrIsIntDeleted,None,PNEANet)
+PNEANet.NodeAttrIsIntVDeleted = new_instancemethod(_snap.PNEANet_NodeAttrIsIntVDeleted,None,PNEANet)
 PNEANet.NodeAttrIsStrDeleted = new_instancemethod(_snap.PNEANet_NodeAttrIsStrDeleted,None,PNEANet)
 PNEANet.NodeAttrIsFltDeleted = new_instancemethod(_snap.PNEANet_NodeAttrIsFltDeleted,None,PNEANet)
 PNEANet.IsAttrDeletedE = new_instancemethod(_snap.PNEANet_IsAttrDeletedE,None,PNEANet)
 PNEANet.IsIntAttrDeletedE = new_instancemethod(_snap.PNEANet_IsIntAttrDeletedE,None,PNEANet)
+PNEANet.IsIntVAttrDeletedE = new_instancemethod(_snap.PNEANet_IsIntVAttrDeletedE,None,PNEANet)
 PNEANet.IsStrAttrDeletedE = new_instancemethod(_snap.PNEANet_IsStrAttrDeletedE,None,PNEANet)
 PNEANet.IsFltAttrDeletedE = new_instancemethod(_snap.PNEANet_IsFltAttrDeletedE,None,PNEANet)
 PNEANet.EdgeAttrIsDeleted = new_instancemethod(_snap.PNEANet_EdgeAttrIsDeleted,None,PNEANet)
 PNEANet.EdgeAttrIsIntDeleted = new_instancemethod(_snap.PNEANet_EdgeAttrIsIntDeleted,None,PNEANet)
+PNEANet.EdgeAttrIsIntVDeleted = new_instancemethod(_snap.PNEANet_EdgeAttrIsIntVDeleted,None,PNEANet)
 PNEANet.EdgeAttrIsStrDeleted = new_instancemethod(_snap.PNEANet_EdgeAttrIsStrDeleted,None,PNEANet)
 PNEANet.EdgeAttrIsFltDeleted = new_instancemethod(_snap.PNEANet_EdgeAttrIsFltDeleted,None,PNEANet)
 PNEANet.GetNodeAttrValue = new_instancemethod(_snap.PNEANet_GetNodeAttrValue,None,PNEANet)
@@ -78109,110 +81990,263 @@ def PercentMxScc_PNEANet(*args):
 
     """
   return _snap.PercentMxScc_PNEANet(*args)
-# redefine TNGraphEdgeI.GetId to return a pair of nodes rather than -1
-def GetId(self):
-    return (self.GetSrcNId(), self.GetDstNId())
-
-TNGraphEdgeI.GetId = GetId
-
-class PNGraph(object):
-    """Proxy of C++ TPt<(TNGraph)> class"""
+class PMMNet(object):
+    """Proxy of C++ TPt<(TMMNet)> class"""
     thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
     def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined")
     __repr__ = _swig_repr
     def New():
-        """New() -> PNGraph"""
-        return _snap.PNGraph_New()
+        """New() -> PMMNet"""
+        return _snap.PMMNet_New()
 
     New = staticmethod(New)
-    __swig_destroy__ = _snap.delete_PNGraph
+    __swig_destroy__ = _snap.delete_PMMNet
     def Save(self, *args):
         """
         Save(self, TSOut SOut)
         Parameters:
-           self: TPt< TNGraph > const * value
+           self: TPt< TMMNet > const * value
            SOut: TSOut & value
 
            SOut: TSOut & value
 
         """
-        return _snap.PNGraph_Save(self, *args)
+        return _snap.PMMNet_Save(self, *args)
 
     def __deref__(self):
         """
-        __deref__(self) -> TNGraph
+        __deref__(self) -> TMMNet
         Parameters:
-           self: TPt< TNGraph > const * value
+           self: TPt< TMMNet > const * value
 
 
 
 
         """
-        return _snap.PNGraph___deref__(self)
+        return _snap.PMMNet___deref__(self)
 
     def __ref__(self):
         """
-        __ref__(self) -> TNGraph
+        __ref__(self) -> TMMNet
         Parameters:
-           self: TPt< TNGraph > const * value
+           self: TPt< TMMNet > const * value
 
 
 
 
         """
-        return _snap.PNGraph___ref__(self)
+        return _snap.PMMNet___ref__(self)
 
     def __call__(self):
         """
-        __call__(self) -> TNGraph
+        __call__(self) -> TMMNet
         Parameters:
-           self: TPt< TNGraph > const * value
+           self: TPt< TMMNet > const * value
 
 
 
 
         """
-        return _snap.PNGraph___call__(self)
+        return _snap.PMMNet___call__(self)
 
     def Empty(self):
         """
         Empty(self) -> bool
         Parameters:
-           self: TPt< TNGraph > const * value
+           self: TPt< TMMNet > const * value
 
 
 
 
         """
-        return _snap.PNGraph_Empty(self)
+        return _snap.PMMNet_Empty(self)
 
     def Clr(self):
         """
         Clr(self)
         Parameters:
-           self: TPt< TNGraph > * value
+           self: TPt< TMMNet > * value
 
 
 
 
         """
-        return _snap.PNGraph_Clr(self)
+        return _snap.PMMNet_Clr(self)
 
     def GetRefs(self):
         """
         GetRefs(self) -> int
         Parameters:
-           self: TPt< TNGraph > const * value
+           self: TPt< TMMNet > const * value
 
 
 
 
         """
-        return _snap.PNGraph_GetRefs(self)
+        return _snap.PMMNet_GetRefs(self)
+
+    CRef = _swig_property(_snap.PMMNet_CRef_get)
+    def AddMode(self, *args):
+        """
+        AddMode(self, TStr ModeName) -> int
+        Parameters:
+           self: TMMNet * value
+           ModeName: TStr const & value
+
+           ModeName: TStr const & value
+
+           self: TPt< TMMNet > * value
+           ModeName: TStr const & value
+
+           ModeName: TStr const & value
+
+        """
+        return _snap.PMMNet_AddMode(self, *args)
+
+    def DelMode(self, *args):
+        """
+        DelMode(self, TInt ModeId) -> int
+        Parameters:
+           ModeId: TInt const & value
+
+           ModeId: TInt const & value
+
+           ModeId: TInt const & value
+
+           ModeId: TInt const & value
+
+        DelMode(self, TStr ModeName) -> int
+        Parameters:
+           self: TMMNet * value
+           ModeName: TStr const & value
+
+           ModeName: TStr const & value
+
+           self: TPt< TMMNet > * value
+           ModeName: TStr const & value
+
+           ModeName: TStr const & value
+
+        """
+        return _snap.PMMNet_DelMode(self, *args)
+
+    def AddCrossNet(self, *args):
+        """
+        AddCrossNet(self, TStr ModeName1, TStr ModeName2, TStr CrossNetName) -> int
+        Parameters:
+           ModeName1: TStr const & value
+           ModeName2: TStr const & value
+           CrossNetName: TStr const & value
+
+           ModeName1: TStr const & value
+           ModeName2: TStr const & value
+           CrossNetName: TStr const & value
+
+           ModeName1: TStr const & value
+           ModeName2: TStr const & value
+           CrossNetName: TStr const & value
+
+           ModeName1: TStr const & value
+           ModeName2: TStr const & value
+           CrossNetName: TStr const & value
+
+        AddCrossNet(self, TInt ModeId1, TInt ModeId2, TStr CrossNetName) -> int
+        Parameters:
+           ModeId1: TInt const & value
+           ModeId2: TInt const & value
+           CrossNetName: TStr const & value
+
+           ModeId1: TInt const & value
+           ModeId2: TInt const & value
+           CrossNetName: TStr const & value
+
+           ModeId1: TInt const & value
+           ModeId2: TInt const & value
+           CrossNetName: TStr const & value
+
+           ModeId1: TInt const & value
+           ModeId2: TInt const & value
+           CrossNetName: TStr const & value
+
+        AddCrossNet(self, TStr ModeName1, TStr ModeName2, bool isDir, TStr CrossNetName) -> int
+        Parameters:
+           ModeName1: TStr const & value
+           ModeName2: TStr const & value
+           isDir: bool value
+           CrossNetName: TStr const & value
+
+           ModeName1: TStr const & value
+           ModeName2: TStr const & value
+           isDir: bool value
+           CrossNetName: TStr const & value
+
+           ModeName1: TStr const & value
+           ModeName2: TStr const & value
+           isDir: bool value
+           CrossNetName: TStr const & value
+
+           ModeName1: TStr const & value
+           ModeName2: TStr const & value
+           isDir: bool value
+           CrossNetName: TStr const & value
+
+        AddCrossNet(self, TInt ModeId1, TInt ModeId2, bool isDir, TStr CrossNetName) -> int
+        Parameters:
+           self: TMMNet * value
+           ModeId1: TInt const & value
+           ModeId2: TInt const & value
+           isDir: bool value
+           CrossNetName: TStr const & value
+
+           ModeId1: TInt const & value
+           ModeId2: TInt const & value
+           isDir: bool value
+           CrossNetName: TStr const & value
+
+           self: TPt< TMMNet > * value
+           ModeId1: TInt const & value
+           ModeId2: TInt const & value
+           isDir: bool value
+           CrossNetName: TStr const & value
+
+           ModeId1: TInt const & value
+           ModeId2: TInt const & value
+           isDir: bool value
+           CrossNetName: TStr const & value
+
+        """
+        return _snap.PMMNet_AddCrossNet(self, *args)
+
+    def DelCrossNet(self, *args):
+        """
+        DelCrossNet(self, TInt CrossNetId) -> int
+        Parameters:
+           CrossNetId: TInt const & value
+
+           CrossNetId: TInt const & value
+
+           CrossNetId: TInt const & value
+
+           CrossNetId: TInt const & value
+
+        DelCrossNet(self, TStr CrossNet) -> int
+        Parameters:
+           self: TMMNet * value
+           CrossNet: TStr const & value
+
+           CrossNet: TStr const & value
+
+           self: TPt< TMMNet > * value
+           CrossNet: TStr const & value
+
+           CrossNet: TStr const & value
+
+        """
+        return _snap.PMMNet_DelCrossNet(self, *args)
 
     def Load(self, *args):
         """
-        Load(self, TSIn SIn) -> PNGraph
+        Load(self, TSIn SIn) -> PMMNet
         Parameters:
            SIn: TSIn & value
 
@@ -78220,730 +82254,378 @@ class PNGraph(object):
 
            SIn: TSIn & value
 
-           self: TPt< TNGraph > * value
+           self: TPt< TMMNet > * value
            SIn: TSIn & value
 
            SIn: TSIn & value
 
         """
-        return _snap.PNGraph_Load(self, *args)
+        return _snap.PMMNet_Load(self, *args)
 
-    def HasFlag(self, *args):
+    def GetModeId(self, *args):
         """
-        HasFlag(self,  Flag) -> bool
+        GetModeId(self, TStr ModeName) -> int
         Parameters:
-           self: TNGraph const * value
-           Flag: TGraphFlag const & value
+           self: TMMNet const * value
+           ModeName: TStr const & value
 
-           Flag: TGraphFlag const & value
+           ModeName: TStr const & value
 
-           self: TPt< TNGraph > const * value
-           Flag: TGraphFlag const & value
+           self: TPt< TMMNet > const * value
+           ModeName: TStr const & value
 
-           Flag: TGraphFlag const & value
+           ModeName: TStr const & value
 
         """
-        return _snap.PNGraph_HasFlag(self, *args)
+        return _snap.PMMNet_GetModeId(self, *args)
 
-    def GetNodes(self):
+    def GetModeName(self, *args):
         """
-        GetNodes(self) -> int
+        GetModeName(self, TInt ModeId) -> TStr
         Parameters:
-           self: TNGraph const * value
+           self: TMMNet const * value
+           ModeId: TInt const & value
 
+           ModeId: TInt const & value
 
+           self: TPt< TMMNet > const * value
+           ModeId: TInt const & value
 
-
-           self: TPt< TNGraph > const * value
-
-
-
+           ModeId: TInt const & value
 
         """
-        return _snap.PNGraph_GetNodes(self)
+        return _snap.PMMNet_GetModeName(self, *args)
 
-    def AddNode(self, *args):
+    def GetCrossId(self, *args):
         """
-        AddNode(self, int NId = -1) -> int
+        GetCrossId(self, TStr CrossName) -> int
         Parameters:
-           NId: int value
+           self: TMMNet const * value
+           CrossName: TStr const & value
 
-           NId: int value
+           CrossName: TStr const & value
 
-           NId: int value
+           self: TPt< TMMNet > const * value
+           CrossName: TStr const & value
 
-           NId: int value
-
-        AddNode(self) -> int
-        AddNode(self, TNodeI NodeId) -> int
-        Parameters:
-           NodeId: TNGraph::TNodeI const & value
-
-           NodeId: TNGraph::TNodeI const & value
-
-           NodeId: TNGraph::TNodeI const & value
-
-           NodeId: TNGraph::TNodeI const & value
-
-        AddNode(self, int NId, TIntV InNIdV, TIntV OutNIdV) -> int
-        Parameters:
-           NId: int const & value
-           InNIdV: TIntV const & value
-           OutNIdV: TIntV const & value
-
-           NId: int const & value
-           InNIdV: TIntV const & value
-           OutNIdV: TIntV const & value
-
-           NId: int const & value
-           InNIdV: TIntV const & value
-           OutNIdV: TIntV const & value
-
-           NId: int const & value
-           InNIdV: TIntV const & value
-           OutNIdV: TIntV const & value
-
-        AddNode(self, int NId, TVecPool<(TInt)> Pool, int SrcVId, int DstVId) -> int
-        Parameters:
-           self: TNGraph * value
-           NId: int const & value
-           Pool: TVecPool< TInt > const & value
-           SrcVId: int const & value
-           DstVId: int const & value
-
-           NId: int const & value
-           Pool: TVecPool< TInt > const & value
-           SrcVId: int const & value
-           DstVId: int const & value
-
-           self: TPt< TNGraph > * value
-           NId: int const & value
-           Pool: TVecPool< TInt > const & value
-           SrcVId: int const & value
-           DstVId: int const & value
-
-           NId: int const & value
-           Pool: TVecPool< TInt > const & value
-           SrcVId: int const & value
-           DstVId: int const & value
+           CrossName: TStr const & value
 
         """
-        return _snap.PNGraph_AddNode(self, *args)
+        return _snap.PMMNet_GetCrossId(self, *args)
 
-    def AddNodeUnchecked(self, *args):
+    def GetCrossName(self, *args):
         """
-        AddNodeUnchecked(self, int NId = -1) -> int
+        GetCrossName(self, TInt CrossId) -> TStr
         Parameters:
-           NId: int value
+           self: TMMNet const * value
+           CrossId: TInt const & value
 
-           NId: int value
+           CrossId: TInt const & value
 
-           NId: int value
+           self: TPt< TMMNet > const * value
+           CrossId: TInt const & value
 
-           NId: int value
+           CrossId: TInt const & value
 
-        AddNodeUnchecked(self) -> int
+        """
+        return _snap.PMMNet_GetCrossName(self, *args)
+
+    def GetModeNetByName(self, *args):
+        """
+        GetModeNetByName(self, TStr ModeName) -> TModeNet
         Parameters:
-           self: TNGraph * value
+           self: TMMNet const * value
+           ModeName: TStr const & value
 
+           ModeName: TStr const & value
 
-           self: TPt< TNGraph > * value
+           self: TPt< TMMNet > const * value
+           ModeName: TStr const & value
 
+           ModeName: TStr const & value
 
         """
-        return _snap.PNGraph_AddNodeUnchecked(self, *args)
+        return _snap.PMMNet_GetModeNetByName(self, *args)
 
-    def DelNode(self, *args):
+    def GetModeNetById(self, *args):
         """
-        DelNode(self, int NId)
+        GetModeNetById(self, TInt ModeId) -> TModeNet
         Parameters:
-           NId: int const & value
+           self: TMMNet const * value
+           ModeId: TInt const & value
 
-           NId: int const & value
+           ModeId: TInt const & value
 
-           NId: int const & value
+           self: TPt< TMMNet > const * value
+           ModeId: TInt const & value
 
-           NId: int const & value
+           ModeId: TInt const & value
 
-        DelNode(self, TNode NodeI)
+        """
+        return _snap.PMMNet_GetModeNetById(self, *args)
+
+    def GetCrossNetByName(self, *args):
+        """
+        GetCrossNetByName(self, TStr CrossName) -> TCrossNet
         Parameters:
-           self: TNGraph * value
-           NodeI: TNGraph::TNode const & value
+           self: TMMNet const * value
+           CrossName: TStr const & value
 
-           NodeI: TNGraph::TNode const & value
+           CrossName: TStr const & value
 
-           self: TPt< TNGraph > * value
-           NodeI: TNGraph::TNode const & value
+           self: TPt< TMMNet > const * value
+           CrossName: TStr const & value
 
-           NodeI: TNGraph::TNode const & value
+           CrossName: TStr const & value
 
         """
-        return _snap.PNGraph_DelNode(self, *args)
+        return _snap.PMMNet_GetCrossNetByName(self, *args)
 
-    def IsNode(self, *args):
+    def GetCrossNetById(self, *args):
         """
-        IsNode(self, int NId) -> bool
+        GetCrossNetById(self, TInt CrossId) -> TCrossNet
         Parameters:
-           self: TNGraph const * value
-           NId: int const & value
+           self: TMMNet const * value
+           CrossId: TInt const & value
 
-           NId: int const & value
+           CrossId: TInt const & value
 
-           self: TPt< TNGraph > const * value
-           NId: int const & value
+           self: TPt< TMMNet > const * value
+           CrossId: TInt const & value
 
-           NId: int const & value
+           CrossId: TInt const & value
 
         """
-        return _snap.PNGraph_IsNode(self, *args)
+        return _snap.PMMNet_GetCrossNetById(self, *args)
 
-    def BegNI(self, *args):
+    def GetCrossNetI(self, *args):
         """
-        BegNI(self) -> TNodeI
-        BegNI(self) -> TNGraphNodeI
+        GetCrossNetI(self, int Id) -> TCrossNetI
         Parameters:
-           self: TNGraph * value
+           Id: int const & value
+
+           Id: int const & value
+
+           Id: int const & value
+
+           Id: int const & value
+
+        GetCrossNetI(self, int CId) -> TMMNetCrossNetI
+        Parameters:
+           self: TMMNet * value
+           CId: int const & value
+
+           CId: int const & value
+
+           self: TPt< TMMNet > * value
+           CId: int const & value
+
+           CId: int const & value
+
+        """
+        return _snap.PMMNet_GetCrossNetI(self, *args)
+
+    def BegCrossNetI(self, *args):
+        """
+        BegCrossNetI(self) -> TCrossNetI
+        BegCrossNetI(self) -> TMMNetCrossNetI
+        Parameters:
+           self: TMMNet * value
 
 
-           self: TPt< TNGraph > * value
+           self: TPt< TMMNet > * value
 
 
         """
-        return _snap.PNGraph_BegNI(self, *args)
+        return _snap.PMMNet_BegCrossNetI(self, *args)
 
-    def EndNI(self, *args):
+    def EndCrossNetI(self, *args):
         """
-        EndNI(self) -> TNodeI
-        EndNI(self) -> TNGraphNodeI
+        EndCrossNetI(self) -> TCrossNetI
+        EndCrossNetI(self) -> TMMNetCrossNetI
         Parameters:
-           self: TNGraph * value
+           self: TMMNet * value
 
 
-           self: TPt< TNGraph > * value
+           self: TPt< TMMNet > * value
 
 
         """
-        return _snap.PNGraph_EndNI(self, *args)
+        return _snap.PMMNet_EndCrossNetI(self, *args)
 
-    def GetNI(self, *args):
+    def GetModeNetI(self, *args):
         """
-        GetNI(self, int NId) -> TNodeI
+        GetModeNetI(self, int Id) -> TModeNetI
         Parameters:
-           NId: int const & value
+           Id: int const & value
 
-           NId: int const & value
+           Id: int const & value
 
-           NId: int const & value
+           Id: int const & value
 
-           NId: int const & value
+           Id: int const & value
 
-        GetNI(self, int NId) -> TNGraphNodeI
+        GetModeNetI(self, int NId) -> TMMNetModeNetI
         Parameters:
-           self: TNGraph * value
+           self: TMMNet * value
            NId: int const & value
 
            NId: int const & value
 
-           self: TPt< TNGraph > * value
+           self: TPt< TMMNet > * value
            NId: int const & value
 
            NId: int const & value
 
         """
-        return _snap.PNGraph_GetNI(self, *args)
+        return _snap.PMMNet_GetModeNetI(self, *args)
 
-    def GetMxNId(self):
+    def BegModeNetI(self, *args):
         """
-        GetMxNId(self) -> int
+        BegModeNetI(self) -> TModeNetI
+        BegModeNetI(self) -> TMMNetModeNetI
         Parameters:
-           self: TNGraph const * value
+           self: TMMNet * value
 
 
-
-
-           self: TPt< TNGraph > const * value
-
-
+           self: TPt< TMMNet > * value
 
 
         """
-        return _snap.PNGraph_GetMxNId(self)
+        return _snap.PMMNet_BegModeNetI(self, *args)
 
-    def GetEdges(self):
+    def EndModeNetI(self, *args):
         """
-        GetEdges(self) -> int
+        EndModeNetI(self) -> TModeNetI
+        EndModeNetI(self) -> TMMNetModeNetI
         Parameters:
-           self: TNGraph const * value
+           self: TMMNet * value
 
 
-
-
-           self: TPt< TNGraph > const * value
-
-
+           self: TPt< TMMNet > * value
 
 
         """
-        return _snap.PNGraph_GetEdges(self)
+        return _snap.PMMNet_EndModeNetI(self, *args)
 
-    def AddEdge(self, *args):
+    def GetSubgraphByCrossNet(self, *args):
         """
-        AddEdge(self, int SrcNId, int DstNId) -> int
+        GetSubgraphByCrossNet(self, TStrV CrossNetTypes) -> PMMNet
         Parameters:
-           SrcNId: int const & value
-           DstNId: int const & value
+           self: TMMNet * value
+           CrossNetTypes: TStrV & value
 
-           SrcNId: int const & value
-           DstNId: int const & value
+           CrossNetTypes: TStrV & value
 
-           SrcNId: int const & value
-           DstNId: int const & value
+           self: TPt< TMMNet > * value
+           CrossNetTypes: TStrV & value
 
-           SrcNId: int const & value
-           DstNId: int const & value
+           CrossNetTypes: TStrV & value
 
-        AddEdge(self, TEdgeI EdgeI) -> int
+        """
+        return _snap.PMMNet_GetSubgraphByCrossNet(self, *args)
+
+    def GetSubgraphByModeNet(self, *args):
+        """
+        GetSubgraphByModeNet(self, TStrV ModeNetTypes) -> PMMNet
         Parameters:
-           self: TNGraph * value
-           EdgeI: TNGraph::TEdgeI const & value
+           self: TMMNet * value
+           ModeNetTypes: TStrV & value
 
-           EdgeI: TNGraph::TEdgeI const & value
+           ModeNetTypes: TStrV & value
 
-           self: TPt< TNGraph > * value
-           EdgeI: TNGraph::TEdgeI const & value
+           self: TPt< TMMNet > * value
+           ModeNetTypes: TStrV & value
 
-           EdgeI: TNGraph::TEdgeI const & value
+           ModeNetTypes: TStrV & value
 
         """
-        return _snap.PNGraph_AddEdge(self, *args)
+        return _snap.PMMNet_GetSubgraphByModeNet(self, *args)
 
-    def AddEdgeUnchecked(self, *args):
+    def ToNetwork(self, *args):
         """
-        AddEdgeUnchecked(self, int SrcNId, int DstNId) -> int
+        ToNetwork(self, TIntV CrossNetTypes, TVec<(TTriple<(TInt,TStr,TStr)>)> NodeAttrMap, 
+            TVec<(TTriple<(TInt,TStr,TStr)>)> EdgeAttrMap) -> PNEANet
         Parameters:
-           self: TNGraph * value
-           SrcNId: int const & value
-           DstNId: int const & value
+           self: TMMNet * value
+           CrossNetTypes: TIntV & value
+           NodeAttrMap: TVec< TTriple< TInt,TStr,TStr > > & value
+           EdgeAttrMap: TVec< TTriple< TInt,TStr,TStr > > & value
 
-           SrcNId: int const & value
-           DstNId: int const & value
+           CrossNetTypes: TIntV & value
+           NodeAttrMap: TVec< TTriple< TInt,TStr,TStr > > & value
+           EdgeAttrMap: TVec< TTriple< TInt,TStr,TStr > > & value
 
-           self: TPt< TNGraph > * value
-           SrcNId: int const & value
-           DstNId: int const & value
+           self: TPt< TMMNet > * value
+           CrossNetTypes: TIntV & value
+           NodeAttrMap: TVec< TTriple< TInt,TStr,TStr > > & value
+           EdgeAttrMap: TVec< TTriple< TInt,TStr,TStr > > & value
 
-           SrcNId: int const & value
-           DstNId: int const & value
+           CrossNetTypes: TIntV & value
+           NodeAttrMap: TVec< TTriple< TInt,TStr,TStr > > & value
+           EdgeAttrMap: TVec< TTriple< TInt,TStr,TStr > > & value
 
         """
-        return _snap.PNGraph_AddEdgeUnchecked(self, *args)
+        return _snap.PMMNet_ToNetwork(self, *args)
 
-    def DelEdge(self, *args):
+    def ToNetwork2(self, *args):
         """
-        DelEdge(self, int SrcNId, int DstNId, bool IsDir = True)
+        ToNetwork2(self, TIntV CrossNetTypes, THash<(TInt,TVec<(TPair<(TStr,TStr)>)>)> NodeAttrMap, 
+            THash<(TInt,TVec<(TPair<(TStr,TStr)>)>)> EdgeAttrMap) -> PNEANet
         Parameters:
-           SrcNId: int const & value
-           DstNId: int const & value
-           IsDir: bool const & value
+           self: TMMNet * value
+           CrossNetTypes: TIntV & value
+           NodeAttrMap: THash< TInt,TVec< TPair< TStr,TStr > > > & value
+           EdgeAttrMap: THash< TInt,TVec< TPair< TStr,TStr > > > & value
 
-           SrcNId: int const & value
-           DstNId: int const & value
-           IsDir: bool const & value
+           CrossNetTypes: TIntV & value
+           NodeAttrMap: THash< TInt,TVec< TPair< TStr,TStr > > > & value
+           EdgeAttrMap: THash< TInt,TVec< TPair< TStr,TStr > > > & value
 
-           SrcNId: int const & value
-           DstNId: int const & value
-           IsDir: bool const & value
+           self: TPt< TMMNet > * value
+           CrossNetTypes: TIntV & value
+           NodeAttrMap: THash< TInt,TVec< TPair< TStr,TStr > > > & value
+           EdgeAttrMap: THash< TInt,TVec< TPair< TStr,TStr > > > & value
 
-           SrcNId: int const & value
-           DstNId: int const & value
-           IsDir: bool const & value
-
-        DelEdge(self, int SrcNId, int DstNId)
-        Parameters:
-           self: TNGraph * value
-           SrcNId: int const & value
-           DstNId: int const & value
-
-           SrcNId: int const & value
-           DstNId: int const & value
-
-           self: TPt< TNGraph > * value
-           SrcNId: int const & value
-           DstNId: int const & value
-
-           SrcNId: int const & value
-           DstNId: int const & value
+           CrossNetTypes: TIntV & value
+           NodeAttrMap: THash< TInt,TVec< TPair< TStr,TStr > > > & value
+           EdgeAttrMap: THash< TInt,TVec< TPair< TStr,TStr > > > & value
 
         """
-        return _snap.PNGraph_DelEdge(self, *args)
-
-    def IsEdge(self, *args):
-        """
-        IsEdge(self, int SrcNId, int DstNId, bool IsDir = True) -> bool
-        Parameters:
-           SrcNId: int const & value
-           DstNId: int const & value
-           IsDir: bool const & value
-
-           SrcNId: int const & value
-           DstNId: int const & value
-           IsDir: bool const & value
-
-           SrcNId: int const & value
-           DstNId: int const & value
-           IsDir: bool const & value
-
-           SrcNId: int const & value
-           DstNId: int const & value
-           IsDir: bool const & value
-
-        IsEdge(self, int SrcNId, int DstNId) -> bool
-        Parameters:
-           self: TNGraph const * value
-           SrcNId: int const & value
-           DstNId: int const & value
-
-           SrcNId: int const & value
-           DstNId: int const & value
-
-           self: TPt< TNGraph > const * value
-           SrcNId: int const & value
-           DstNId: int const & value
-
-           SrcNId: int const & value
-           DstNId: int const & value
-
-        """
-        return _snap.PNGraph_IsEdge(self, *args)
-
-    def BegEI(self, *args):
-        """
-        BegEI(self) -> TEdgeI
-        BegEI(self) -> TNGraphEdgeI
-        Parameters:
-           self: TNGraph * value
-
-
-           self: TPt< TNGraph > * value
-
-
-        """
-        return _snap.PNGraph_BegEI(self, *args)
-
-    def EndEI(self, *args):
-        """
-        EndEI(self) -> TEdgeI
-        EndEI(self) -> TNGraphEdgeI
-        Parameters:
-           self: TNGraph * value
-
-
-           self: TPt< TNGraph > * value
-
-
-        """
-        return _snap.PNGraph_EndEI(self, *args)
-
-    def GetEI(self, *args):
-        """
-        GetEI(self, int SrcNId, int DstNId) -> TEdgeI
-        Parameters:
-           self: TNGraph const * value
-           SrcNId: int const & value
-           DstNId: int const & value
-
-           SrcNId: int const & value
-           DstNId: int const & value
-
-           self: TPt< TNGraph > const * value
-           SrcNId: int const & value
-           DstNId: int const & value
-
-           SrcNId: int const & value
-           DstNId: int const & value
-
-        """
-        return _snap.PNGraph_GetEI(self, *args)
-
-    def GetRndNId(self, *args):
-        """
-        GetRndNId(self, TRnd Rnd = Rnd) -> int
-        Parameters:
-           Rnd: TRnd & value
-
-           Rnd: TRnd & value
-
-           Rnd: TRnd & value
-
-           Rnd: TRnd & value
-
-        GetRndNId(self) -> int
-        Parameters:
-           self: TNGraph * value
-
-
-           self: TPt< TNGraph > * value
-
-
-        """
-        return _snap.PNGraph_GetRndNId(self, *args)
-
-    def GetRndNI(self, *args):
-        """
-        GetRndNI(self, TRnd Rnd = Rnd) -> TNodeI
-        Parameters:
-           Rnd: TRnd & value
-
-           Rnd: TRnd & value
-
-           Rnd: TRnd & value
-
-           Rnd: TRnd & value
-
-        GetRndNI(self) -> TNodeI
-        Parameters:
-           self: TNGraph * value
-
-
-           self: TPt< TNGraph > * value
-
-
-        """
-        return _snap.PNGraph_GetRndNI(self, *args)
-
-    def GetNIdV(self, *args):
-        """
-        GetNIdV(self, TIntV NIdV)
-        Parameters:
-           self: TNGraph const * value
-           NIdV: TIntV & value
-
-           NIdV: TIntV & value
-
-           self: TPt< TNGraph > const * value
-           NIdV: TIntV & value
-
-           NIdV: TIntV & value
-
-        """
-        return _snap.PNGraph_GetNIdV(self, *args)
-
-    def Reserve(self, *args):
-        """
-        Reserve(self, int Nodes, int Edges)
-        Parameters:
-           self: TNGraph * value
-           Nodes: int const & value
-           Edges: int const & value
-
-           Nodes: int const & value
-           Edges: int const & value
-
-           self: TPt< TNGraph > * value
-           Nodes: int const & value
-           Edges: int const & value
-
-           Nodes: int const & value
-           Edges: int const & value
-
-        """
-        return _snap.PNGraph_Reserve(self, *args)
-
-    def ReserveNIdInDeg(self, *args):
-        """
-        ReserveNIdInDeg(self, int NId, int InDeg)
-        Parameters:
-           self: TNGraph * value
-           NId: int const & value
-           InDeg: int const & value
-
-           NId: int const & value
-           InDeg: int const & value
-
-           self: TPt< TNGraph > * value
-           NId: int const & value
-           InDeg: int const & value
-
-           NId: int const & value
-           InDeg: int const & value
-
-        """
-        return _snap.PNGraph_ReserveNIdInDeg(self, *args)
-
-    def ReserveNIdOutDeg(self, *args):
-        """
-        ReserveNIdOutDeg(self, int NId, int OutDeg)
-        Parameters:
-           self: TNGraph * value
-           NId: int const & value
-           OutDeg: int const & value
-
-           NId: int const & value
-           OutDeg: int const & value
-
-           self: TPt< TNGraph > * value
-           NId: int const & value
-           OutDeg: int const & value
-
-           NId: int const & value
-           OutDeg: int const & value
-
-        """
-        return _snap.PNGraph_ReserveNIdOutDeg(self, *args)
-
-    def SortNodeAdjV(self):
-        """
-        SortNodeAdjV(self)
-        Parameters:
-           self: TNGraph * value
-
-
-
-
-           self: TPt< TNGraph > * value
-
-
-
-
-        """
-        return _snap.PNGraph_SortNodeAdjV(self)
-
-    def Defrag(self, OnlyNodeLinks = False):
-        """
-        Defrag(self, bool OnlyNodeLinks = False)
-        Parameters:
-           OnlyNodeLinks: bool const & value
-
-           OnlyNodeLinks: bool const & value
-
-           OnlyNodeLinks: bool const & value
-
-           OnlyNodeLinks: bool const & value
-
-           OnlyNodeLinks: bool const & value
-
-           OnlyNodeLinks: bool const & value
-
-           OnlyNodeLinks: bool const & value
-
-           OnlyNodeLinks: bool const & value
-
-        Defrag(self)
-        Parameters:
-           self: TNGraph * value
-
-
-           self: TPt< TNGraph > * value
-
-
-        """
-        return _snap.PNGraph_Defrag(self, OnlyNodeLinks)
-
-    def IsOk(self, ThrowExcept = True):
-        """
-        IsOk(self, bool ThrowExcept = True) -> bool
-        Parameters:
-           ThrowExcept: bool const & value
-
-           ThrowExcept: bool const & value
-
-           ThrowExcept: bool const & value
-
-           ThrowExcept: bool const & value
-
-           ThrowExcept: bool const & value
-
-           ThrowExcept: bool const & value
-
-           ThrowExcept: bool const & value
-
-           ThrowExcept: bool const & value
-
-        IsOk(self) -> bool
-        Parameters:
-           self: TNGraph const * value
-
-
-           self: TPt< TNGraph > const * value
-
-
-        """
-        return _snap.PNGraph_IsOk(self, ThrowExcept)
-
-    def Dump(self, *args):
-        """
-        Dump(self, FILE OutF = stdout)
-        Parameters:
-           OutF: FILE * value
-
-           OutF: FILE * value
-
-           OutF: FILE * value
-
-           OutF: FILE * value
-
-        Dump(self)
-        Parameters:
-           self: TNGraph const * value
-
-
-           self: TPt< TNGraph > const * value
-
-
-        """
-        return _snap.PNGraph_Dump(self, *args)
-
-    def GetSmallGraph(self):
-        """
-        GetSmallGraph(self) -> PNGraph
-        Parameters:
-           self: TPt< TNGraph > * value
-
-
-
-
-        """
-        return _snap.PNGraph_GetSmallGraph(self)
-
-PNGraph.Save = new_instancemethod(_snap.PNGraph_Save,None,PNGraph)
-PNGraph.__deref__ = new_instancemethod(_snap.PNGraph___deref__,None,PNGraph)
-PNGraph.__ref__ = new_instancemethod(_snap.PNGraph___ref__,None,PNGraph)
-PNGraph.__call__ = new_instancemethod(_snap.PNGraph___call__,None,PNGraph)
-PNGraph.Empty = new_instancemethod(_snap.PNGraph_Empty,None,PNGraph)
-PNGraph.Clr = new_instancemethod(_snap.PNGraph_Clr,None,PNGraph)
-PNGraph.GetRefs = new_instancemethod(_snap.PNGraph_GetRefs,None,PNGraph)
-PNGraph.Load = new_instancemethod(_snap.PNGraph_Load,None,PNGraph)
-PNGraph.HasFlag = new_instancemethod(_snap.PNGraph_HasFlag,None,PNGraph)
-PNGraph.GetNodes = new_instancemethod(_snap.PNGraph_GetNodes,None,PNGraph)
-PNGraph.AddNode = new_instancemethod(_snap.PNGraph_AddNode,None,PNGraph)
-PNGraph.AddNodeUnchecked = new_instancemethod(_snap.PNGraph_AddNodeUnchecked,None,PNGraph)
-PNGraph.DelNode = new_instancemethod(_snap.PNGraph_DelNode,None,PNGraph)
-PNGraph.IsNode = new_instancemethod(_snap.PNGraph_IsNode,None,PNGraph)
-PNGraph.BegNI = new_instancemethod(_snap.PNGraph_BegNI,None,PNGraph)
-PNGraph.EndNI = new_instancemethod(_snap.PNGraph_EndNI,None,PNGraph)
-PNGraph.GetNI = new_instancemethod(_snap.PNGraph_GetNI,None,PNGraph)
-PNGraph.GetMxNId = new_instancemethod(_snap.PNGraph_GetMxNId,None,PNGraph)
-PNGraph.GetEdges = new_instancemethod(_snap.PNGraph_GetEdges,None,PNGraph)
-PNGraph.AddEdge = new_instancemethod(_snap.PNGraph_AddEdge,None,PNGraph)
-PNGraph.AddEdgeUnchecked = new_instancemethod(_snap.PNGraph_AddEdgeUnchecked,None,PNGraph)
-PNGraph.DelEdge = new_instancemethod(_snap.PNGraph_DelEdge,None,PNGraph)
-PNGraph.IsEdge = new_instancemethod(_snap.PNGraph_IsEdge,None,PNGraph)
-PNGraph.BegEI = new_instancemethod(_snap.PNGraph_BegEI,None,PNGraph)
-PNGraph.EndEI = new_instancemethod(_snap.PNGraph_EndEI,None,PNGraph)
-PNGraph.GetEI = new_instancemethod(_snap.PNGraph_GetEI,None,PNGraph)
-PNGraph.GetRndNId = new_instancemethod(_snap.PNGraph_GetRndNId,None,PNGraph)
-PNGraph.GetRndNI = new_instancemethod(_snap.PNGraph_GetRndNI,None,PNGraph)
-PNGraph.GetNIdV = new_instancemethod(_snap.PNGraph_GetNIdV,None,PNGraph)
-PNGraph.Reserve = new_instancemethod(_snap.PNGraph_Reserve,None,PNGraph)
-PNGraph.ReserveNIdInDeg = new_instancemethod(_snap.PNGraph_ReserveNIdInDeg,None,PNGraph)
-PNGraph.ReserveNIdOutDeg = new_instancemethod(_snap.PNGraph_ReserveNIdOutDeg,None,PNGraph)
-PNGraph.SortNodeAdjV = new_instancemethod(_snap.PNGraph_SortNodeAdjV,None,PNGraph)
-PNGraph.Defrag = new_instancemethod(_snap.PNGraph_Defrag,None,PNGraph)
-PNGraph.IsOk = new_instancemethod(_snap.PNGraph_IsOk,None,PNGraph)
-PNGraph.Dump = new_instancemethod(_snap.PNGraph_Dump,None,PNGraph)
-PNGraph.GetSmallGraph = new_instancemethod(_snap.PNGraph_GetSmallGraph,None,PNGraph)
-PNGraph_swigregister = _snap.PNGraph_swigregister
-PNGraph_swigregister(PNGraph)
+        return _snap.PMMNet_ToNetwork2(self, *args)
+
+PMMNet.Save = new_instancemethod(_snap.PMMNet_Save,None,PMMNet)
+PMMNet.__deref__ = new_instancemethod(_snap.PMMNet___deref__,None,PMMNet)
+PMMNet.__ref__ = new_instancemethod(_snap.PMMNet___ref__,None,PMMNet)
+PMMNet.__call__ = new_instancemethod(_snap.PMMNet___call__,None,PMMNet)
+PMMNet.Empty = new_instancemethod(_snap.PMMNet_Empty,None,PMMNet)
+PMMNet.Clr = new_instancemethod(_snap.PMMNet_Clr,None,PMMNet)
+PMMNet.GetRefs = new_instancemethod(_snap.PMMNet_GetRefs,None,PMMNet)
+PMMNet.AddMode = new_instancemethod(_snap.PMMNet_AddMode,None,PMMNet)
+PMMNet.DelMode = new_instancemethod(_snap.PMMNet_DelMode,None,PMMNet)
+PMMNet.AddCrossNet = new_instancemethod(_snap.PMMNet_AddCrossNet,None,PMMNet)
+PMMNet.DelCrossNet = new_instancemethod(_snap.PMMNet_DelCrossNet,None,PMMNet)
+PMMNet.Load = new_instancemethod(_snap.PMMNet_Load,None,PMMNet)
+PMMNet.GetModeId = new_instancemethod(_snap.PMMNet_GetModeId,None,PMMNet)
+PMMNet.GetModeName = new_instancemethod(_snap.PMMNet_GetModeName,None,PMMNet)
+PMMNet.GetCrossId = new_instancemethod(_snap.PMMNet_GetCrossId,None,PMMNet)
+PMMNet.GetCrossName = new_instancemethod(_snap.PMMNet_GetCrossName,None,PMMNet)
+PMMNet.GetModeNetByName = new_instancemethod(_snap.PMMNet_GetModeNetByName,None,PMMNet)
+PMMNet.GetModeNetById = new_instancemethod(_snap.PMMNet_GetModeNetById,None,PMMNet)
+PMMNet.GetCrossNetByName = new_instancemethod(_snap.PMMNet_GetCrossNetByName,None,PMMNet)
+PMMNet.GetCrossNetById = new_instancemethod(_snap.PMMNet_GetCrossNetById,None,PMMNet)
+PMMNet.GetCrossNetI = new_instancemethod(_snap.PMMNet_GetCrossNetI,None,PMMNet)
+PMMNet.BegCrossNetI = new_instancemethod(_snap.PMMNet_BegCrossNetI,None,PMMNet)
+PMMNet.EndCrossNetI = new_instancemethod(_snap.PMMNet_EndCrossNetI,None,PMMNet)
+PMMNet.GetModeNetI = new_instancemethod(_snap.PMMNet_GetModeNetI,None,PMMNet)
+PMMNet.BegModeNetI = new_instancemethod(_snap.PMMNet_BegModeNetI,None,PMMNet)
+PMMNet.EndModeNetI = new_instancemethod(_snap.PMMNet_EndModeNetI,None,PMMNet)
+PMMNet.GetSubgraphByCrossNet = new_instancemethod(_snap.PMMNet_GetSubgraphByCrossNet,None,PMMNet)
+PMMNet.GetSubgraphByModeNet = new_instancemethod(_snap.PMMNet_GetSubgraphByModeNet,None,PMMNet)
+PMMNet.ToNetwork = new_instancemethod(_snap.PMMNet_ToNetwork,None,PMMNet)
+PMMNet.ToNetwork2 = new_instancemethod(_snap.PMMNet_ToNetwork2,None,PMMNet)
+PMMNet_swigregister = _snap.PMMNet_swigregister
+PMMNet_swigregister(PMMNet)
 
 def PrintInfo_PNEANet(*args):
   """
@@ -80900,8 +84582,885 @@ def ToNetwork_PNEANet(*args):
        DstCol: TStr const & value
        AggrPolicy: enum TAttrAggr value
 
+    ToNetwork_PNEANet(PTable Table, TStr SrcCol, TStr DstCol, TStrV EdgeAttrV, 
+        TAttrAggr AggrPolicy) -> PNEANet
+    Parameters:
+       Table: PTable value
+       SrcCol: TStr const & value
+       DstCol: TStr const & value
+       EdgeAttrV: TStrV & value
+       AggrPolicy: enum TAttrAggr value
+
+       Table: PTable value
+       SrcCol: TStr const & value
+       DstCol: TStr const & value
+       EdgeAttrV: TStrV & value
+       AggrPolicy: enum TAttrAggr value
+
+    ToNetwork_PNEANet(PTable Table, TStr SrcCol, TStr DstCol, TStrV EdgeAttrV, 
+        PTable NodeTable, TStr NodeCol, TStrV NodeAttrV, 
+        TAttrAggr AggrPolicy) -> PNEANet
+    Parameters:
+       Table: PTable value
+       SrcCol: TStr const & value
+       DstCol: TStr const & value
+       EdgeAttrV: TStrV & value
+       NodeTable: PTable value
+       NodeCol: TStr const & value
+       NodeAttrV: TStrV & value
+       AggrPolicy: enum TAttrAggr value
+
+       Table: PTable value
+       SrcCol: TStr const & value
+       DstCol: TStr const & value
+       EdgeAttrV: TStrV & value
+       NodeTable: PTable value
+       NodeCol: TStr const & value
+       NodeAttrV: TStrV & value
+       AggrPolicy: enum TAttrAggr value
+
     """
   return _snap.ToNetwork_PNEANet(*args)
+
+def PMMNet_New():
+  """PMMNet_New() -> PMMNet"""
+  return _snap.PMMNet_New()
+
+# redefine TNGraphEdgeI.GetId to return a pair of nodes rather than -1
+def GetId(self):
+    return (self.GetSrcNId(), self.GetDstNId())
+
+TNGraphEdgeI.GetId = GetId
+
+class PNGraph(object):
+    """Proxy of C++ TPt<(TNGraph)> class"""
+    thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
+    def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined")
+    __repr__ = _swig_repr
+    def New():
+        """New() -> PNGraph"""
+        return _snap.PNGraph_New()
+
+    New = staticmethod(New)
+    __swig_destroy__ = _snap.delete_PNGraph
+    def Save(self, *args):
+        """
+        Save(self, TSOut SOut)
+        Parameters:
+           self: TPt< TNGraph > const * value
+           SOut: TSOut & value
+
+           SOut: TSOut & value
+
+        """
+        return _snap.PNGraph_Save(self, *args)
+
+    def __deref__(self):
+        """
+        __deref__(self) -> TNGraph
+        Parameters:
+           self: TPt< TNGraph > const * value
+
+
+
+
+        """
+        return _snap.PNGraph___deref__(self)
+
+    def __ref__(self):
+        """
+        __ref__(self) -> TNGraph
+        Parameters:
+           self: TPt< TNGraph > const * value
+
+
+
+
+        """
+        return _snap.PNGraph___ref__(self)
+
+    def __call__(self):
+        """
+        __call__(self) -> TNGraph
+        Parameters:
+           self: TPt< TNGraph > const * value
+
+
+
+
+        """
+        return _snap.PNGraph___call__(self)
+
+    def Empty(self):
+        """
+        Empty(self) -> bool
+        Parameters:
+           self: TPt< TNGraph > const * value
+
+
+
+
+        """
+        return _snap.PNGraph_Empty(self)
+
+    def Clr(self):
+        """
+        Clr(self)
+        Parameters:
+           self: TPt< TNGraph > * value
+
+
+
+
+        """
+        return _snap.PNGraph_Clr(self)
+
+    def GetRefs(self):
+        """
+        GetRefs(self) -> int
+        Parameters:
+           self: TPt< TNGraph > const * value
+
+
+
+
+        """
+        return _snap.PNGraph_GetRefs(self)
+
+    def Load(self, *args):
+        """
+        Load(self, TSIn SIn) -> PNGraph
+        Parameters:
+           SIn: TSIn & value
+
+           SIn: TSIn & value
+
+           SIn: TSIn & value
+
+           self: TPt< TNGraph > * value
+           SIn: TSIn & value
+
+           SIn: TSIn & value
+
+        """
+        return _snap.PNGraph_Load(self, *args)
+
+    def HasFlag(self, *args):
+        """
+        HasFlag(self,  Flag) -> bool
+        Parameters:
+           self: TNGraph const * value
+           Flag: TGraphFlag const & value
+
+           Flag: TGraphFlag const & value
+
+           self: TPt< TNGraph > const * value
+           Flag: TGraphFlag const & value
+
+           Flag: TGraphFlag const & value
+
+        """
+        return _snap.PNGraph_HasFlag(self, *args)
+
+    def GetNodes(self):
+        """
+        GetNodes(self) -> int
+        Parameters:
+           self: TNGraph const * value
+
+
+
+
+           self: TPt< TNGraph > const * value
+
+
+
+
+        """
+        return _snap.PNGraph_GetNodes(self)
+
+    def AddNode(self, *args):
+        """
+        AddNode(self, int NId = -1) -> int
+        Parameters:
+           NId: int value
+
+           NId: int value
+
+           NId: int value
+
+           NId: int value
+
+        AddNode(self) -> int
+        AddNode(self, TNodeI NodeId) -> int
+        Parameters:
+           NodeId: TNGraph::TNodeI const & value
+
+           NodeId: TNGraph::TNodeI const & value
+
+           NodeId: TNGraph::TNodeI const & value
+
+           NodeId: TNGraph::TNodeI const & value
+
+        AddNode(self, int NId, TIntV InNIdV, TIntV OutNIdV) -> int
+        Parameters:
+           NId: int const & value
+           InNIdV: TIntV const & value
+           OutNIdV: TIntV const & value
+
+           NId: int const & value
+           InNIdV: TIntV const & value
+           OutNIdV: TIntV const & value
+
+           NId: int const & value
+           InNIdV: TIntV const & value
+           OutNIdV: TIntV const & value
+
+           NId: int const & value
+           InNIdV: TIntV const & value
+           OutNIdV: TIntV const & value
+
+        AddNode(self, int NId, TVecPool<(TInt)> Pool, int SrcVId, int DstVId) -> int
+        Parameters:
+           self: TNGraph * value
+           NId: int const & value
+           Pool: TVecPool< TInt > const & value
+           SrcVId: int const & value
+           DstVId: int const & value
+
+           NId: int const & value
+           Pool: TVecPool< TInt > const & value
+           SrcVId: int const & value
+           DstVId: int const & value
+
+           self: TPt< TNGraph > * value
+           NId: int const & value
+           Pool: TVecPool< TInt > const & value
+           SrcVId: int const & value
+           DstVId: int const & value
+
+           NId: int const & value
+           Pool: TVecPool< TInt > const & value
+           SrcVId: int const & value
+           DstVId: int const & value
+
+        """
+        return _snap.PNGraph_AddNode(self, *args)
+
+    def AddNodeUnchecked(self, *args):
+        """
+        AddNodeUnchecked(self, int NId = -1) -> int
+        Parameters:
+           NId: int value
+
+           NId: int value
+
+           NId: int value
+
+           NId: int value
+
+        AddNodeUnchecked(self) -> int
+        Parameters:
+           self: TNGraph * value
+
+
+           self: TPt< TNGraph > * value
+
+
+        """
+        return _snap.PNGraph_AddNodeUnchecked(self, *args)
+
+    def DelNode(self, *args):
+        """
+        DelNode(self, int NId)
+        Parameters:
+           NId: int const & value
+
+           NId: int const & value
+
+           NId: int const & value
+
+           NId: int const & value
+
+        DelNode(self, TNode NodeI)
+        Parameters:
+           self: TNGraph * value
+           NodeI: TNGraph::TNode const & value
+
+           NodeI: TNGraph::TNode const & value
+
+           self: TPt< TNGraph > * value
+           NodeI: TNGraph::TNode const & value
+
+           NodeI: TNGraph::TNode const & value
+
+        """
+        return _snap.PNGraph_DelNode(self, *args)
+
+    def IsNode(self, *args):
+        """
+        IsNode(self, int NId) -> bool
+        Parameters:
+           self: TNGraph const * value
+           NId: int const & value
+
+           NId: int const & value
+
+           self: TPt< TNGraph > const * value
+           NId: int const & value
+
+           NId: int const & value
+
+        """
+        return _snap.PNGraph_IsNode(self, *args)
+
+    def BegNI(self, *args):
+        """
+        BegNI(self) -> TNodeI
+        BegNI(self) -> TNGraphNodeI
+        Parameters:
+           self: TNGraph * value
+
+
+           self: TPt< TNGraph > * value
+
+
+        """
+        return _snap.PNGraph_BegNI(self, *args)
+
+    def EndNI(self, *args):
+        """
+        EndNI(self) -> TNodeI
+        EndNI(self) -> TNGraphNodeI
+        Parameters:
+           self: TNGraph * value
+
+
+           self: TPt< TNGraph > * value
+
+
+        """
+        return _snap.PNGraph_EndNI(self, *args)
+
+    def GetNI(self, *args):
+        """
+        GetNI(self, int NId) -> TNodeI
+        Parameters:
+           NId: int const & value
+
+           NId: int const & value
+
+           NId: int const & value
+
+           NId: int const & value
+
+        GetNI(self, int NId) -> TNGraphNodeI
+        Parameters:
+           self: TNGraph * value
+           NId: int const & value
+
+           NId: int const & value
+
+           self: TPt< TNGraph > * value
+           NId: int const & value
+
+           NId: int const & value
+
+        """
+        return _snap.PNGraph_GetNI(self, *args)
+
+    def GetMxNId(self):
+        """
+        GetMxNId(self) -> int
+        Parameters:
+           self: TNGraph const * value
+
+
+
+
+           self: TPt< TNGraph > const * value
+
+
+
+
+        """
+        return _snap.PNGraph_GetMxNId(self)
+
+    def GetEdges(self):
+        """
+        GetEdges(self) -> int
+        Parameters:
+           self: TNGraph const * value
+
+
+
+
+           self: TPt< TNGraph > const * value
+
+
+
+
+        """
+        return _snap.PNGraph_GetEdges(self)
+
+    def AddEdge(self, *args):
+        """
+        AddEdge(self, int SrcNId, int DstNId) -> int
+        Parameters:
+           SrcNId: int const & value
+           DstNId: int const & value
+
+           SrcNId: int const & value
+           DstNId: int const & value
+
+           SrcNId: int const & value
+           DstNId: int const & value
+
+           SrcNId: int const & value
+           DstNId: int const & value
+
+        AddEdge(self, TEdgeI EdgeI) -> int
+        Parameters:
+           self: TNGraph * value
+           EdgeI: TNGraph::TEdgeI const & value
+
+           EdgeI: TNGraph::TEdgeI const & value
+
+           self: TPt< TNGraph > * value
+           EdgeI: TNGraph::TEdgeI const & value
+
+           EdgeI: TNGraph::TEdgeI const & value
+
+        """
+        return _snap.PNGraph_AddEdge(self, *args)
+
+    def AddEdgeUnchecked(self, *args):
+        """
+        AddEdgeUnchecked(self, int SrcNId, int DstNId) -> int
+        Parameters:
+           self: TNGraph * value
+           SrcNId: int const & value
+           DstNId: int const & value
+
+           SrcNId: int const & value
+           DstNId: int const & value
+
+           self: TPt< TNGraph > * value
+           SrcNId: int const & value
+           DstNId: int const & value
+
+           SrcNId: int const & value
+           DstNId: int const & value
+
+        """
+        return _snap.PNGraph_AddEdgeUnchecked(self, *args)
+
+    def DelEdge(self, *args):
+        """
+        DelEdge(self, int SrcNId, int DstNId, bool IsDir = True)
+        Parameters:
+           SrcNId: int const & value
+           DstNId: int const & value
+           IsDir: bool const & value
+
+           SrcNId: int const & value
+           DstNId: int const & value
+           IsDir: bool const & value
+
+           SrcNId: int const & value
+           DstNId: int const & value
+           IsDir: bool const & value
+
+           SrcNId: int const & value
+           DstNId: int const & value
+           IsDir: bool const & value
+
+        DelEdge(self, int SrcNId, int DstNId)
+        Parameters:
+           self: TNGraph * value
+           SrcNId: int const & value
+           DstNId: int const & value
+
+           SrcNId: int const & value
+           DstNId: int const & value
+
+           self: TPt< TNGraph > * value
+           SrcNId: int const & value
+           DstNId: int const & value
+
+           SrcNId: int const & value
+           DstNId: int const & value
+
+        """
+        return _snap.PNGraph_DelEdge(self, *args)
+
+    def IsEdge(self, *args):
+        """
+        IsEdge(self, int SrcNId, int DstNId, bool IsDir = True) -> bool
+        Parameters:
+           SrcNId: int const & value
+           DstNId: int const & value
+           IsDir: bool const & value
+
+           SrcNId: int const & value
+           DstNId: int const & value
+           IsDir: bool const & value
+
+           SrcNId: int const & value
+           DstNId: int const & value
+           IsDir: bool const & value
+
+           SrcNId: int const & value
+           DstNId: int const & value
+           IsDir: bool const & value
+
+        IsEdge(self, int SrcNId, int DstNId) -> bool
+        Parameters:
+           self: TNGraph const * value
+           SrcNId: int const & value
+           DstNId: int const & value
+
+           SrcNId: int const & value
+           DstNId: int const & value
+
+           self: TPt< TNGraph > const * value
+           SrcNId: int const & value
+           DstNId: int const & value
+
+           SrcNId: int const & value
+           DstNId: int const & value
+
+        """
+        return _snap.PNGraph_IsEdge(self, *args)
+
+    def BegEI(self, *args):
+        """
+        BegEI(self) -> TEdgeI
+        BegEI(self) -> TNGraphEdgeI
+        Parameters:
+           self: TNGraph * value
+
+
+           self: TPt< TNGraph > * value
+
+
+        """
+        return _snap.PNGraph_BegEI(self, *args)
+
+    def EndEI(self, *args):
+        """
+        EndEI(self) -> TEdgeI
+        EndEI(self) -> TNGraphEdgeI
+        Parameters:
+           self: TNGraph * value
+
+
+           self: TPt< TNGraph > * value
+
+
+        """
+        return _snap.PNGraph_EndEI(self, *args)
+
+    def GetEI(self, *args):
+        """
+        GetEI(self, int SrcNId, int DstNId) -> TEdgeI
+        Parameters:
+           self: TNGraph const * value
+           SrcNId: int const & value
+           DstNId: int const & value
+
+           SrcNId: int const & value
+           DstNId: int const & value
+
+           self: TPt< TNGraph > const * value
+           SrcNId: int const & value
+           DstNId: int const & value
+
+           SrcNId: int const & value
+           DstNId: int const & value
+
+        """
+        return _snap.PNGraph_GetEI(self, *args)
+
+    def GetRndNId(self, *args):
+        """
+        GetRndNId(self, TRnd Rnd = Rnd) -> int
+        Parameters:
+           Rnd: TRnd & value
+
+           Rnd: TRnd & value
+
+           Rnd: TRnd & value
+
+           Rnd: TRnd & value
+
+        GetRndNId(self) -> int
+        Parameters:
+           self: TNGraph * value
+
+
+           self: TPt< TNGraph > * value
+
+
+        """
+        return _snap.PNGraph_GetRndNId(self, *args)
+
+    def GetRndNI(self, *args):
+        """
+        GetRndNI(self, TRnd Rnd = Rnd) -> TNodeI
+        Parameters:
+           Rnd: TRnd & value
+
+           Rnd: TRnd & value
+
+           Rnd: TRnd & value
+
+           Rnd: TRnd & value
+
+        GetRndNI(self) -> TNodeI
+        Parameters:
+           self: TNGraph * value
+
+
+           self: TPt< TNGraph > * value
+
+
+        """
+        return _snap.PNGraph_GetRndNI(self, *args)
+
+    def GetNIdV(self, *args):
+        """
+        GetNIdV(self, TIntV NIdV)
+        Parameters:
+           self: TNGraph const * value
+           NIdV: TIntV & value
+
+           NIdV: TIntV & value
+
+           self: TPt< TNGraph > const * value
+           NIdV: TIntV & value
+
+           NIdV: TIntV & value
+
+        """
+        return _snap.PNGraph_GetNIdV(self, *args)
+
+    def Reserve(self, *args):
+        """
+        Reserve(self, int Nodes, int Edges)
+        Parameters:
+           self: TNGraph * value
+           Nodes: int const & value
+           Edges: int const & value
+
+           Nodes: int const & value
+           Edges: int const & value
+
+           self: TPt< TNGraph > * value
+           Nodes: int const & value
+           Edges: int const & value
+
+           Nodes: int const & value
+           Edges: int const & value
+
+        """
+        return _snap.PNGraph_Reserve(self, *args)
+
+    def ReserveNIdInDeg(self, *args):
+        """
+        ReserveNIdInDeg(self, int NId, int InDeg)
+        Parameters:
+           self: TNGraph * value
+           NId: int const & value
+           InDeg: int const & value
+
+           NId: int const & value
+           InDeg: int const & value
+
+           self: TPt< TNGraph > * value
+           NId: int const & value
+           InDeg: int const & value
+
+           NId: int const & value
+           InDeg: int const & value
+
+        """
+        return _snap.PNGraph_ReserveNIdInDeg(self, *args)
+
+    def ReserveNIdOutDeg(self, *args):
+        """
+        ReserveNIdOutDeg(self, int NId, int OutDeg)
+        Parameters:
+           self: TNGraph * value
+           NId: int const & value
+           OutDeg: int const & value
+
+           NId: int const & value
+           OutDeg: int const & value
+
+           self: TPt< TNGraph > * value
+           NId: int const & value
+           OutDeg: int const & value
+
+           NId: int const & value
+           OutDeg: int const & value
+
+        """
+        return _snap.PNGraph_ReserveNIdOutDeg(self, *args)
+
+    def SortNodeAdjV(self):
+        """
+        SortNodeAdjV(self)
+        Parameters:
+           self: TNGraph * value
+
+
+
+
+           self: TPt< TNGraph > * value
+
+
+
+
+        """
+        return _snap.PNGraph_SortNodeAdjV(self)
+
+    def Defrag(self, OnlyNodeLinks = False):
+        """
+        Defrag(self, bool OnlyNodeLinks = False)
+        Parameters:
+           OnlyNodeLinks: bool const & value
+
+           OnlyNodeLinks: bool const & value
+
+           OnlyNodeLinks: bool const & value
+
+           OnlyNodeLinks: bool const & value
+
+           OnlyNodeLinks: bool const & value
+
+           OnlyNodeLinks: bool const & value
+
+           OnlyNodeLinks: bool const & value
+
+           OnlyNodeLinks: bool const & value
+
+        Defrag(self)
+        Parameters:
+           self: TNGraph * value
+
+
+           self: TPt< TNGraph > * value
+
+
+        """
+        return _snap.PNGraph_Defrag(self, OnlyNodeLinks)
+
+    def IsOk(self, ThrowExcept = True):
+        """
+        IsOk(self, bool ThrowExcept = True) -> bool
+        Parameters:
+           ThrowExcept: bool const & value
+
+           ThrowExcept: bool const & value
+
+           ThrowExcept: bool const & value
+
+           ThrowExcept: bool const & value
+
+           ThrowExcept: bool const & value
+
+           ThrowExcept: bool const & value
+
+           ThrowExcept: bool const & value
+
+           ThrowExcept: bool const & value
+
+        IsOk(self) -> bool
+        Parameters:
+           self: TNGraph const * value
+
+
+           self: TPt< TNGraph > const * value
+
+
+        """
+        return _snap.PNGraph_IsOk(self, ThrowExcept)
+
+    def Dump(self, *args):
+        """
+        Dump(self, FILE OutF = stdout)
+        Parameters:
+           OutF: FILE * value
+
+           OutF: FILE * value
+
+           OutF: FILE * value
+
+           OutF: FILE * value
+
+        Dump(self)
+        Parameters:
+           self: TNGraph const * value
+
+
+           self: TPt< TNGraph > const * value
+
+
+        """
+        return _snap.PNGraph_Dump(self, *args)
+
+    def GetSmallGraph(self):
+        """
+        GetSmallGraph(self) -> PNGraph
+        Parameters:
+           self: TPt< TNGraph > * value
+
+
+
+
+        """
+        return _snap.PNGraph_GetSmallGraph(self)
+
+PNGraph.Save = new_instancemethod(_snap.PNGraph_Save,None,PNGraph)
+PNGraph.__deref__ = new_instancemethod(_snap.PNGraph___deref__,None,PNGraph)
+PNGraph.__ref__ = new_instancemethod(_snap.PNGraph___ref__,None,PNGraph)
+PNGraph.__call__ = new_instancemethod(_snap.PNGraph___call__,None,PNGraph)
+PNGraph.Empty = new_instancemethod(_snap.PNGraph_Empty,None,PNGraph)
+PNGraph.Clr = new_instancemethod(_snap.PNGraph_Clr,None,PNGraph)
+PNGraph.GetRefs = new_instancemethod(_snap.PNGraph_GetRefs,None,PNGraph)
+PNGraph.Load = new_instancemethod(_snap.PNGraph_Load,None,PNGraph)
+PNGraph.HasFlag = new_instancemethod(_snap.PNGraph_HasFlag,None,PNGraph)
+PNGraph.GetNodes = new_instancemethod(_snap.PNGraph_GetNodes,None,PNGraph)
+PNGraph.AddNode = new_instancemethod(_snap.PNGraph_AddNode,None,PNGraph)
+PNGraph.AddNodeUnchecked = new_instancemethod(_snap.PNGraph_AddNodeUnchecked,None,PNGraph)
+PNGraph.DelNode = new_instancemethod(_snap.PNGraph_DelNode,None,PNGraph)
+PNGraph.IsNode = new_instancemethod(_snap.PNGraph_IsNode,None,PNGraph)
+PNGraph.BegNI = new_instancemethod(_snap.PNGraph_BegNI,None,PNGraph)
+PNGraph.EndNI = new_instancemethod(_snap.PNGraph_EndNI,None,PNGraph)
+PNGraph.GetNI = new_instancemethod(_snap.PNGraph_GetNI,None,PNGraph)
+PNGraph.GetMxNId = new_instancemethod(_snap.PNGraph_GetMxNId,None,PNGraph)
+PNGraph.GetEdges = new_instancemethod(_snap.PNGraph_GetEdges,None,PNGraph)
+PNGraph.AddEdge = new_instancemethod(_snap.PNGraph_AddEdge,None,PNGraph)
+PNGraph.AddEdgeUnchecked = new_instancemethod(_snap.PNGraph_AddEdgeUnchecked,None,PNGraph)
+PNGraph.DelEdge = new_instancemethod(_snap.PNGraph_DelEdge,None,PNGraph)
+PNGraph.IsEdge = new_instancemethod(_snap.PNGraph_IsEdge,None,PNGraph)
+PNGraph.BegEI = new_instancemethod(_snap.PNGraph_BegEI,None,PNGraph)
+PNGraph.EndEI = new_instancemethod(_snap.PNGraph_EndEI,None,PNGraph)
+PNGraph.GetEI = new_instancemethod(_snap.PNGraph_GetEI,None,PNGraph)
+PNGraph.GetRndNId = new_instancemethod(_snap.PNGraph_GetRndNId,None,PNGraph)
+PNGraph.GetRndNI = new_instancemethod(_snap.PNGraph_GetRndNI,None,PNGraph)
+PNGraph.GetNIdV = new_instancemethod(_snap.PNGraph_GetNIdV,None,PNGraph)
+PNGraph.Reserve = new_instancemethod(_snap.PNGraph_Reserve,None,PNGraph)
+PNGraph.ReserveNIdInDeg = new_instancemethod(_snap.PNGraph_ReserveNIdInDeg,None,PNGraph)
+PNGraph.ReserveNIdOutDeg = new_instancemethod(_snap.PNGraph_ReserveNIdOutDeg,None,PNGraph)
+PNGraph.SortNodeAdjV = new_instancemethod(_snap.PNGraph_SortNodeAdjV,None,PNGraph)
+PNGraph.Defrag = new_instancemethod(_snap.PNGraph_Defrag,None,PNGraph)
+PNGraph.IsOk = new_instancemethod(_snap.PNGraph_IsOk,None,PNGraph)
+PNGraph.Dump = new_instancemethod(_snap.PNGraph_Dump,None,PNGraph)
+PNGraph.GetSmallGraph = new_instancemethod(_snap.PNGraph_GetSmallGraph,None,PNGraph)
+PNGraph_swigregister = _snap.PNGraph_swigregister
+PNGraph_swigregister(PNGraph)
 
 def PrintGraphStatTable_PNGraph(*args):
   """
@@ -89369,6 +93928,23 @@ class PNEANetMP(object):
         """
         return _snap.PNEANetMP_SetEdges(self, *args)
 
+    def SetMxEId(self, *args):
+        """
+        SetMxEId(self, TInt Id)
+        Parameters:
+           self: TNEANetMP * value
+           Id: TInt const & value
+
+           Id: TInt const & value
+
+           self: TPt< TNEANetMP > * value
+           Id: TInt const & value
+
+           Id: TInt const & value
+
+        """
+        return _snap.PNEANetMP_SetMxEId(self, *args)
+
     def AddEdge(self, *args):
         """
         AddEdge(self, int SrcNId, int DstNId, int EId = -1) -> int
@@ -91066,6 +95642,7 @@ PNEANetMP.Reserved = new_instancemethod(_snap.PNEANetMP_Reserved,None,PNEANetMP)
 PNEANetMP.ReservedE = new_instancemethod(_snap.PNEANetMP_ReservedE,None,PNEANetMP)
 PNEANetMP.GetEdges = new_instancemethod(_snap.PNEANetMP_GetEdges,None,PNEANetMP)
 PNEANetMP.SetEdges = new_instancemethod(_snap.PNEANetMP_SetEdges,None,PNEANetMP)
+PNEANetMP.SetMxEId = new_instancemethod(_snap.PNEANetMP_SetMxEId,None,PNEANetMP)
 PNEANetMP.AddEdge = new_instancemethod(_snap.PNEANetMP_AddEdge,None,PNEANetMP)
 PNEANetMP.AddEdgeUnchecked = new_instancemethod(_snap.PNEANetMP_AddEdgeUnchecked,None,PNEANetMP)
 PNEANetMP.IsEdge = new_instancemethod(_snap.PNEANetMP_IsEdge,None,PNEANetMP)
@@ -92141,6 +96718,17 @@ def GetInEdges(self):
         yield self.GetInNId(e)
 
 #
+# generators for nodes and edges
+#
+
+# iterate through all the nodes
+def MMNodes(self):
+    NI = self.BegMMNI()
+    while NI < self.EndMMNI():
+        yield NI
+        NI.Next()
+
+#
 # redefine some methods to use T... class not P... class
 #
 
@@ -92162,6 +96750,11 @@ PNEANet.Edges = Edges
 PNEANet.Clr = Clr
 PNEANet.Empty = Empty
 PNEANet.Save = Save
+
+TModeNet.Nodes = MMNodes
+TModeNet.Edges = Edges
+
+PMMNet.Save = Save
 
 PUNGraph.Nodes = Nodes
 PUNGraph.Edges = Edges
@@ -92195,6 +96788,9 @@ TUNGraphNodeI.GetInEdges = GetInEdges
 
 TNEANetNodeI.GetOutEdges = GetOutEdges
 TNEANetNodeI.GetInEdges = GetInEdges
+
+TModeNetNodeI.GetOutEdges = GetOutEdges
+TModeNetNodeI.GetInEdges = GetInEdges
 
 TNGraphMPNodeI.GetOutEdges = GetOutEdges
 TNGraphMPNodeI.GetInEdges = GetInEdges
@@ -92363,6 +96959,57 @@ class PTable(object):
 
         """
         return _snap.PTable_NormalizeColNameV(self, *args)
+
+    def AddIntCol(self, *args):
+        """
+        AddIntCol(self, TStr ColName)
+        Parameters:
+           self: TTable * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+           self: TPt< TTable > * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+        """
+        return _snap.PTable_AddIntCol(self, *args)
+
+    def AddFltCol(self, *args):
+        """
+        AddFltCol(self, TStr ColName)
+        Parameters:
+           self: TTable * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+           self: TPt< TTable > * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+        """
+        return _snap.PTable_AddFltCol(self, *args)
+
+    def AddStrCol(self, *args):
+        """
+        AddStrCol(self, TStr ColName)
+        Parameters:
+           self: TTable * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+           self: TPt< TTable > * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+        """
+        return _snap.PTable_AddStrCol(self, *args)
 
     def GroupByIntColMP(self, *args):
         """
@@ -92887,6 +97534,204 @@ class PTable(object):
 
         """
         return _snap.PTable_GetFltVal(self, *args)
+
+    def GetStrMapById(self, *args):
+        """
+        GetStrMapById(self, TInt ColIdx, TInt RowIdx) -> TInt
+        Parameters:
+           self: TTable const * value
+           ColIdx: TInt value
+           RowIdx: TInt value
+
+           ColIdx: TInt value
+           RowIdx: TInt value
+
+           self: TPt< TTable > const * value
+           ColIdx: TInt value
+           RowIdx: TInt value
+
+           ColIdx: TInt value
+           RowIdx: TInt value
+
+        """
+        return _snap.PTable_GetStrMapById(self, *args)
+
+    def GetStrMapByName(self, *args):
+        """
+        GetStrMapByName(self, TStr ColName, TInt RowIdx) -> TInt
+        Parameters:
+           self: TTable const * value
+           ColName: TStr const & value
+           RowIdx: TInt value
+
+           ColName: TStr const & value
+           RowIdx: TInt value
+
+           self: TPt< TTable > const * value
+           ColName: TStr const & value
+           RowIdx: TInt value
+
+           ColName: TStr const & value
+           RowIdx: TInt value
+
+        """
+        return _snap.PTable_GetStrMapByName(self, *args)
+
+    def GetStrValById(self, *args):
+        """
+        GetStrValById(self, TInt ColIdx, TInt RowIdx) -> TStr
+        Parameters:
+           self: TTable const * value
+           ColIdx: TInt value
+           RowIdx: TInt value
+
+           ColIdx: TInt value
+           RowIdx: TInt value
+
+           self: TPt< TTable > const * value
+           ColIdx: TInt value
+           RowIdx: TInt value
+
+           ColIdx: TInt value
+           RowIdx: TInt value
+
+        """
+        return _snap.PTable_GetStrValById(self, *args)
+
+    def GetStrValByName(self, *args):
+        """
+        GetStrValByName(self, TStr ColName, TInt RowIdx) -> TStr
+        Parameters:
+           self: TTable const * value
+           ColName: TStr const & value
+           RowIdx: TInt const & value
+
+           ColName: TStr const & value
+           RowIdx: TInt const & value
+
+           self: TPt< TTable > const * value
+           ColName: TStr const & value
+           RowIdx: TInt const & value
+
+           ColName: TStr const & value
+           RowIdx: TInt const & value
+
+        """
+        return _snap.PTable_GetStrValByName(self, *args)
+
+    def GetIntRowIdxByVal(self, *args):
+        """
+        GetIntRowIdxByVal(self, TStr ColName, TInt Val) -> TIntV
+        Parameters:
+           self: TTable const * value
+           ColName: TStr const & value
+           Val: TInt const & value
+
+           ColName: TStr const & value
+           Val: TInt const & value
+
+           self: TPt< TTable > const * value
+           ColName: TStr const & value
+           Val: TInt const & value
+
+           ColName: TStr const & value
+           Val: TInt const & value
+
+        """
+        return _snap.PTable_GetIntRowIdxByVal(self, *args)
+
+    def GetStrRowIdxByMap(self, *args):
+        """
+        GetStrRowIdxByMap(self, TStr ColName, TInt Map) -> TIntV
+        Parameters:
+           self: TTable const * value
+           ColName: TStr const & value
+           Map: TInt const & value
+
+           ColName: TStr const & value
+           Map: TInt const & value
+
+           self: TPt< TTable > const * value
+           ColName: TStr const & value
+           Map: TInt const & value
+
+           ColName: TStr const & value
+           Map: TInt const & value
+
+        """
+        return _snap.PTable_GetStrRowIdxByMap(self, *args)
+
+    def GetFltRowIdxByVal(self, *args):
+        """
+        GetFltRowIdxByVal(self, TStr ColName, TFlt Val) -> TIntV
+        Parameters:
+           self: TTable const * value
+           ColName: TStr const & value
+           Val: TFlt const & value
+
+           ColName: TStr const & value
+           Val: TFlt const & value
+
+           self: TPt< TTable > const * value
+           ColName: TStr const & value
+           Val: TFlt const & value
+
+           ColName: TStr const & value
+           Val: TFlt const & value
+
+        """
+        return _snap.PTable_GetFltRowIdxByVal(self, *args)
+
+    def RequestIndexInt(self, *args):
+        """
+        RequestIndexInt(self, TStr ColName) -> TInt
+        Parameters:
+           self: TTable * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+           self: TPt< TTable > * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+        """
+        return _snap.PTable_RequestIndexInt(self, *args)
+
+    def RequestIndexFlt(self, *args):
+        """
+        RequestIndexFlt(self, TStr ColName) -> TInt
+        Parameters:
+           self: TTable * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+           self: TPt< TTable > * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+        """
+        return _snap.PTable_RequestIndexFlt(self, *args)
+
+    def RequestIndexStrMap(self, *args):
+        """
+        RequestIndexStrMap(self, TStr ColName) -> TInt
+        Parameters:
+           self: TTable * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+           self: TPt< TTable > * value
+           ColName: TStr const & value
+
+           ColName: TStr const & value
+
+        """
+        return _snap.PTable_RequestIndexStrMap(self, *args)
 
     def GetStr(self, *args):
         """
@@ -97023,6 +101868,9 @@ PTable.SetMP = new_instancemethod(_snap.PTable_SetMP,None,PTable)
 PTable.GetMP = new_instancemethod(_snap.PTable_GetMP,None,PTable)
 PTable.NormalizeColName = new_instancemethod(_snap.PTable_NormalizeColName,None,PTable)
 PTable.NormalizeColNameV = new_instancemethod(_snap.PTable_NormalizeColNameV,None,PTable)
+PTable.AddIntCol = new_instancemethod(_snap.PTable_AddIntCol,None,PTable)
+PTable.AddFltCol = new_instancemethod(_snap.PTable_AddFltCol,None,PTable)
+PTable.AddStrCol = new_instancemethod(_snap.PTable_AddStrCol,None,PTable)
 PTable.GroupByIntColMP = new_instancemethod(_snap.PTable_GroupByIntColMP,None,PTable)
 PTable.LoadSS = new_instancemethod(_snap.PTable_LoadSS,None,PTable)
 PTable.SaveSS = new_instancemethod(_snap.PTable_SaveSS,None,PTable)
@@ -97035,6 +101883,16 @@ PTable.ChangeContext = new_instancemethod(_snap.PTable_ChangeContext,None,PTable
 PTable.GetColIdx = new_instancemethod(_snap.PTable_GetColIdx,None,PTable)
 PTable.GetIntVal = new_instancemethod(_snap.PTable_GetIntVal,None,PTable)
 PTable.GetFltVal = new_instancemethod(_snap.PTable_GetFltVal,None,PTable)
+PTable.GetStrMapById = new_instancemethod(_snap.PTable_GetStrMapById,None,PTable)
+PTable.GetStrMapByName = new_instancemethod(_snap.PTable_GetStrMapByName,None,PTable)
+PTable.GetStrValById = new_instancemethod(_snap.PTable_GetStrValById,None,PTable)
+PTable.GetStrValByName = new_instancemethod(_snap.PTable_GetStrValByName,None,PTable)
+PTable.GetIntRowIdxByVal = new_instancemethod(_snap.PTable_GetIntRowIdxByVal,None,PTable)
+PTable.GetStrRowIdxByMap = new_instancemethod(_snap.PTable_GetStrRowIdxByMap,None,PTable)
+PTable.GetFltRowIdxByVal = new_instancemethod(_snap.PTable_GetFltRowIdxByVal,None,PTable)
+PTable.RequestIndexInt = new_instancemethod(_snap.PTable_RequestIndexInt,None,PTable)
+PTable.RequestIndexFlt = new_instancemethod(_snap.PTable_RequestIndexFlt,None,PTable)
+PTable.RequestIndexStrMap = new_instancemethod(_snap.PTable_RequestIndexStrMap,None,PTable)
 PTable.GetStr = new_instancemethod(_snap.PTable_GetStr,None,PTable)
 PTable.GetIntValAtRowIdx = new_instancemethod(_snap.PTable_GetIntValAtRowIdx,None,PTable)
 PTable.GetFltValAtRowIdx = new_instancemethod(_snap.PTable_GetFltValAtRowIdx,None,PTable)
@@ -97161,6 +102019,21 @@ def ToNetworkMP_PNEANetMP(*args):
        EdgeAttrs: TStrV & value
        AggrPolicy: enum TAttrAggr value
 
+    ToNetworkMP_PNEANetMP(PTable Table, TStr SrcCol, TStr DstCol, TStrV EdgeAttrV, 
+        TAttrAggr AggrPolicy) -> PNEANetMP
+    Parameters:
+       Table: PTable value
+       SrcCol: TStr const & value
+       DstCol: TStr const & value
+       EdgeAttrV: TStrV & value
+       AggrPolicy: enum TAttrAggr value
+
+       Table: PTable value
+       SrcCol: TStr const & value
+       DstCol: TStr const & value
+       EdgeAttrV: TStrV & value
+       AggrPolicy: enum TAttrAggr value
+
     ToNetworkMP_PNEANetMP(PTable Table, TStr SrcCol, TStr DstCol, TAttrAggr AggrPolicy) -> PNEANetMP
     Parameters:
        Table: PTable value
@@ -97171,6 +102044,28 @@ def ToNetworkMP_PNEANetMP(*args):
        Table: PTable value
        SrcCol: TStr const & value
        DstCol: TStr const & value
+       AggrPolicy: enum TAttrAggr value
+
+    ToNetworkMP_PNEANetMP(PTable Table, TStr SrcCol, TStr DstCol, TStrV EdgeAttrV, 
+        PTable NodeTable, TStr NodeCol, TStrV NodeAttrV, 
+        TAttrAggr AggrPolicy) -> PNEANetMP
+    Parameters:
+       Table: PTable value
+       SrcCol: TStr const & value
+       DstCol: TStr const & value
+       EdgeAttrV: TStrV & value
+       NodeTable: PTable value
+       NodeCol: TStr const & value
+       NodeAttrV: TStrV & value
+       AggrPolicy: enum TAttrAggr value
+
+       Table: PTable value
+       SrcCol: TStr const & value
+       DstCol: TStr const & value
+       EdgeAttrV: TStrV & value
+       NodeTable: PTable value
+       NodeCol: TStr const & value
+       NodeAttrV: TStrV & value
        AggrPolicy: enum TAttrAggr value
 
     """
