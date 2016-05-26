@@ -55,7 +55,7 @@ r.show("__references__")
 # load context
 print time.ctime(), "loading context ..."
 context.Load(FIn)
-t.show("loadbin context", refs)
+t.show("loadbin context", RefsT)
 r.show("__context__")
 
 print time.ctime(), "done"
