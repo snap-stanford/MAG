@@ -64,7 +64,7 @@ print time.ctime(), "done"
 # In[2]:
 
 # Create the network
-refs_schema = map(lambda x: x.GetVal1(), refs.GetSchema())
+refs_schema = map(lambda x: x.GetVal1(), RefsT.GetSchema())
 print time.ctime(), "Creating network ..."
 net = snap.ToGraph(snap.PNGraph, RefsT, refs_schema[0], refs_schema[1], snap.aaFirst)
 print time.ctime(), "done."
