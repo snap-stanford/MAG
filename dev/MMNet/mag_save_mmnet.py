@@ -132,17 +132,6 @@ for crossnetname in ["refs", "papauth", "authaffl", "papaffl"]:
     crossnet = mmnet.GetCrossNetByName(crossnetname)
     print crossnetname, crossnet.GetEdges()
 
-
-# In[ ]:
-
-crossnetnames = snap.TStrV()
-crossnetnames.Add("refs")
-print time.ctime()
-refs_pneanet = mmnet.ToNetworkMP(crossnetnames)
-print time.ctime()
-
-snap.PlotInDegDistr(refs_pneanet, "refs_indeg", "References graph - in-degree Distribution")
-
-print time.ctime()
-snap.PlotOutDegDistr(refs_pneanet, "refs_outdeg", "References graph - out-degree distribution")
-print time.ctime()
+FOut = snap.TFOut("mag-mmnet.bin")
+mmnet.Save(FOut)
+FOut.Flush()
